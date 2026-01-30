@@ -1,0 +1,79 @@
+# _*Game project*_
+
+⩺ project contents:
+1. player movement
+2. hitboxes and collision
+3. UI and menus
+4. enemies
+5. core gameplay/gameloop
+6. level designing
+7. assets and animation
+
+1) _*Player movement:*_
+* walk
+* run
+* slide
+* jump
+* shoot
+* adjusting the player speed to the fast paced environment of he game
+* shooting cooldown between each bullet
+
+2) _*hitboxes and collision*_
+* player collision with floors and walls
+* player bullet killing an enemy and damaging the player by 1 health point
+* enemies bullet damaging the player by 1 health point
+* health pick ups that give the player 1 health point
+
+3) _*UI and menus*_
+⩺ main menu:
+* level select
+* quick toturial on how to play
+* best level clear times -> optional
+* sittings -> if there is
+⩺ UI:
+* player health points
+* current number of enemies and number of all enemies in the level
+* current number of health packs and number of all health packs in the level
+* current number of bullets in the gun and a realoding icon when reloading
+* mini map that show enemies and the player -> optional
+
+4) _*enemies*_
+* tracking the player postion to shoot him
+* shooting cooldown between each bullet
+* rotating to look toward the player
+* die when they get shot
+
+5) _*gameloop*_
+* the  player must clear the level by killing all enemies in the level while maintaining atleast one health point to clear the level
+* the player loses 1 health point each time he succsusfuly kills an enemy  
+* a recorded timer will be displayed of the best time taken to clear the level and the player can type three letters to that record -> optional
+
+6) _*Level designing*_
+* the level should atleast take 1 to 2 mintues to be cleared by a gamer and 3 to 4 by casuals
+* simple and not too complex 
+* clear enemies positions and not hidden fully by walls
+* to be fun will navigating by using the movement mechaincs of the player
+
+7) _*assets and animations*_
+* player:
+https://poly.pizza/m/3hC2i0CTuO
+* enemy:
+https://poly.pizza/m/Btfn3G5Xv4
+
+* level block:
+https://assetstore.unity.com/packages/3d/props/pandazole-simple-game-low-poly-pack-210274?aid=1100liZev
+https://poly.pizza/m/3OEFd1AWfa
+https://poly.pizza/m/dlBoC4Wkzp2
+https://poly.pizza/m/0V6btzVQCx
+https://poly.pizza/m/1orHe0kCc1
+https://poly.pizza/m/8MVBwVyqQA
+
+* guns:
+enemies gun: https://poly.pizza/m/J3i9KDQ3kt
+player gun: https://poly.pizza/m/52kQzphmeF
+
+* pick ups:
+ammo: https://poly.pizza/m/bTEYFxKHF9
+Medkit: https://poly.pizza/m/ijqVDSeIM5
+
+* note that tha player and enemies have their animation already made

@@ -1,0 +1,54 @@
+_*to do list - week 1*_
+
+*start date:* 30/1/2026
+*End date:* 6/2/2026
+
+* Ammar
+1. make a 3d player that can: 
+↳ walk with *(WASD)*
+↳ jump with *(space bar)*
+↳ run when the *(shift is held down)* and stops gradually when left
+↳ shot when *(left mouse button)* is pressed 
+↳ make the player speed @exported var for later adjustments in next weeks
+↳ add controller input -> optional 
+
+* Rawan
+1. put the assets in the engine and edit them to have collision and textures
+2. make a demo/dummy level using the assets that contains the following building blocks:
+↳ wall
+↳ floor
+↳ half a wall
+↳ wall with a door
+↳ crates
+↳ barrels 
+      
+* Hadeel
+1. make a level using grayboxing, the level must have the following:
+↳ a place for the player to walk, run, jump
+↳ a gap the player must jump and the gap has a floor under it for the player to try jumping again if he failed the jump
+↳ some objects for the player to jump on them one after the other (parkour)
+↳ places for future enemies for now mark them with a capsule shape 
+
+* Mohamed
+1. make a pick ups for:
+↳ medkit
+↳ ammo
+2. make a player ui with: health, ammo and enemies left
+
+
+* Nourhan
+1. make a staionary enemy that tracks the player and shoots on him once then takes i amount of seconds before shooting again
+↳ @export the i cooldown for late adjustments
+_note: use a dummy player for testing until the player is made_
+
+* Doha
+1. make a main menu that contains:
+↳ toturial button
+↳ exit button
+↳ level select button
+2. the exit button should close the game
+
+
+# please remember to git pull always before you start working and to add and commit your changes even if uncompleted to avoid conflicts with git
+# if your work is incomplete please comment it before pushing it to the rest
+# you can find any asset you may need in the game outline document i will upload on the project folder and available as a WhatsApp massage
