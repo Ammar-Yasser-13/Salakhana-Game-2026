@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cuynwls3xkrxt"]
+
+[ext_resource type="Script" uid="uid://dsvi1u26rew5v" path="res://PlayerControler.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_i3pqv"]
+
+[node name="Player" type="CharacterBody3D" unique_id=279958562]
+script = ExtResource("1_4flbx")
+
+[node name="Player Collider" type="CollisionShape3D" parent="." unique_id=1921965431]
+shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="Player Mesh" type="MeshInstance3D" parent="." unique_id=539426126]
+mesh = SubResource("CapsuleMesh_i3pqv")
+
+[node name="Head" type="Node3D" parent="." unique_id=557745485]
+
+[node name="Player Camera" type="Camera3D" parent="Head" unique_id=1913317922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
