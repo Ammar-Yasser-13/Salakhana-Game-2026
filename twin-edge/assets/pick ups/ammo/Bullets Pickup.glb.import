@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c2yhhn5k2j03s"
-path="res://.godot/imported/Bullets Pickup.glb-185ab1143247e9f15a0b39e035281317.scn"
+path="res://.godot/imported/Bullets Pickup.glb-b6ee8546290a6e6e64c9954e9495d24b.scn"
 
 [deps]
 
-source_file="res://Assets/pick ups/ammo/Bullets Pickup.glb"
-dest_files=["res://.godot/imported/Bullets Pickup.glb-185ab1143247e9f15a0b39e035281317.scn"]
+source_file="res://assets/pick ups/ammo/Bullets Pickup.glb"
+dest_files=["res://.godot/imported/Bullets Pickup.glb-b6ee8546290a6e6e64c9954e9495d24b.scn"]
 
 [params]
 

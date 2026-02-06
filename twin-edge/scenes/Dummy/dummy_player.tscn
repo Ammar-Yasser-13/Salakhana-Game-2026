@@ -10,6 +10,7 @@ height = 2.022461
 [node name="DummyPlayer" type="Node3D" unique_id=1601139084]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=135660040]
+collision_layer = 2
 script = ExtResource("1_xlvhn")
 
 [node name="CSGCylinder3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=410782227]
