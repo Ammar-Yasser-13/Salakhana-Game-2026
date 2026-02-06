@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c8ixllqekvjlv"]
+
+[ext_resource type="Script" uid="uid://beyijqhrh8ot4" path="res://scenes/Dummy/scripts/character_body_3d.gd" id="1_xlvhn"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bja5n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xlvhn"]
+height = 2.022461
+
+[node name="DummyPlayer" type="Node3D" unique_id=1601139084]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=135660040]
+script = ExtResource("1_xlvhn")
+
+[node name="CSGCylinder3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=410782227]
+mesh = SubResource("CapsuleMesh_bja5n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1831110111]
+shape = SubResource("CapsuleShape3D_xlvhn")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=95157076]
+transform = Transform3D(1, 0, 0, 0, 0.9484178, 0.31702328, 0, -0.31702328, 0.9484178, 0, 1.0894437, 1.9148655)

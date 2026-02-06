@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://5sgn26iq0isp"]
+
+[ext_resource type="PackedScene" uid="uid://c8ixllqekvjlv" path="res://scenes/Dummy/dummy_player.tscn" id="1_5ov5x"]
+[ext_resource type="PackedScene" uid="uid://b68yt1a7nfwif" path="res://scenes/assets_with_collision/BarrelSpil.tscn" id="2_dp8d5"]
+[ext_resource type="PackedScene" uid="uid://dtbr0nh5y2xmi" path="res://scenes/assets_with_collision/Barrel.tscn" id="3_63y18"]
+[ext_resource type="PackedScene" uid="uid://dgtwrgqowsjyp" path="res://scenes/assets_with_collision/crate.tscn" id="4_aci0v"]
+[ext_resource type="PackedScene" uid="uid://bdh47gk4blvpg" path="res://scenes/assets_with_collision/ShippingContainer.tscn" id="5_7ch43"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6ym5l"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_5ov5x"]
+sky_material = SubResource("ProceduralSkyMaterial_6ym5l")
+
+[sub_resource type="Environment" id="Environment_6v27d"]
+background_mode = 2
+sky = SubResource("Sky_5ov5x")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=434062710]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=499762013]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=186955845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2043457, 0)
+size = Vector3(10.397461, 0.00390625, 8.349609)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=338709765]
+transform = Transform3D(0.020802781, 0.9997836, 0, -0.9997836, 0.020802781, 0, 0, 0, 1, 5.083647, 3.552949, 0)
+size = Vector3(7.689453, 0.00390625, 8.349609)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1173943850]
+transform = Transform3D(0.033207465, 0.9994485, 0, -0.9994485, 0.033207465, 0, 0, 0, 1, -5.301133, 3.552949, -0.12231445)
+size = Vector3(7.689453, 0.00390625, 8.594238)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=47623509]
+transform = Transform3D(-0.0009857198, -0.029667312, -0.99955934, -0.9994485, 0.033207465, 0, 0.033192832, 0.99900806, -0.029683683, -0.14210224, 3.552949, -4.0876074)
+size = Vector3(7.689453, 0.00390625, 10.560547)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1852259650]
+transform = Transform3D(-0.0009857197, -0.02966731, -0.99955934, -0.999998, -0.0017648675, 0.0010385342, -0.0017949007, 0.99955827, -0.029665511, -0.14210224, 3.552949, 4.1717587)
+size = Vector3(7.689453, 0.00390625, 10.560547)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=268289154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3898194, 4.468537)
+operation = 2
+size = Vector3(2.4003906, 5.084717, 2.144287)
+
+[node name="obstacles" type="Node" parent="." unique_id=810266968]
+
+[node name="BarrelSpil" parent="obstacles" unique_id=698688371 instance=ExtResource("2_dp8d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8693464, -0.22516894, 1.7412536)
+
+[node name="Barrel" parent="obstacles" unique_id=567476980 instance=ExtResource("3_63y18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0598915, -0.17014146, 0.40767145)
+
+[node name="crate" parent="obstacles" unique_id=171462718 instance=ExtResource("4_aci0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.970728, -0.16855016, -2.904426)
+
+[node name="ShippingContainer" parent="obstacles" unique_id=1733980717 instance=ExtResource("5_7ch43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5381327, 0.3782652, -2.6742263)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1888673939]
+transform = Transform3D(1, 0, 0, 0, 0.7259508, 0.68774664, 0, -0.68774664, 0.7259508, -0.31724167, 11.341792, 4.8089848)
+visible = false
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1422268824]
+transform = Transform3D(-0.8660253, -0.43301272, 0.24999996, 0.31343108, -0.080581665, 0.9461857, -0.38956505, 0.8977785, 0.20550543, 6.7838, 13.631922, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=979662245]
+environment = SubResource("Environment_6v27d")
+
+[node name="DummyPlayer" parent="." unique_id=1601139084 instance=ExtResource("1_5ov5x")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.36025155, 3.7967257)
