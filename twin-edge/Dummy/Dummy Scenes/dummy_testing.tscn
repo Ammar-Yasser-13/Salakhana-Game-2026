@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cj7e4vetiy6st"]
+
+[ext_resource type="Script" uid="uid://b58221qeb13ta" path="res://Dummy/Dummy Scripts/character_body_3d.gd" id="1_qgi1x"]
+[ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://Scenes/pick ups/bullets.tscn" id="2_2m1u3"]
+[ext_resource type="PackedScene" uid="uid://d0tbffm4hqa2v" path="res://Scenes/Player/Player_UI.tscn" id="2_mx2a1"]
+[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://Scenes/pick ups/medkit.tscn" id="3_tk7nb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qgi1x"]
+sky_top_color = Color(0.63844043, 0.37873557, 3.85046e-07, 1)
+sky_horizon_color = Color(0.69255805, 0.61988187, 0.51619804, 1)
+ground_horizon_color = Color(0.69255805, 0.61988187, 0.51619804, 1)
+
+[sub_resource type="Sky" id="Sky_2m1u3"]
+sky_material = SubResource("ProceduralSkyMaterial_qgi1x")
+
+[sub_resource type="Environment" id="Environment_tk7nb"]
+background_mode = 2
+sky = SubResource("Sky_2m1u3")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2m1u3"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_tk7nb"]
+
+[node name="dummy testing" type="Node3D" unique_id=110756983]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2049052916]
+environment = SubResource("Environment_tk7nb")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1918754901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3628316, 0)
+floor_stop_on_slope = false
+script = ExtResource("1_qgi1x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2111376343]
+shape = SubResource("CapsuleShape3D_2m1u3")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=590433829]
+
+[node name="Player_UI" parent="CharacterBody3D/Camera3D" unique_id=619151351 instance=ExtResource("2_mx2a1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=30896918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.77544725, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1364529788]
+shape = SubResource("WorldBoundaryShape3D_tk7nb")
+debug_color = Color(0.78984886, 0.36872208, 0.5805442, 0.41960785)
+
+[node name="bullets" parent="." unique_id=1877117906 instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15662622, 0.5947439, -3.302302)
+
+[node name="Medkit" parent="." unique_id=1030489201 instance=ExtResource("3_tk7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69611406, 0.81049097, -5.1743574)
