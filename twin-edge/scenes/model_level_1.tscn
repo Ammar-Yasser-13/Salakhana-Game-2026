@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://dom8xk3k0ktfh"]
+
+[ext_resource type="PackedScene" uid="uid://c8jutqpp4h8yd" path="res://scenes/player.tscn" id="1_ffnre"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffnre"]
+sky_horizon_color = Color(0.8296772, 0.83433414, 0.8441853, 1)
+ground_bottom_color = Color(0.3674441, 0.3170717, 0.2604763, 1)
+ground_horizon_color = Color(0.8296772, 0.83433414, 0.8441853, 1)
+energy_multiplier = 0.75
+
+[sub_resource type="Sky" id="Sky_0v6ob"]
+sky_material = SubResource("ProceduralSkyMaterial_ffnre")
+
+[sub_resource type="Environment" id="Environment_ac4d1"]
+background_mode = 2
+sky = SubResource("Sky_0v6ob")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="model level 1" type="Node3D" unique_id=2105410516]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=239212469]
+environment = SubResource("Environment_ac4d1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1794968148]
+transform = Transform3D(-0.8660254, -0.50000006, -2.1855696e-08, 0, -4.371139e-08, 1, -0.50000006, 0.8660254, 3.7855173e-08, 0, 0, 0)
+light_energy = 1.8
+shadow_enabled = true
+directional_shadow_max_distance = 120.0
+
+[node name="floor" type="CSGBox3D" parent="." unique_id=1169740850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099591255, -1.137518, 0.20130539)
+use_collision = true
+collision_mask = 2
+size = Vector3(1000, 1, 1000)
+
+[node name="room1" type="Node3D" parent="." unique_id=2089698046]
+
+[node name="inner walls" type="Node" parent="room1" unique_id=1499449568]
+
+[node name="w2" type="CSGBox3D" parent="room1/inner walls" unique_id=1553448829]
+transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -138.85689, 68.51614, 101.21625)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 477.76096)
+
+[node name="w3" type="CSGBox3D" parent="room1/inner walls" unique_id=863820090]
+transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, 98.880745, 68.560295, 300.10715)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 397.5)
+
+[node name="w8" type="CSGBox3D" parent="room1/inner walls" unique_id=504737300]
+transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, 322.2599, 68.53847, 398.53708)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 199.37346)
+
+[node name="w4" type="CSGBox3D" parent="room1/inner walls" unique_id=1401188669]
+transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, 161.00214, 68.538, -198.92531)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 203.52228)
+
+[node name="w11" type="CSGBox3D" parent="room1/inner walls" unique_id=1282718837]
+transform = Transform3D(0.0001761413, 0.013402849, -0.99991024, 0.99999464, 0.0032969085, 0.0002203481, 0.0032995632, -0.9999048, -0.013402257, -132.94951, 68.538, -374.67722)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 203.52228)
+
+[node name="w12" type="CSGBox3D" parent="room1/inner walls" unique_id=1518925600]
+transform = Transform3D(0.0032983155, -0.99997205, -0.0067354105, 0.9999945, 0.0032969078, 0.00022034814, -0.00019813597, -0.0067360923, 0.99997723, -233.44801, 68.554985, -437.3017)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
+
+[node name="w9" type="CSGBox3D" parent="room1/inner walls" unique_id=1651110404]
+transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, -377.99, 68.53837, 202.39078)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 200.20108)
+
+[node name="w10" type="CSGBox3D" parent="room1/inner walls" unique_id=493530396]
+transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -315.93793, 68.554985, 299.39166)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
+
+[node name="w6" type="CSGBox3D" parent="room1/inner walls" unique_id=559186072]
+transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -221.77837, 68.60297, -98.01025)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 560.69415)
+
+[node name="w7" type="CSGBox3D" parent="room1/inner walls" unique_id=1119000805]
+transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -439.523, 68.554985, 101.04027)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
+
+[node name="door1" type="CSGCylinder3D" parent="room1/inner walls/w7" unique_id=1422814465]
+transform = Transform3D(-0.0002204096, 0.99999464, -0.003296904, 1.8246337e-05, 0.003296906, 0.9999946, 1.0000002, 0.00022034829, -1.8966526e-05, -25.03164, 2.9099426, 3.6047058)
+operation = 2
+radius = 36.073
+height = 77.693
+sides = 6
+
+[node name="barriers" type="Node" parent="room1" unique_id=1085725516]
+
+[node name="w6" type="CSGBox3D" parent="room1/barriers" unique_id=1473468531]
+transform = Transform3D(-0.00022040955, 1.8239954e-05, 0.99999976, 0.99999464, 0.0032969085, 0.00022034816, -0.0032969022, 0.99999475, -1.8972902e-05, 0.10262872, 69.250595, 498.96735)
+use_collision = true
+collision_mask = 2
+size = Vector3(139.83865, 1, 1000)
+
+[node name="w7" type="CSGBox3D" parent="room1/barriers" unique_id=2056974189]
+transform = Transform3D(-0.00022040955, 1.8239954e-05, 0.99999976, 0.99999464, 0.0032969085, 0.00022034816, -0.0032969022, 0.99999475, -1.8972902e-05, 0.102409124, 68.54675, -499.1455)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.846, 1, 1000)
+
+[node name="w8" type="CSGBox3D" parent="room1/barriers" unique_id=1926456376]
+transform = Transform3D(0.0032969022, -0.99999475, 1.892919e-05, 0.99999464, 0.0032969085, 0.00022034814, -0.00022040916, 1.8196246e-05, 0.9999999, -500.77597, 68.54675, -1.7068481)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.846, 1, 1000)
+
+[node name="w9" type="CSGBox3D" parent="room1/barriers" unique_id=508865241]
+transform = Transform3D(0.0032969022, -0.99999475, 1.892919e-05, 0.99999464, 0.0032969085, 0.00022034814, -0.00022040916, 1.8196246e-05, 0.9999999, 501.40234, 68.54675, -2.295166)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.846, 1, 1000)
+
+[node name="obstacles" type="Node" parent="room1" unique_id=1228593932]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="room1/obstacles" unique_id=1929543782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.39337, -10.371033, 0)
+size = Vector3(25.213257, 79.257935, 100)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="room1/obstacles" unique_id=269461679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.180397, -10.371033, 0)
+size = Vector3(25.213257, 79.257935, 100)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="room1/obstacles" unique_id=286823618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -160.65572, -10.371033, 0)
+size = Vector3(25.213257, 79.257935, 100)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="room1/obstacles" unique_id=722861009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -261.7908, -10.371033, 0)
+size = Vector3(25.213257, 79.257935, 100)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="room1/obstacles" unique_id=982131901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -359.88925, -10.371033, 0)
+size = Vector3(25.213257, 79.257935, 100)
+
+[node name="doors" type="Node" parent="room1" unique_id=2007274131]
+
+[node name="player" parent="." unique_id=1089465899 instance=ExtResource("1_ffnre")]
+transform = Transform3D(-0.96573585, 0, -0.259527, 0, 1, 0, 0.259527, 0, -0.96573585, -390.7912, 57.699432, 20.101532)
