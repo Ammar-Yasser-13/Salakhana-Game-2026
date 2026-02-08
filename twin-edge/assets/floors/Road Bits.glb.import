@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cl8q0ypiyfnyd"
-path="res://.godot/imported/Road Bits.glb-db18cb596b142685462b830dddeb7dc6.scn"
+path="res://.godot/imported/Road Bits.glb-21c88ee854efedcbefe8dad6ead58dad.scn"
 
 [deps]
 
-source_file="res://assets/floors/Road Bits.glb"
-dest_files=["res://.godot/imported/Road Bits.glb-db18cb596b142685462b830dddeb7dc6.scn"]
+source_file="res://Assets/floors/Road Bits.glb"
+dest_files=["res://.godot/imported/Road Bits.glb-21c88ee854efedcbefe8dad6ead58dad.scn"]
 
 [params]
 

@@ -1,0 +1,37 @@
+_*to do list - week 2*_
+
+*start date:* 8/2/2026
+*End date:* 15/2/2026
+
+* Ammar
+1. add crouching when (C) is pressed and uncrouch when it is pressed again
+2. if the player is running (using shift) and then press (C) the player should slide
+3. add player model and gun from the assets but keep its collision as capsule that just covers him
+4. add cooldown between the shoots from the player gun
+
+* Rawan & Hadeel
+1. replace the grayboxed level with assets that contains collision 
+2. put the enemies made by Nourhan
+3. create more levels focusing on the character movement 
+
+* Nourhan
+1. add enemy model 
+2. add animations: shooting, die
+3. add hitbox collision
+
+* Doha
+1. add the tutorial pop up picture (put a place holder in case the picture was not ready)
+2. pressing the level select button should take you to the level select scene
+3. add place holder buttons with level numbers for linking them with the levels
+
+* Mohamed & Ammar
+1. link the player ability to shoot with the ui
+2. create a game over screen when the player loses all his lifes 
+3. link the number of enemies in the level to the ui 
+4. add the main mechanic of getting damaged when an enemy is killed 
+
+# please remember to git pull always before you start working and to add and commit your changes even if uncompleted to avoid conflicts with git
+# if your work is incomplete please comment it before pushing it to the rest
+# you can find any asset you may need in the game outline document i will upload on the project folder and available as a WhatsApp massage
+
+
