@@ -15,10 +15,6 @@ run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-GlobalEscapeButton="*uid://sgodi7da03uw"
-
 [file_customization]
 
 folder_colors={
