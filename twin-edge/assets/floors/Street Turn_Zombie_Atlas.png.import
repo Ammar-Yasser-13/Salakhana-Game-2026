@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cegum13hidc7c"
-path.s3tc="res://.godot/imported/Street Turn_Zombie_Atlas.png-e53025c78a1f2e740d0ef846a9ffab5b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Street Turn_Zombie_Atlas.png-f4f72af0666c1583fc5d5a48f1a4ff04.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/floors/Street Turn_Zombie_Atlas.png"
-dest_files=["res://.godot/imported/Street Turn_Zombie_Atlas.png-e53025c78a1f2e740d0ef846a9ffab5b.s3tc.ctex"]
+source_file="res://assets/floors/Street Turn_Zombie_Atlas.png"
+dest_files=["res://.godot/imported/Street Turn_Zombie_Atlas.png-f4f72af0666c1583fc5d5a48f1a4ff04.s3tc.ctex"]
 
 [params]
 

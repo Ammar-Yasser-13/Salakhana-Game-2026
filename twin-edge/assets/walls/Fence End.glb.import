@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bpdfiddaey833"
-path="res://.godot/imported/Fence End.glb-db0ab9333f518d45850e8e44191bafab.scn"
+path="res://.godot/imported/Fence End.glb-b7dfd23280599347ef61825d4cbdd9dd.scn"
 
 [deps]
 
-source_file="res://Assets/walls/Fence End.glb"
-dest_files=["res://.godot/imported/Fence End.glb-db0ab9333f518d45850e8e44191bafab.scn"]
+source_file="res://assets/walls/Fence End.glb"
+dest_files=["res://.godot/imported/Fence End.glb-b7dfd23280599347ef61825d4cbdd9dd.scn"]
 
 [params]
 

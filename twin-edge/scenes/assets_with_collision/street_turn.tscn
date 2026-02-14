@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bcava2bwtrm28"]
+
+[ext_resource type="PackedScene" uid="uid://bpwnfk3kuf674" path="res://assets/floors/Street Turn.glb" id="1_ncg7a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7atd"]
+size = Vector3(8.342773, 0.18945313, 8.323242)
+
+[node name="StreetTurn" type="StaticBody3D" unique_id=835518234]
+
+[node name="Root Scene" parent="." unique_id=1179776030 instance=ExtResource("1_ncg7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19334853, 1.1920929e-07, 0.046482086)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1417743243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19055176, 0.044921875, 6.389618e-05)
+shape = SubResource("BoxShape3D_f7atd")

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bpwnfk3kuf674"
-path="res://.godot/imported/Street Turn.glb-bf28d7780fc336f81418a1f331a88205.scn"
+path="res://.godot/imported/Street Turn.glb-3d744548284cd0d28b78c19ab8e28ef3.scn"
 
 [deps]
 
-source_file="res://Assets/floors/Street Turn.glb"
-dest_files=["res://.godot/imported/Street Turn.glb-bf28d7780fc336f81418a1f331a88205.scn"]
+source_file="res://assets/floors/Street Turn.glb"
+dest_files=["res://.godot/imported/Street Turn.glb-3d744548284cd0d28b78c19ab8e28ef3.scn"]
 
 [params]
 

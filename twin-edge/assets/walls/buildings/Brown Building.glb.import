@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bubp3ocbuj6mw"
-path="res://.godot/imported/Brown Building.glb-fe58be32f3709b2d366702dd1c4e3b16.scn"
+path="res://.godot/imported/Brown Building.glb-7fbf97816860873728efe9d4e96ad7b0.scn"
 
 [deps]
 
-source_file="res://Assets/walls/buildings/Brown Building.glb"
-dest_files=["res://.godot/imported/Brown Building.glb-fe58be32f3709b2d366702dd1c4e3b16.scn"]
+source_file="res://assets/walls/buildings/Brown Building.glb"
+dest_files=["res://.godot/imported/Brown Building.glb-7fbf97816860873728efe9d4e96ad7b0.scn"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5uispdf1gdej"
-path.s3tc="res://.godot/imported/Street Straight_Zombie_Atlas.png-d0464829844b5e149fc66edbc1d247e5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Street Straight_Zombie_Atlas.png-9f86ee0d7601f59329b8837cf4e5a41f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/floors/Street Straight_Zombie_Atlas.png"
-dest_files=["res://.godot/imported/Street Straight_Zombie_Atlas.png-d0464829844b5e149fc66edbc1d247e5.s3tc.ctex"]
+source_file="res://assets/floors/Street Straight_Zombie_Atlas.png"
+dest_files=["res://.godot/imported/Street Straight_Zombie_Atlas.png-9f86ee0d7601f59329b8837cf4e5a41f.s3tc.ctex"]
 
 [params]
 
