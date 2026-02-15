@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cl8efly6bnuxi"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lesfc"]
+radius = 14.454
+height = 87.046
+
 [node name="model_level_2" type="Node3D" unique_id=7759660]
 
 [node name="boundaries" type="CSGCombiner3D" parent="." unique_id=1944622934]
@@ -110,3 +114,138 @@ transform = Transform3D(0.0032958393, -0.9999838, 0.0046788827, 0.99999446, 0.00
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 125.204796)
+
+[node name="obstacles" type="CSGCombiner3D" parent="." unique_id=1601596144]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="obstacles" unique_id=490664745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.23593, 57.002884, 190.88696)
+size = Vector3(100, 100, 100)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="obstacles" unique_id=1114354502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -187.9047, 29.088577, 327.34723)
+size = Vector3(61.399902, 67.623535, 52.756287)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="obstacles" unique_id=424069125]
+transform = Transform3D(0.80656844, 0, -0.59114075, 0, 1, 0, 0.59114075, 0, 0.80656844, -251.12283, 13.652908, 377.98065)
+size = Vector3(44.839233, 36.752197, 35.638397)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="obstacles" unique_id=1164915864]
+transform = Transform3D(0.8337124, 0, 0.55219895, 0, 1, 0, -0.55219895, 0, 0.8337124, 200.59386, 33.122574, 190.88696)
+size = Vector3(100, 52.23938, 100)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="obstacles" unique_id=866559156]
+transform = Transform3D(0.99598193, 0, 0.089554876, 0, 1, 0, -0.089554876, 0, 0.99598193, 401.59323, 138.06128, 388.81122)
+size = Vector3(77.62256, 52.23938, 58.200684)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="obstacles" unique_id=1993477163]
+transform = Transform3D(0.756944, -0.6499257, 0.068061516, 0.6473143, 0.7599978, 0.058204018, -0.089554876, -2.979615e-09, 0.99598205, 281.78152, 60.585533, -430.8225)
+size = Vector3(112.2395, 52.23938, 58.200684)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="obstacles" unique_id=1328697400]
+transform = Transform3D(0.8337124, 0, 0.55219895, 0, 1, 0, -0.55219895, 0, 0.8337124, 344.33975, 25.106583, -178.03656)
+size = Vector3(44.165375, 37.760803, 38.053864)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="obstacles" unique_id=1029611206]
+transform = Transform3D(0.8337124, 0, 0.55219895, 0, 1, 0, -0.55219895, 0, 0.8337124, 144.53058, 17.168686, 279.46744)
+size = Vector3(43.586426, 20.331604, 43.865723)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="obstacles" unique_id=1329093485]
+transform = Transform3D(0.9243863, 0, -0.3814576, 0, 1, 0, 0.3814576, 0, 0.9243863, -287.61432, 41.774918, 56.715607)
+size = Vector3(66.131836, 69.54407, 50.266968)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="obstacles" unique_id=66841200]
+transform = Transform3D(0.9813128, 0, 0.19241926, 0, 1, 0, -0.19241926, 0, 0.9813128, -155.23318, 33.122574, 101.379166)
+size = Vector3(100, 52.23938, 100)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="obstacles" unique_id=1390785145]
+transform = Transform3D(0.9813128, 0, 0.19241926, 0, 1, 0, -0.19241926, 0, 0.9813128, -240.847, 17.168686, 161.87598)
+size = Vector3(43.586426, 20.331604, 43.865723)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="obstacles" unique_id=239795483]
+transform = Transform3D(0.8015461, 0, -0.59793293, 0, 1, 0, 0.59793293, 0, 0.8015461, -375.62784, 41.774918, -365.67456)
+size = Vector3(66.131836, 69.54407, 50.266968)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="obstacles" unique_id=461477120]
+transform = Transform3D(0.99843687, 0, -0.05589117, 0, 1, 0, 0.05589117, 0, 0.99843687, -258.3776, 33.122574, -289.70096)
+size = Vector3(100, 52.23938, 100)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="obstacles" unique_id=816273223]
+transform = Transform3D(0.99843687, 0, -0.05589117, 0, 1, 0, 0.05589117, 0, 0.99843687, -356.2801, 17.168686, -252.22171)
+size = Vector3(43.586426, 20.331604, 43.865723)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="obstacles" unique_id=346887618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.20055, 74.89404, 0)
+radius = 29.060059
+height = 151.78809
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="obstacles" unique_id=2080293277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.87085, 74.89404, -120.917114)
+radius = 29.060059
+height = 151.78809
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="obstacles" unique_id=954892866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.05229, 80.54373, -85.22955)
+radius = 29.060059
+height = 151.78809
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="obstacles" unique_id=1265614253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -417.72333, 60.91043, 291.43604)
+radius = 29.060059
+height = 112.521484
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="obstacles" unique_id=1992099518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -366.26898, 43.86429, 326.93298)
+radius = 29.060059
+height = 78.4292
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="obstacles" unique_id=865593728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161.26772, 80.54373, -186.17654)
+radius = 29.060059
+height = 151.78809
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="obstacles" unique_id=1833670345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 386.06744, 45.29605, -249.39835)
+radius = 29.060059
+height = 81.292725
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="obstacles" unique_id=855768300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 342.107, 45.29605, 372.96115)
+radius = 29.060059
+height = 81.292725
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="obstacles" unique_id=1455330649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 342.107, 45.29605, -417.24124)
+radius = 29.060059
+height = 81.292725
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="obstacles" unique_id=1024353516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 431.31158, 59.308563, 395.4092)
+radius = 29.060059
+height = 109.31775
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="obstacles" unique_id=1997557311]
+transform = Transform3D(-0.5566581, 0, -0.83074164, 0, 1, 0, 0.83074164, 0, -0.5566581, -419.0244, 25.106583, -49.662395)
+size = Vector3(44.165375, 37.760803, 38.053864)
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="obstacles" unique_id=241017943]
+transform = Transform3D(-0.9228274, 0, -0.38521364, 0, 1, 0, 0.38521364, 0, -0.9228274, -430.04236, 45.29605, 32.266293)
+radius = 29.060059
+height = 81.292725
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1567471323]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1187775375]
+transform = Transform3D(1.1806127, 0, 0, 0, 2.1177988, 0, 0, 0, 1, 382.81052, 0, 58.776596)
+mesh = SubResource("CapsuleMesh_lesfc")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1988415276]
+transform = Transform3D(1.1806127, 0, 0, 0, 2.1177988, 0, 0, 0, 1, -3.2935486, 0, -365.93393)
+mesh = SubResource("CapsuleMesh_lesfc")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=481435970]
+transform = Transform3D(1.1806127, 0, 0, 0, 2.1177988, 0, 0, 0, 1, -442.47693, 0, -201.04321)
+mesh = SubResource("CapsuleMesh_lesfc")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1476927400]
+transform = Transform3D(1.1806127, 0, 0, 0, 2.1177988, 0, 0, 0, 1, -48.33142, 0, 380.16306)
+mesh = SubResource("CapsuleMesh_lesfc")
