@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dot4dhuv8tpqe"
+uid="uid://bqgbb18weql0m"
 path.s3tc="res://.godot/imported/Street T_Zombie_Atlas.png-25e3869665c3cd352e9ab2bc0f9686ee.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ae8ba728fcf7e919305cebabeacf184e"
 }
 
 [deps]
@@ -22,8 +19,6 @@ dest_files=["res://.godot/imported/Street T_Zombie_Atlas.png-25e3869665c3cd352e9
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
-compress/uastc_level=0
-compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -31,10 +26,6 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/channel_remap/red=0
-process/channel_remap/green=1
-process/channel_remap/blue=2
-process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

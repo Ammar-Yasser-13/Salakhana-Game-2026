@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://d0tbffm4hqa2v"]
+[gd_scene load_steps=12 format=3 uid="uid://d0tbffm4hqa2v"]
 
-[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://Assets/player/UI/Health.png" id="1_d1abm"]
-[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://Assets/player/UI/Enemy skull.png" id="2_gg8lv"]
-[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://Assets/player/UI/Bullet.png" id="3_cn2k5"]
-[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://Assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
+[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://assets/player/UI/Health.png" id="1_d1abm"]
+[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://assets/player/UI/Enemy skull.png" id="2_gg8lv"]
+[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://assets/player/UI/Bullet.png" id="3_cn2k5"]
+[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg8lv"]
 atlas = ExtResource("1_d1abm")
@@ -50,65 +50,65 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_skwaw"]
 
-[node name="Player_UI" type="CanvasLayer" unique_id=619151351]
+[node name="Player_UI" type="CanvasLayer"]
 
-[node name="Health bar" type="AnimatedSprite2D" parent="." unique_id=1164983071]
+[node name="Health bar" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(47.999996, 42.999996)
+position = Vector2(48, 43)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ojbky")
 frame = 4
 frame_progress = 1.0
 
-[node name="Enemy symbol" type="Sprite2D" parent="." unique_id=981344058]
+[node name="Enemy symbol" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1015.99994, 39.999992)
+position = Vector2(1016, 40)
 scale = Vector2(5, 5)
 texture = ExtResource("2_gg8lv")
 
-[node name="Bullet1" type="Sprite2D" parent="." unique_id=1675049382]
+[node name="Bullet1" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(127.999985, 26.999998)
-rotation = 1.5707964
+position = Vector2(128, 27)
+rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet2" type="Sprite2D" parent="." unique_id=712523901]
+[node name="Bullet2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(127.99999, 56.999996)
-rotation = 1.5707964
+position = Vector2(128, 57)
+rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet3" type="Sprite2D" parent="." unique_id=1298150608]
+[node name="Bullet3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(178.99998, 26.999998)
-rotation = 1.5707964
+position = Vector2(179, 27)
+rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet4" type="Sprite2D" parent="." unique_id=1080635248]
+[node name="Bullet4" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(178.99998, 56.999996)
-rotation = 1.5707964
+position = Vector2(179, 57)
+rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet5" type="Sprite2D" parent="." unique_id=199657904]
+[node name="Bullet5" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(229.99998, 26.999998)
-rotation = 1.5707964
+position = Vector2(230, 27)
+rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet6" type="Sprite2D" parent="." unique_id=1518956836]
+[node name="Bullet6" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(229.99998, 56.999996)
-rotation = 1.5707964
+position = Vector2(230, 57)
+rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Enemy counter" type="Label" parent="." unique_id=202931187]
+[node name="Enemy counter" type="Label" parent="."]
 texture_filter = 1
 anchors_preset = 1
 anchor_left = 1.0
