@@ -35,10 +35,6 @@ light_energy = 1.8
 shadow_enabled = true
 directional_shadow_max_distance = 120.0
 
-[node name="player" parent="." unique_id=1089465899 instance=ExtResource("1_ffnre")]
-transform = Transform3D(-4.89835, 0, 1.0030813, 0, 5, 0, -1.0030813, 0, -4.89835, -16.842064, 29.780884, 130.4314)
-visible = false
-
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2039415791]
 
 [node name="room1" type="Node3D" parent="CSGCombiner3D" unique_id=2089698046]
@@ -47,70 +43,60 @@ visible = false
 
 [node name="w2" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=1553448829]
 transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -138.85689, 68.51614, 101.21625)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 477.76096)
 
 [node name="w3" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=863820090]
 transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, 98.880745, 68.560295, 300.10715)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 397.5)
 
 [node name="w8" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=504737300]
 transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, 322.2599, 68.53847, 398.53708)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 199.37346)
 
 [node name="w4" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=1401188669]
 transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, 161.00214, 68.538, -198.92531)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 203.52228)
 
 [node name="w11" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=1282718837]
 transform = Transform3D(0.0001761413, 0.013402849, -0.99991024, 0.99999464, 0.0032969085, 0.0002203481, 0.0032995632, -0.9999048, -0.013402257, -132.94951, 68.538, -374.67722)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 203.52228)
 
 [node name="w12" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=1518925600]
 transform = Transform3D(0.0032983155, -0.99997205, -0.0067354105, 0.9999945, 0.0032969078, 0.00022034814, -0.00019813597, -0.0067360923, 0.99997723, -233.44801, 68.554985, -437.3017)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 125.204796)
 
 [node name="w9" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=1651110404]
 transform = Transform3D(0.0032982985, -0.9999725, -0.006648183, 0.99999464, 0.0032969085, 0.00022034811, -0.00019842398, -0.0066488087, 0.99997795, -377.99, 68.53837, 202.39078)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 200.20108)
 
 [node name="w10" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=493530396]
 transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -315.93793, 68.554985, 299.39166)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 125.204796)
 
 [node name="w6" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=559186072]
 transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -221.77837, 68.60297, -98.01025)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 560.69415)
 
 [node name="w7" type="CSGBox3D" parent="CSGCombiner3D/room1/inner walls" unique_id=1119000805]
 transform = Transform3D(-0.00022040954, 1.8239953e-05, 0.99999976, 0.9999945, 0.003296908, 0.00022034816, -0.0032969017, 0.99999464, -1.8972903e-05, -439.523, 68.554985, 101.04027)
-visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(137.84589, 1, 125.204796)
@@ -156,33 +142,29 @@ size = Vector3(137.846, 1, 1000)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/room1/obstacles" unique_id=1929543782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.39337, -10.371033, 0)
-visible = false
 size = Vector3(25.213257, 79.257935, 100)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/room1/obstacles" unique_id=269461679]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.180397, -10.371033, 0)
-visible = false
 size = Vector3(25.213257, 79.257935, 100)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D/room1/obstacles" unique_id=286823618]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -160.65572, -10.371033, 0)
-visible = false
 size = Vector3(25.213257, 79.257935, 100)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D/room1/obstacles" unique_id=722861009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -261.7908, -10.371033, 0)
-visible = false
 size = Vector3(25.213257, 79.257935, 100)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D/room1/obstacles" unique_id=982131901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -359.88925, -10.371033, 0)
-visible = false
 size = Vector3(25.213257, 79.257935, 100)
 
 [node name="doors" type="Node" parent="CSGCombiner3D/room1" unique_id=2007274131]
 
 [node name="floor" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1169740850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099591255, -1.6370181, 0.20130539)
+visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(1000, 1.579834, 1000)
@@ -497,3 +479,6 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -428.4262, -6.2861176, 
 
 [node name="FloorTile25" parent="chFloors" unique_id=545025567 instance=ExtResource("8_0w3ht")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -428.4262, -6.2861176, 429.59122)
+
+[node name="player" parent="." unique_id=1089465899 instance=ExtResource("1_ffnre")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.21914, 24.702475, 130.0121)
