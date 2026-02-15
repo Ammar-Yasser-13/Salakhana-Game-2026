@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ddev24yo5enx6"
-path="res://.godot/imported/Pizza Corner.glb-bd3ba9c5cabf802c0c2ef3f61267b99f.scn"
+path="res://.godot/imported/Pizza Corner.glb-3bbbd46a8f1c3df3d479151c4c3a5549.scn"
 
 [deps]
 
-source_file="res://Assets/walls/buildings/Pizza Corner.glb"
-dest_files=["res://.godot/imported/Pizza Corner.glb-bd3ba9c5cabf802c0c2ef3f61267b99f.scn"]
+source_file="res://assets/walls/buildings/Pizza Corner.glb"
+dest_files=["res://.godot/imported/Pizza Corner.glb-3bbbd46a8f1c3df3d479151c4c3a5549.scn"]
 
 [params]
 

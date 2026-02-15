@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gufuryihqkta"
-path="res://.godot/imported/Street Straight.glb-2a8543823ad5156f4f074c80d79b2b59.scn"
+path="res://.godot/imported/Street Straight.glb-42cc02b6ed6fe0ba253da75c5adc8602.scn"
 
 [deps]
 
-source_file="res://Assets/floors/Street Straight.glb"
-dest_files=["res://.godot/imported/Street Straight.glb-2a8543823ad5156f4f074c80d79b2b59.scn"]
+source_file="res://assets/floors/Street Straight.glb"
+dest_files=["res://.godot/imported/Street Straight.glb-42cc02b6ed6fe0ba253da75c5adc8602.scn"]
 
 [params]
 

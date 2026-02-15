@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://drkbmskjjnxm7"
-path="res://.godot/imported/Pickup Health.glb-c826152360e9866472ab09e3697005ed.scn"
+path="res://.godot/imported/Pickup Health.glb-7c92eaccb8c76e7117c3ac569ba4e10f.scn"
 
 [deps]
 
-source_file="res://Assets/pick ups/Medkit/Pickup Health.glb"
-dest_files=["res://.godot/imported/Pickup Health.glb-c826152360e9866472ab09e3697005ed.scn"]
+source_file="res://assets/pick ups/Medkit/Pickup Health.glb"
+dest_files=["res://.godot/imported/Pickup Health.glb-7c92eaccb8c76e7117c3ac569ba4e10f.scn"]
 
 [params]
 
