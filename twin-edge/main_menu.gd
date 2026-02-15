@@ -10,13 +10,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+@onready var tutorial_popup = $"tutorial panel"
 func _on_level_select_pressed() -> void:
 	get_tree().change_scene_to_file("res://level_select.tscn")
 
 
 func _on_toturial_pressed() -> void:
-	get_tree().change_scene_to_file("res://toturial.tscn")
+	tutorial_popup.visible = true
 	
 	
 
@@ -24,3 +24,7 @@ func _on_toturial_pressed() -> void:
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 	
+
+
+func _on_close_button_pressed() -> void:
+	tutorial_popup.visible = false

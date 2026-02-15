@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cicoolsuuiqr"
-path="res://.godot/imported/Cross walk.glb-b375c29e538622604e88bd57d2bf3a8a.scn"
+path="res://.godot/imported/Cross walk.glb-853898915260004af92e332ad76cf561.scn"
 
 [deps]
 
-source_file="res://Assets/floors/Cross walk.glb"
-dest_files=["res://.godot/imported/Cross walk.glb-b375c29e538622604e88bd57d2bf3a8a.scn"]
+source_file="res://assets/floors/Cross walk.glb"
+dest_files=["res://.godot/imported/Cross walk.glb-853898915260004af92e332ad76cf561.scn"]
 
 [params]
 

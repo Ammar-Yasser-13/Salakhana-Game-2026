@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnyc1qucll737"]
 
 [ext_resource type="Script" uid="uid://raa8vx1jr4ci" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://cim7yypw6h0cn" path="res://download (1).png" id="2_7vrkn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -93,7 +94,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rhts7")
-text = " Toturial"
+text = " Tutorial"
 
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=499713698]
 layout_mode = 2
@@ -126,6 +127,30 @@ text = "Game Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="tutorial panel" type="Panel" parent="." unique_id=1408251318]
+visible = false
+layout_mode = 0
+offset_left = -571.0
+offset_top = -320.0
+offset_right = 581.0
+offset_bottom = 328.0
+
+[node name="TextureRect" type="TextureRect" parent="tutorial panel" unique_id=728260396]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 644.0
+texture = ExtResource("2_7vrkn")
+
+[node name="close_button" type="Button" parent="tutorial panel" unique_id=952653751]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 13.0
+offset_right = 91.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 40
+text = "X"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_toturial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="tutorial panel/close_button" to="." method="_on_close_button_pressed"]
