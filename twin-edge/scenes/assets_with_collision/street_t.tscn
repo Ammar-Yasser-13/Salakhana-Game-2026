@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cvwodejm3c6kh"]
+
+[ext_resource type="PackedScene" uid="uid://c10afg4wjmit4" path="res://assets/floors/Street T.glb" id="1_o4ch1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2k1p"]
+size = Vector3(8.35376, 0.14251709, 8.040039)
+
+[node name="StreetT" type="StaticBody3D" unique_id=1027899010]
+
+[node name="Root Scene" parent="." unique_id=1548482013 instance=ExtResource("1_o4ch1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.834514, 0, 0.86388373)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1055490874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8365364, 0.018463135, 0.8537903)
+shape = SubResource("BoxShape3D_i2k1p")
