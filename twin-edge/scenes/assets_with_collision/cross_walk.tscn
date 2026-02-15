@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://drx8h741ofaey"]
+
+[ext_resource type="PackedScene" uid="uid://cicoolsuuiqr" path="res://assets/floors/Cross walk.glb" id="1_uou64"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yrqo1"]
+points = PackedVector3Array(-0.04, 0.0009999102, -0.04, -0.03, -8.265282e-09, -0.04, -0.04, -8.265282e-09, -0.03, -0.04, 0.0010000081, 0.04, 0.04, 0.0009999102, -0.04, 0.029999994, -8.265282e-09, -0.04, -0.04, -8.265282e-09, 0.029999994, -0.03, -8.265282e-09, 0.04, 0.04, 0.0010000081, 0.04, 0.04, -8.265282e-09, -0.03, 0.029999994, -8.265282e-09, 0.04, 0.04, -8.265282e-09, 0.029999994)
+
+[node name="CrossWalk" type="StaticBody3D" unique_id=1688738994]
+
+[node name="Root Scene" parent="." unique_id=1126317014 instance=ExtResource("1_uou64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2213148, -1.1920929e-07, -0.6839161)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2057193425]
+transform = Transform3D(100, 0, 0, 0, 100, -4.371139e-06, 0, 4.371139e-06, 100, -1.2213148, -1.1920929e-07, -0.6839161)
+shape = SubResource("ConvexPolygonShape3D_yrqo1")
+
+[editable path="Root Scene"]
