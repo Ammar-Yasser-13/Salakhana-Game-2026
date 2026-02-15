@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cuynwls3xkrxt"]
 
-[ext_resource type="Script" uid="uid://dsvi1u26rew5v" path="res://PlayerControler.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dsvi1u26rew5v" path="res://Scripts/Player/PlayerControler.gd" id="1_uvnfx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_i3pqv"]
 
 [node name="Player" type="CharacterBody3D" unique_id=279958562]
-script = ExtResource("1_4flbx")
+script = ExtResource("1_uvnfx")
 
 [node name="Player Collider" type="CollisionShape3D" parent="." unique_id=1921965431]
 shape = SubResource("CapsuleShape3D_onrkg")

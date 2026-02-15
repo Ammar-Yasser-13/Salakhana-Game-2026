@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cj7e4vetiy6st"]
 
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://Scenes/pick ups/bullets.tscn" id="2_2m1u3"]
-[ext_resource type="PackedScene" uid="uid://d0tbffm4hqa2v" path="res://Scenes/Player/Player_UI.tscn" id="2_mx2a1"]
-[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://player.tscn" id="3_6wf7h"]
+[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://Scenes/Player/player.tscn" id="3_6wf7h"]
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://Scenes/pick ups/medkit.tscn" id="3_tk7nb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qgi1x"]
@@ -27,9 +26,7 @@ glow_enabled = true
 environment = SubResource("Environment_tk7nb")
 
 [node name="Player" parent="." unique_id=279958562 instance=ExtResource("3_6wf7h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1494606, 0)
-
-[node name="Player_UI" parent="Player" unique_id=619151351 instance=ExtResource("2_mx2a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3.1307871, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=30896918]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.77544725, 0)
