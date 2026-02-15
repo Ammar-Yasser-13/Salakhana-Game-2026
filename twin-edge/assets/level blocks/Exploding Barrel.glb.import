@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c6y2simj2lu44"
-path="res://.godot/imported/Exploding Barrel.glb-3221f166cc1cc0acfa14e083b86fbaa4.scn"
+path="res://.godot/imported/Exploding Barrel.glb-118d3189d1df5f0a295c4dbf0de2326e.scn"
 
 [deps]
 
-source_file="res://assets/level blocks/Exploding Barrel.glb"
-dest_files=["res://.godot/imported/Exploding Barrel.glb-3221f166cc1cc0acfa14e083b86fbaa4.scn"]
+source_file="res://Assets/level blocks/Exploding Barrel.glb"
+dest_files=["res://.godot/imported/Exploding Barrel.glb-118d3189d1df5f0a295c4dbf0de2326e.scn"]
 
 [params]
 

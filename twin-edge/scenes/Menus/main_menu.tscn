@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnyc1qucll737"]
 
-[ext_resource type="Script" uid="uid://raa8vx1jr4ci" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://cim7yypw6h0cn" path="res://download (1).png" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://raa8vx1jr4ci" path="res://Scripts/Menus/main_menu.gd" id="1_pha2q"]
+[ext_resource type="Texture2D" uid="uid://cim7yypw6h0cn" path="res://download (1).png" id="2_penys"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -41,7 +41,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06t4h")
+script = ExtResource("1_pha2q")
 
 [node name="Panel" type="Panel" parent="." unique_id=990618428]
 layout_mode = 1
@@ -139,7 +139,7 @@ offset_bottom = 328.0
 layout_mode = 0
 offset_right = 1157.0
 offset_bottom = 644.0
-texture = ExtResource("2_7vrkn")
+texture = ExtResource("2_penys")
 
 [node name="close_button" type="Button" parent="tutorial panel" unique_id=952653751]
 layout_mode = 0

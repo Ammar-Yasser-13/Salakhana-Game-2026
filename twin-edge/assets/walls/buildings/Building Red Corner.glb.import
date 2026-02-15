@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bfd7x3xnwgvau"
-path="res://.godot/imported/Building Red Corner.glb-3179d8dc3ab83db5f8485851d27e6bcb.scn"
+path="res://.godot/imported/Building Red Corner.glb-26b82b91bb8839954b8f1aea2478d661.scn"
 
 [deps]
 
-source_file="res://assets/walls/buildings/Building Red Corner.glb"
-dest_files=["res://.godot/imported/Building Red Corner.glb-3179d8dc3ab83db5f8485851d27e6bcb.scn"]
+source_file="res://Assets/walls/buildings/Building Red Corner.glb"
+dest_files=["res://.godot/imported/Building Red Corner.glb-26b82b91bb8839954b8f1aea2478d661.scn"]
 
 [params]
 

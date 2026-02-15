@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhaiig30k40ji"]
 
-[ext_resource type="Script" uid="uid://d1mbfhhnh1v4" path="res://level_select.gd" id="1_il3u1"]
+[ext_resource type="Script" uid="uid://d1mbfhhnh1v4" path="res://Scripts/Menus/level_select.gd" id="1_37jrt"]
 
 [node name="level_select" type="Control" unique_id=1835005655]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_il3u1")
+script = ExtResource("1_37jrt")
 
 [node name="Panel" type="Panel" parent="." unique_id=1214581023]
 layout_mode = 0

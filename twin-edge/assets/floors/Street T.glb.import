@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c10afg4wjmit4"
-path="res://.godot/imported/Street T.glb-825b516bc15d139232760132d660c210.scn"
+path="res://.godot/imported/Street T.glb-50b1114ccff243f149d59644e56d575c.scn"
 
 [deps]
 
-source_file="res://assets/floors/Street T.glb"
-dest_files=["res://.godot/imported/Street T.glb-825b516bc15d139232760132d660c210.scn"]
+source_file="res://Assets/floors/Street T.glb"
+dest_files=["res://.godot/imported/Street T.glb-50b1114ccff243f149d59644e56d575c.scn"]
 
 [params]
 

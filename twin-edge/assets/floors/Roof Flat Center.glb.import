@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bc1qvwiq41k5r"
-path="res://.godot/imported/Roof Flat Center.glb-117456a5c9d041eee496586565c44b4d.scn"
+path="res://.godot/imported/Roof Flat Center.glb-faf4823ba88321a9b181d0b3bd7938e5.scn"
 
 [deps]
 
-source_file="res://assets/floors/Roof Flat Center.glb"
-dest_files=["res://.godot/imported/Roof Flat Center.glb-117456a5c9d041eee496586565c44b4d.scn"]
+source_file="res://Assets/floors/Roof Flat Center.glb"
+dest_files=["res://.godot/imported/Roof Flat Center.glb-faf4823ba88321a9b181d0b3bd7938e5.scn"]
 
 [params]
 

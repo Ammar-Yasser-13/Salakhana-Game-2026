@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 @onready var tutorial_popup = $"tutorial panel"
 func _on_level_select_pressed() -> void:
-	get_tree().change_scene_to_file("res://level_select.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menus/level_select.tscn")
 
 
 func _on_toturial_pressed() -> void:

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cabi0ud17407o"
-path="res://.godot/imported/Astronaut.glb-a28edfc56f75fdfe97c5332b6482f423.scn"
+path="res://.godot/imported/Astronaut.glb-6c73b678c973904bf579096158799700.scn"
 
 [deps]
 
-source_file="res://assets/player/Astronaut.glb"
-dest_files=["res://.godot/imported/Astronaut.glb-a28edfc56f75fdfe97c5332b6482f423.scn"]
+source_file="res://Assets/player/Astronaut.glb"
+dest_files=["res://.godot/imported/Astronaut.glb-6c73b678c973904bf579096158799700.scn"]
 
 [params]
 
