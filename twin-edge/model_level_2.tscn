@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://btpn2o3r7j8m6"]
+
+[node name="model_level_2" type="Node3D" unique_id=7759660]
+
+[node name="boundaries" type="CSGCombiner3D" parent="." unique_id=1944622934]
+
+[node name="floor" type="CSGBox3D" parent="boundaries" unique_id=1746699916]
+size = Vector3(1000, 1, 1000)
+
+[node name="w6" type="CSGBox3D" parent="boundaries" unique_id=767496711]
+transform = Transform3D(-0.00022811953, 0.0023569667, 0.99999696, 0.99999464, 0.0032969085, 0.00022034814, -0.0032963778, 0.9999921, -0.0023577118, 0.8443004, 67.41468, 501.9655)
+use_collision = true
+collision_mask = 2
+size = Vector3(138.62877, 1, 1003.922)
+
+[node name="w7" type="CSGBox3D" parent="boundaries" unique_id=1797692742]
+transform = Transform3D(-0.00022040955, 1.8239954e-05, 0.99999976, 0.99999464, 0.0032969085, 0.00022034816, -0.0032969022, 0.99999475, -1.8972902e-05, 0.102409124, 68.54675, -499.1455)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.846, 1, 1000)
+
+[node name="w8" type="CSGBox3D" parent="boundaries" unique_id=874136580]
+transform = Transform3D(0.0032969022, -0.99999475, 1.892919e-05, 0.99999464, 0.0032969085, 0.00022034814, -0.00022040916, 1.8196246e-05, 0.9999999, -500.7759, 68.547325, 0.9016111)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.846, 1, 1005.2169)
+
+[node name="w9" type="CSGBox3D" parent="boundaries" unique_id=2117875232]
+transform = Transform3D(0.0032969022, -0.99999475, 1.892919e-05, 0.99999464, 0.0032969085, 0.00022034814, -0.00022040916, 1.8196246e-05, 0.9999999, 501.40237, 68.547035, -1.0026857)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.846, 1, 1002.58496)
+
+[node name="inner walls" type="CSGCombiner3D" parent="." unique_id=1992876961]
+
+[node name="w11" type="CSGBox3D" parent="inner walls" unique_id=659127961]
+transform = Transform3D(0.0001761413, 0.013402849, -0.99991024, 0.99999464, 0.0032969085, 0.0002203481, 0.0032995632, -0.9999048, -0.013402257, -131.89267, 68.537766, -3.0144603)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 205.63614)
+
+[node name="w15" type="CSGBox3D" parent="inner walls" unique_id=175536485]
+transform = Transform3D(0.0001761413, 0.013402849, -0.99991024, 0.99999464, 0.0032969085, 0.0002203481, 0.0032995632, -0.9999048, -0.013402257, 74.665344, 68.537766, 99.72656)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 205.63614)
+
+[node name="w12" type="CSGBox3D" parent="inner walls" unique_id=244079242]
+transform = Transform3D(0.0032983155, -0.99997205, -0.0067354105, 0.9999945, 0.0032969078, 0.00022034814, -0.00019813597, -0.0067360923, 0.99997723, -233.44801, 68.554985, -65.65311)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
+
+[node name="w13" type="CSGBox3D" parent="inner walls" unique_id=727450561]
+transform = Transform3D(0.0032969173, -0.99999464, -5.0935894e-05, 0.99999464, 0.0032969085, 0.0002203481, -0.00022017924, -5.160086e-05, 1.0000001, -28.321754, 68.53807, 99.560165)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 202.90474)
+
+[node name="w21" type="CSGBox3D" parent="inner walls" unique_id=1318591477]
+transform = Transform3D(-0.0032957268, 0.9999813, -0.0051502287, 0.9999946, 0.0032969082, 0.00022034804, 0.00023732404, -0.005149454, -0.99998677, -356.9559, 68.537766, -20.141365)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 205.63614)
+
+[node name="w23" type="CSGBox3D" parent="inner walls" unique_id=1298913880]
+transform = Transform3D(0.0002592916, -0.011816353, -0.99993, 0.99999446, 0.0032969078, 0.00022034829, 0.0032940716, -0.9999249, 0.011816978, -296.2121, 68.554985, -122.84125)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
+
+[node name="w24" type="CSGBox3D" parent="inner walls" unique_id=294357232]
+transform = Transform3D(0.00028130505, -0.0185, -0.9998289, 0.9999945, 0.0032969078, 0.0002203479, 0.0032922646, -0.99982333, 0.018500775, -429.91223, 68.53197, 84.802505)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 147.53683)
+
+[node name="w14" type="CSGBox3D" parent="inner walls" unique_id=1414559812]
+transform = Transform3D(-0.00024215512, 0.0066154604, 0.99997807, 0.99999446, 0.0032969075, 0.00022034813, -0.003295376, 0.9999728, -0.0066162115, -89.598854, 68.554985, 200.57706)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
+
+[node name="w16" type="CSGBox3D" parent="inner walls" unique_id=2143325646]
+transform = Transform3D(-0.003299898, 0.999877, 0.015339421, 0.99999464, 0.0032969085, 0.00022034813, 0.00016974845, 0.015340001, -0.9998824, 280.69534, 68.537766, -211.34602)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 205.63614)
+
+[node name="w17" type="CSGBox3D" parent="inner walls" unique_id=351173015]
+transform = Transform3D(-0.003299898, 0.999877, 0.015339421, 0.99999464, 0.0032969085, 0.00022034813, 0.00016974845, 0.015340001, -0.9998824, 177.55435, 68.537766, -4.987442)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 205.63614)
+
+[node name="w18" type="CSGBox3D" parent="inner walls" unique_id=1482190934]
+transform = Transform3D(0.00019174564, 0.008673385, -0.99996233, 0.9999944, 0.0032969078, 0.00022034813, 0.003298693, -0.9999571, -0.008672713, 390.58426, 68.54462, -312.37173)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 219.31561)
+
+[node name="w19" type="CSGBox3D" parent="inner walls" unique_id=1541795745]
+transform = Transform3D(0.0002137914, 0.0019889502, -0.9999981, 0.9999946, 0.0032969082, 0.00022034805, 0.003297338, -0.9999927, -0.001988296, 177.92026, 68.53807, -107.974014)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 202.90474)
+
+[node name="w20" type="CSGBox3D" parent="inner walls" unique_id=629688921]
+transform = Transform3D(0.0032958393, -0.9999838, 0.0046788827, 0.99999446, 0.0032969075, 0.00022034814, -0.0002357701, 0.004678141, 0.99998903, 77.02228, 68.554985, -169.4467)
+use_collision = true
+collision_mask = 2
+size = Vector3(137.84589, 1, 125.204796)
