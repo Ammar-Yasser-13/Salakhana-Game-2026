@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://owxam4lehsjp"]
+
+[ext_resource type="PackedScene" uid="uid://ddev24yo5enx6" path="res://assets/walls/buildings/Pizza Corner.glb" id="1_ns88v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ns88v"]
+size = Vector3(1.3052368, 3.54953, 1.5273438)
+
+[node name="Root Scene" unique_id=1306437937 instance=ExtResource("1_ns88v")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2000892908]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=188070336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010467529, 1.784256, 0.11279297)
+shape = SubResource("BoxShape3D_ns88v")

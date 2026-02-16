@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://k8qxu4nst5cu"]
+
+[ext_resource type="PackedScene" uid="uid://bfd7x3xnwgvau" path="res://assets/walls/buildings/Building Red Corner.glb" id="1_sy3tu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pfk7m"]
+size = Vector3(1.3381348, 3.4940643, 1.2533417)
+
+[node name="Root Scene" unique_id=511168353 instance=ExtResource("1_sy3tu")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1627476669]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1961853194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013061523, 1.764534, 0.0015792847)
+shape = SubResource("BoxShape3D_pfk7m")
