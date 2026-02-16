@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://0tfx3scf238"]
+
+[ext_resource type="PackedScene" uid="uid://cux7lumeb6gy4" path="res://assets/walls/new for level2/Fence Gate.glb" id="1_7di7f"]
+
+[node name="Root Scene" unique_id=214503569 instance=ExtResource("1_7di7f")]
+
+[node name="fence_gate_left" parent="RootNode/fence_gate" parent_id_path=PackedInt32Array(1222537184) index="0" unique_id=978869465]
+transform = Transform3D(0.61340344, 1.2866983e-07, 0.7897697, -1.2866983e-07, 1, -6.298457e-08, -0.7897697, -6.2984576e-08, 0.61340344, 0.015, 0, 0)
+
+[node name="fence_gate_right" parent="RootNode/fence_gate" parent_id_path=PackedInt32Array(1222537184) index="1" unique_id=665008482]
+transform = Transform3D(0.2487575, -1.577994e-07, -0.9685658, 1.577994e-07, 1, -1.2239296e-07, 0.9685658, -1.2239295e-07, 0.2487575, -0.015, 0, 0)

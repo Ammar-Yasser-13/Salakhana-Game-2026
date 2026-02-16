@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://carrur17r25c4"]
+
+[ext_resource type="PackedScene" uid="uid://72enu5x7aume" path="res://assets/walls/Fence Piece.glb" id="1_pe24c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pe24c"]
+size = Vector3(1.1633911, 0.8260956, 0.34179688)
+
+[node name="FencePiece" type="StaticBody3D" unique_id=1523798319]
+
+[node name="Root Scene" parent="." unique_id=269835426 instance=ExtResource("1_pe24c")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=51467866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102874756, 0.39550018, 0)
+shape = SubResource("BoxShape3D_pe24c")

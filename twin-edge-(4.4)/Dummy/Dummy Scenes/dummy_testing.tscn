@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cj7e4vetiy6st"]
+
+[ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="2_2m1u3"]
+[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="3_6wf7h"]
+[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="3_tk7nb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qgi1x"]
+sky_top_color = Color(0.63844, 0.378736, 3.85046e-07, 1)
+sky_horizon_color = Color(0.692558, 0.619882, 0.516198, 1)
+ground_horizon_color = Color(0.692558, 0.619882, 0.516198, 1)
+
+[sub_resource type="Sky" id="Sky_2m1u3"]
+sky_material = SubResource("ProceduralSkyMaterial_qgi1x")
+
+[sub_resource type="Environment" id="Environment_tk7nb"]
+background_mode = 2
+sky = SubResource("Sky_2m1u3")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_tk7nb"]
+
+[node name="dummy testing" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tk7nb")
+
+[node name="Player" parent="." instance=ExtResource("3_6wf7h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3.13079, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.775447, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_tk7nb")
+debug_color = Color(0.789849, 0.368722, 0.580544, 0.419608)
+
+[node name="bullets" parent="." instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156626, 0.594744, -3.3023)
+
+[node name="Medkit" parent="." instance=ExtResource("3_tk7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696114, 0.810491, -5.17436)

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://n76rvujk02oh"]
+
+[ext_resource type="PackedScene" uid="uid://c7wp2joxblene" path="res://assets/walls/new for level2/Iron Fence.glb" id="1_p6f82"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suj27"]
+size = Vector3(4.0507813, 2.0897522, 0.33346558)
+
+[node name="IronFence" type="StaticBody3D" unique_id=2102165232]
+
+[node name="Root Scene" parent="." unique_id=2130227644 instance=ExtResource("1_p6f82")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1203216573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96842957, 0.029006958)
+shape = SubResource("BoxShape3D_suj27")

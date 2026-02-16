@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c1wbq6h1s31ec"]
+
+[ext_resource type="PackedScene" uid="uid://c2yhhn5k2j03s" path="res://Assets/pick ups/ammo/Bullets Pickup.glb" id="1_1nfwd"]
+[ext_resource type="Script" uid="uid://c40sw2p812wca" path="res://Scripts/pick ups/bullets.gd" id="1_ip2rd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ip2rd"]
+radius = 0.58898824
+
+[node name="bullets" type="Area3D" unique_id=1877117906]
+script = ExtResource("1_ip2rd")
+
+[node name="Root Scene" parent="." unique_id=1024756486 instance=ExtResource("1_1nfwd")]
+transform = Transform3D(0.52032334, 0.37595388, 0, -0.40132537, 0.48742887, 0, 0, 0, 0.7179817, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=581065003]
+shape = SubResource("SphereShape3D_ip2rd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

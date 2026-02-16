@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxwg7m0ajuw82"]
+
+[ext_resource type="PackedScene" uid="uid://drkbmskjjnxm7" path="res://Assets/pick ups/Medkit/Pickup Health.glb" id="1_ekv0u"]
+[ext_resource type="Script" uid="uid://bxfesv3csv8d0" path="res://Scripts/pick ups/medkit.gd" id="1_tqy3h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tqy3h"]
+radius = 0.58898824
+
+[node name="Medkit" type="Area3D" unique_id=1030489201]
+script = ExtResource("1_tqy3h")
+
+[node name="Root Scene" parent="." unique_id=2075949668 instance=ExtResource("1_ekv0u")]
+transform = Transform3D(0.43489146, 0, 0, 0, 0.43489146, 0, 0, 0, 0.46318644, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1060059378]
+shape = SubResource("SphereShape3D_tqy3h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
