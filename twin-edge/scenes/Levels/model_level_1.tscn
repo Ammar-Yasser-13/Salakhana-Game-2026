@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://carrur17r25c4" path="res://scenes/assets_with_collision/fence_piece.tscn" id="3_7xgyx"]
 [ext_resource type="PackedScene" uid="uid://bcava2bwtrm28" path="res://scenes/assets_with_collision/street_turn.tscn" id="4_7xgyx"]
 [ext_resource type="PackedScene" uid="uid://ds2m8y7jwbfhd" path="res://scenes/assets_with_collision/floor_tile.tscn" id="5_nfcou"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="6_1usep"]
 [ext_resource type="PackedScene" uid="uid://dljswqdhq1d6h" path="res://scenes/assets_with_collision/street_straight.tscn" id="6_bfgjj"]
 [ext_resource type="PackedScene" uid="uid://blstdny5pho1r" path="res://assets/walls/buildings/Building Red.glb" id="7_funs6"]
 [ext_resource type="PackedScene" uid="uid://7m4u6g5dgn2v" path="res://assets/walls/buildings/Gb Blank.glb" id="8_5phhs"]
@@ -12,6 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://ctpm7jaolorae" path="res://assets/walls/buildings/Building Green.glb" id="10_48xr1"]
 [ext_resource type="PackedScene" uid="uid://bfd7x3xnwgvau" path="res://assets/walls/buildings/Building Red Corner.glb" id="11_skd0t"]
 [ext_resource type="PackedScene" uid="uid://3vhu75my1q5f" path="res://assets/walls/buildings/RB Blank.glb" id="12_6845v"]
+[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="12_funs6"]
+[ext_resource type="PackedScene" uid="uid://p3mrx3w53pg2" path="res://scenes/assets_with_collision/buildings/b1.tscn" id="13_5phhs"]
+[ext_resource type="PackedScene" uid="uid://clofeajsg2y7w" path="res://scenes/assets_with_collision/buildings/b2.tscn" id="14_xkuf8"]
+[ext_resource type="PackedScene" uid="uid://difein031avga" path="res://scenes/assets_with_collision/buildings/b3.tscn" id="15_48xr1"]
+[ext_resource type="PackedScene" uid="uid://0a2sqq70gnh7" path="res://scenes/assets_with_collision/buildings/b4.tscn" id="16_skd0t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffnre"]
 sky_horizon_color = Color(0.8296772, 0.83433414, 0.8441853, 1)
@@ -496,19 +500,34 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -428.4262, -6.2861176, 
 [node name="FloorTile25" parent="chFloors" unique_id=545025567 instance=ExtResource("5_nfcou")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -428.4262, -6.2861176, 429.59122)
 
-[node name="player" parent="." unique_id=1089465899 instance=ExtResource("6_1usep")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.21914, 24.702475, 130.0121)
+[node name="inner walls2" type="CSGCombiner3D" parent="." unique_id=54277599]
+transform = Transform3D(-0.9999972, 0, 0.0023735687, 0, 1, 0, -0.0023735687, 0, -0.9999972, -150.27786, 0, -12.689606)
 
-[node name="inner walls" type="CSGCombiner3D" parent="." unique_id=1803551065]
-
-[node name="Root Scene" parent="inner walls" unique_id=582521188 instance=ExtResource("7_funs6")]
-transform = Transform3D(62.825, 0, 0, 0, 62.825, 0, 0, 0, 62.825, -208.90257, -0.35861206, 109.87962)
-
-[node name="Root Scene6" parent="inner walls" unique_id=618350061 instance=ExtResource("7_funs6")]
+[node name="Root Scene6" parent="inner walls2" unique_id=1106094885 instance=ExtResource("7_funs6")]
 transform = Transform3D(-0.58991635, 0, 55.316853, 0, 55.32, 0, -55.316853, 0, -0.58991635, 156.39012, 1.7143021, 204.06805)
 
-[node name="Root Scene2" parent="inner walls" unique_id=1483005747 instance=ExtResource("8_5phhs")]
+[node name="Root Scene2" parent="inner walls2" unique_id=1473545923 instance=ExtResource("8_5phhs")]
 transform = Transform3D(54.965, 0, 0, 0, 54.965, 0, 0, 0, 54.965, -75.36935, 2.4533157, 119.6036)
+
+[node name="Root Scene3" parent="inner walls2" unique_id=1446019859 instance=ExtResource("9_xkuf8")]
+transform = Transform3D(0.013096109, 0, -49.999996, 0, 50, 0, 49.999996, 0, 0.013096109, -318.73596, 1.8610535, 102.19922)
+
+[node name="Root Scene4" parent="inner walls2" unique_id=871319378 instance=ExtResource("10_48xr1")]
+transform = Transform3D(55.065, 0, 0, 0, 55.065, 0, 0, 0, 55.065, 60.58338, 2.323204, 106.35687)
+
+[node name="Root Scene9" parent="inner walls2" unique_id=1867964060 instance=ExtResource("8_5phhs")]
+transform = Transform3D(0.9372076, 0, -54.957016, 0, 54.965015, 0, 54.957016, 0, 0.9372076, -325.10614, 2.926857, 194.13675)
+
+[node name="Root Scene5" parent="inner walls2" unique_id=683863348 instance=ExtResource("11_skd0t")]
+transform = Transform3D(0.6905681, 0, 54.875656, 0, 54.88, 0, -54.875656, 0, 0.6905681, 158.03976, 3.2229486, 109.70865)
+
+[node name="Root Scene11" parent="inner walls2" unique_id=1711613447 instance=ExtResource("11_skd0t")]
+transform = Transform3D(54.909973, 0, 0.07476433, 0, 54.91, 0, -0.07476433, 0, 54.909973, -313.251, 3.2229486, 294.7416)
+
+[node name="Root Scene10" parent="inner walls2" unique_id=361395433 instance=ExtResource("12_6845v")]
+transform = Transform3D(39.989376, 0, -0.9228487, 0, 40.000004, 0, 0.9228487, 0, 39.989376, -229.61731, 7.063156, 306.47037)
+
+[node name="inner walls" type="CSGCombiner3D" parent="." unique_id=1803551065]
 
 [node name="Root Scene3" parent="inner walls" unique_id=1668457929 instance=ExtResource("9_xkuf8")]
 transform = Transform3D(1.1666528, 0, -49.98638, 0, 49.999992, 0, 49.98638, 0, 1.1666528, -321.51593, 1.8610535, 116.727646)
@@ -516,10 +535,10 @@ transform = Transform3D(1.1666528, 0, -49.98638, 0, 49.999992, 0, 49.98638, 0, 1
 [node name="Root Scene4" parent="inner walls" unique_id=1183564487 instance=ExtResource("10_48xr1")]
 transform = Transform3D(55.065, 0, 0, 0, 55.065, 0, 0, 0, 55.065, 60.58338, 2.323204, 106.35687)
 
-[node name="Root Scene7" parent="inner walls" unique_id=1724665616 instance=ExtResource("8_5phhs")]
+[node name="Root Scene7" parent="inner walls" unique_id=1817847236 instance=ExtResource("8_5phhs")]
 transform = Transform3D(0.047005057, 0, 54.964977, 0, 54.965004, 0, -54.964977, 0, 0.047005057, 167.48883, 2.926857, 344.35358)
 
-[node name="Root Scene9" parent="inner walls" unique_id=817028419 instance=ExtResource("8_5phhs")]
+[node name="Root Scene9" parent="inner walls" unique_id=1642955923 instance=ExtResource("8_5phhs")]
 transform = Transform3D(2.2048829, 0, -54.920757, 0, 54.96502, 0, 54.920757, 0, 2.2048829, -325.76324, 2.926857, 208.78764)
 
 [node name="Root Scene5" parent="inner walls" unique_id=1005404936 instance=ExtResource("11_skd0t")]
@@ -531,32 +550,19 @@ transform = Transform3D(54.89361, 0, 1.3415833, 0, 54.91, 0, -1.3415833, 0, 54.8
 [node name="Root Scene10" parent="inner walls" unique_id=1320135179 instance=ExtResource("12_6845v")]
 transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -228.03859, 7.063156, 318.19095)
 
-[node name="inner walls2" type="CSGCombiner3D" parent="." unique_id=54277599]
-transform = Transform3D(-0.9999972, 0, 0.0023735687, 0, 1, 0, -0.0023735687, 0, -0.9999972, -150.27786, 0, -12.689606)
+[node name="Player" parent="inner walls" unique_id=279958562 instance=ExtResource("12_funs6")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -76.786224, 34.266003, 228.89185)
 
-[node name="Root Scene" parent="inner walls2" unique_id=306620128 instance=ExtResource("7_funs6")]
-transform = Transform3D(62.825, 0, 0, 0, 62.825, 0, 0, 0, 62.825, -208.90257, -0.35861206, 109.87962)
+[node name="buildings" type="Node3D" parent="." unique_id=2054291790]
 
-[node name="Root Scene6" parent="inner walls2" unique_id=1106094885 instance=ExtResource("7_funs6")]
-transform = Transform3D(-0.58991635, 0, 55.316853, 0, 55.32, 0, -55.316853, 0, -0.58991635, 156.39012, 1.7143021, 204.06805)
+[node name="b1" parent="buildings" unique_id=11529686 instance=ExtResource("13_5phhs")]
+transform = Transform3D(62, 0, 0, 0, 62, 0, 0, 0, 62, -208.223, -0.359, 109.88)
 
-[node name="Root Scene2" parent="inner walls2" unique_id=1437558168 instance=ExtResource("8_5phhs")]
+[node name="b2" parent="buildings" unique_id=1245644891 instance=ExtResource("14_xkuf8")]
+transform = Transform3D(-62.799824, 0, 0.14906244, 0, 62.8, 0, -0.14906244, 0, -62.799824, 58.884903, -0.35861206, -122.07307)
+
+[node name="b3" parent="buildings" unique_id=747567991 instance=ExtResource("15_48xr1")]
+transform = Transform3D(-0.58991635, 0, 55.31685, 0, 55.32, 0, -55.31685, 0, -0.58991635, 156.39012, 1.7143021, 204.06805)
+
+[node name="b4" parent="buildings" unique_id=1082653175 instance=ExtResource("16_skd0t")]
 transform = Transform3D(54.965, 0, 0, 0, 54.965, 0, 0, 0, 54.965, -75.36935, 2.4533157, 119.6036)
-
-[node name="Root Scene3" parent="inner walls2" unique_id=1446019859 instance=ExtResource("9_xkuf8")]
-transform = Transform3D(0.013096109, 0, -49.999996, 0, 50, 0, 49.999996, 0, 0.013096109, -318.73596, 1.8610535, 102.19922)
-
-[node name="Root Scene4" parent="inner walls2" unique_id=871319378 instance=ExtResource("10_48xr1")]
-transform = Transform3D(55.065, 0, 0, 0, 55.065, 0, 0, 0, 55.065, 60.58338, 2.323204, 106.35687)
-
-[node name="Root Scene9" parent="inner walls2" unique_id=1445038122 instance=ExtResource("8_5phhs")]
-transform = Transform3D(0.9372076, 0, -54.957016, 0, 54.965015, 0, 54.957016, 0, 0.9372076, -325.10614, 2.926857, 194.13675)
-
-[node name="Root Scene5" parent="inner walls2" unique_id=683863348 instance=ExtResource("11_skd0t")]
-transform = Transform3D(0.6905681, 0, 54.875656, 0, 54.88, 0, -54.875656, 0, 0.6905681, 158.03976, 3.2229486, 109.70865)
-
-[node name="Root Scene11" parent="inner walls2" unique_id=1711613447 instance=ExtResource("11_skd0t")]
-transform = Transform3D(54.909973, 0, 0.07476433, 0, 54.91, 0, -0.07476433, 0, 54.909973, -313.251, 3.2229486, 294.7416)
-
-[node name="Root Scene10" parent="inner walls2" unique_id=361395433 instance=ExtResource("12_6845v")]
-transform = Transform3D(39.989376, 0, -0.9228487, 0, 40.000004, 0, 0.9228487, 0, 39.989376, -229.61731, 7.063156, 306.47037)
