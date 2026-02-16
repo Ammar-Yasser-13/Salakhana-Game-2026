@@ -4,7 +4,8 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $"Head/Player Camera"
 
 #========================== Player Attributes ===============================
-@export var CURRENT_SPEED = 5.0
+@export var CURRENT_SPEED = 40.0
+#5.0
 @export var NORMAL_SPEED = 5.0
 @export var SPRINT_SPEED_ADDITION = 2.0
 @export var JUMP_VELOCITY = 4.5

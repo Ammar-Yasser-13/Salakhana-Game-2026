@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqgbb18weql0m"
-path.s3tc="res://.godot/imported/Street T_Zombie_Atlas.png-25e3869665c3cd352e9ab2bc0f9686ee.s3tc.ctex"
+uid="uid://1f4ivdfu4fys"
+path.s3tc="res://.godot/imported/Gate_Gate_BaseColor.png-50d3596f2c9e246926accb13f3a53c3c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "ced372f43f5a7aa2b059dcee60d36813"
+}
 
 [deps]
 
-source_file="res://assets/floors/Street T_Zombie_Atlas.png"
-dest_files=["res://.godot/imported/Street T_Zombie_Atlas.png-25e3869665c3cd352e9ab2bc0f9686ee.s3tc.ctex"]
+source_file="res://assets/walls/new for level2/Gate_Gate_BaseColor.png"
+dest_files=["res://.godot/imported/Gate_Gate_BaseColor.png-50d3596f2c9e246926accb13f3a53c3c.s3tc.ctex"]
 
 [params]
 
