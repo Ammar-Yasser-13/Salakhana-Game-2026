@@ -436,10 +436,10 @@ transform = Transform3D(0.058466434, 0, 49.999966, 0, 50, 0, -49.999966, 0, 0.05
 [node name="inner walls2" type="Node3D" parent="." unique_id=988703234]
 
 [node name="IronFence" parent="inner walls2" unique_id=2102165232 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 277.20297, -1.1634789, -107.86743)
+transform = Transform3D(59.77326, 0, 0, 0, 50.88, 0, 0, 0, 50.88, 292.09836, -1.1634789, -107.86743)
 
 [node name="IronFence2" parent="inner walls2" unique_id=249309316 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -289.2531, -1.1634789, -128.00235)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -289.2531, -1.1634789, -205.45618)
 
 [node name="IronFence3" parent="inner walls2" unique_id=820099782 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -98.50682, -1.1634789, -13.34314)
@@ -449,19 +449,19 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -130.02693, -1.1634789, 19
 visible = false
 
 [node name="IronFence5" parent="inner walls2" unique_id=1466236847 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(-0.090755165, 0, 49.999928, 0, 50.000015, 0, -49.999928, 0, -0.090755165, 0.287735, -1.1634789, 18.5316)
+transform = Transform3D(-0.051537067, 0, 39.349174, 0, 49.831303, 0, -28.393103, 0, -0.07142372, 0.287735, -1.1634789, 39.937225)
 
 [node name="IronFence6" parent="inner walls2" unique_id=968907724 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(0.013964534, 0, 50.000004, 0, 50.000008, 0, -50.000004, 0, 0.013964534, -189.02719, -1.1634789, -108.477325)
 
 [node name="IronFence7" parent="inner walls2" unique_id=2036154858 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(0.34557438, 0, 49.99881, 0, 50.000008, 0, -49.99881, 0, 0.34557438, -392.63733, -1.1634789, -40.63465)
+transform = Transform3D(0.34557438, 0, 49.99881, 0, 50.000008, 0, -49.99881, 0, 0.34557438, -392.63733, -1.1634789, -106.433784)
 
 [node name="IronFence8" parent="inner walls2" unique_id=1490182841 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -497.18298, -1.1634789, 53.07451)
+transform = Transform3D(19.537071, 0, 0, 0, 50, 0, 0, 0, 50, -433.3446, -1.1634789, -7.0876923)
 
 [node name="IronFence9" parent="inner walls2" unique_id=1754845964 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(0.33335745, 0, 49.9989, 0, 50.000008, 0, -49.9989, 0, 0.33335745, 180.14557, -1.1634789, -5.392334)
+transform = Transform3D(0.33335745, 0, 49.9989, 0, 50.000008, 0, -49.9989, 0, 0.33335745, 172.2692, 0.4623909, -9.863281)
 
 [node name="IronFence10" parent="inner walls2" unique_id=1430804504 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(1.1143022, 0, 49.987583, 0, 50.000008, 0, -49.987583, 0, 1.1143022, 79.44895, -1.1634789, -205.83769)
