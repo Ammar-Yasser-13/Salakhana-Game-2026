@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj7e4vetiy6st"]
+[gd_scene format=3 uid="uid://cj7e4vetiy6st"]
 
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="2_2m1u3"]
 [ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="3_6wf7h"]
@@ -20,23 +20,23 @@ glow_enabled = true
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_tk7nb"]
 
-[node name="dummy testing" type="Node3D"]
+[node name="dummy testing" type="Node3D" unique_id=1267841132]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2001099356]
 environment = SubResource("Environment_tk7nb")
 
-[node name="Player" parent="." instance=ExtResource("3_6wf7h")]
+[node name="Player" parent="." unique_id=1623967858 instance=ExtResource("3_6wf7h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3.13079, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1566083286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.775447, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1369113078]
 shape = SubResource("WorldBoundaryShape3D_tk7nb")
 debug_color = Color(0.789849, 0.368722, 0.580544, 0.419608)
 
-[node name="bullets" parent="." instance=ExtResource("2_2m1u3")]
+[node name="bullets" parent="." unique_id=688092986 instance=ExtResource("2_2m1u3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156626, 0.594744, -3.3023)
 
-[node name="Medkit" parent="." instance=ExtResource("3_tk7nb")]
+[node name="Medkit" parent="." unique_id=357753018 instance=ExtResource("3_tk7nb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696114, 0.810491, -5.17436)

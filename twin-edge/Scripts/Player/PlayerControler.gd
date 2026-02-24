@@ -2,14 +2,20 @@ extends CharacterBody3D
 #============================= Node References ==============================
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $"Head/Player Camera"
+@onready var collider: CollisionShape3D = $"Player Collider"
+@onready var timer: Timer = $"Dash Timer"
 
 #========================== Player Attributes ===============================
-@export var CURRENT_SPEED = 40.0
-#5.0
-@export var NORMAL_SPEED = 5.0
-@export var SPRINT_SPEED_ADDITION = 2.0
+@export var SPEED = 5.0
+@export var Crouch_Multiplier = 1.0 #(0.5)
+@export var Dash_Multiplier = 1.0 #(3.0)
+@export var Sprint_Multiplier = 1.0 #(1.5)
 @export var JUMP_VELOCITY = 4.5
-@export var Sensitivity = 0.02
+@export var Mouse_Sensitivity = 0.02
+@export var Controller_Sensitivity = 0.05
+#===========================================================================
+var Controller_Direction = null
+var Is_Crouched = false
 
 
 func _ready() -> void:
@@ -17,21 +23,22 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Aiming
+	head.rotation.x = clamp(head.rotation.x,deg_to_rad(-60),deg_to_rad(90))
+	# Mouse
 	if event is InputEventMouseMotion:
 		# Handles rotation, Rotation on x axis is for the head object which will be responsible for aiming
 		# Rotation on the y Axis is for the whole player so it moves in the right direction
-		rotate_y(-event.relative.x * Sensitivity)
-		head.rotate_x(-event.relative.y * Sensitivity )
-		head.rotation.x = clamp(head.rotation.x,deg_to_rad(-60),deg_to_rad(90))
-
+		rotate_y(-event.relative.x * Mouse_Sensitivity)
+		head.rotate_x(-event.relative.y * Mouse_Sensitivity )
+	# Controller aiming is in _physics_process
 	#====================================================================================
 
 	# Sprinting
 	if Input.is_action_pressed("Sprint_Player"):
-		CURRENT_SPEED = NORMAL_SPEED + SPRINT_SPEED_ADDITION
+		Sprint_Multiplier = 1.5
 		camera.fov = 90
 	if Input.is_action_just_released("Sprint_Player"):
-		CURRENT_SPEED = NORMAL_SPEED
+		Sprint_Multiplier = 1.0
 		camera.fov = 75
 	
 	#====================================================================================
@@ -39,6 +46,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Shoot_Player"):
 		#this is a place holder until shooting is implemented
 		print("Player is Shooting")
+	#===================================================================================
+	#Crouching
+	if Input.is_action_just_pressed("Crouch_Player"):
+		Change_Crouch_State()
 
 func _physics_process(delta: float) -> void:
 	
@@ -55,10 +66,35 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("Left_Player","Right_Player","Forward_Player","Backward_Player")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * CURRENT_SPEED
-		velocity.z = direction.z * CURRENT_SPEED
+		velocity.x = direction.x * SPEED*Dash_Multiplier*Sprint_Multiplier*Crouch_Multiplier
+		velocity.z = direction.z * SPEED*Dash_Multiplier*Sprint_Multiplier*Crouch_Multiplier
 	else:
 		velocity.x =0
 		velocity.z =0
+	# Aiming (Controller)
+	# Added controller aiming here because unhandeled input handles input CHANGE not streams
+	Controller_Direction = Input.get_vector("Camera_Left_Player","Camera_Right_Player","Camera_Down_Player","Camera_Up_Player")
+	if Controller_Direction:
+		head.rotate_x(Controller_Direction.y*Controller_Sensitivity)
+		rotate_y(-Controller_Direction.x*Controller_Sensitivity)
 
 	move_and_slide()
+	print(velocity.length())
+
+func Change_Crouch_State() -> void:
+	Is_Crouched = !Is_Crouched
+	match Is_Crouched:
+		true :
+			collider.shape.height = 1
+			Crouch_Multiplier = 0.5
+			if velocity.length() > SPEED:
+				Dash_Multiplier = 3.0
+				timer.start(0.0)
+		false :
+			scale.y = 1
+			collider.shape.height = 2
+			Crouch_Multiplier = 1
+
+
+func _on_dash_timer_timeout() -> void:
+	Dash_Multiplier =1
