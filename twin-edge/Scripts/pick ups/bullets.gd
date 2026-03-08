@@ -13,5 +13,6 @@ func _process(_delta: float) -> void:
 	
 
 func _on_body_entered(_body: Node3D) -> void:
+	Game_Manger.Current_bullets += 3
 	print("bullets +3")
 	queue_free()

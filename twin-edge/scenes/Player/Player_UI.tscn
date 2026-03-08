@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0tbffm4hqa2v"]
+[gd_scene format=3 uid="uid://d0tbffm4hqa2v"]
 
-[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://assets/player/UI/Health.png" id="1_d1abm"]
-[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://assets/player/UI/Enemy skull.png" id="2_gg8lv"]
-[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://assets/player/UI/Bullet.png" id="3_cn2k5"]
-[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
+[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://Assets/player/UI/Health.png" id="1_d1abm"]
+[ext_resource type="Script" uid="uid://ckbos56rmm6lv" path="res://Scripts/Player/player_ui.gd" id="1_skwaw"]
+[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://Assets/player/UI/Enemy skull.png" id="2_gg8lv"]
+[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://Assets/player/UI/Bullet.png" id="3_cn2k5"]
+[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://Assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg8lv"]
 atlas = ExtResource("1_d1abm")
@@ -50,9 +51,10 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_skwaw"]
 
-[node name="Player_UI" type="CanvasLayer"]
+[node name="Player_UI" type="CanvasLayer" unique_id=1254276724]
+script = ExtResource("1_skwaw")
 
-[node name="Health bar" type="AnimatedSprite2D" parent="."]
+[node name="Health bar" type="AnimatedSprite2D" parent="." unique_id=912505038]
 texture_filter = 1
 position = Vector2(48, 43)
 scale = Vector2(5, 5)
@@ -60,66 +62,67 @@ sprite_frames = SubResource("SpriteFrames_ojbky")
 frame = 4
 frame_progress = 1.0
 
-[node name="Enemy symbol" type="Sprite2D" parent="."]
+[node name="Enemy symbol" type="Sprite2D" parent="." unique_id=1874249761]
 texture_filter = 1
 position = Vector2(1016, 40)
 scale = Vector2(5, 5)
 texture = ExtResource("2_gg8lv")
 
-[node name="Bullet1" type="Sprite2D" parent="."]
+[node name="Bullet1" type="Sprite2D" parent="." unique_id=552828107]
 texture_filter = 1
 position = Vector2(128, 27)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet2" type="Sprite2D" parent="."]
+[node name="Bullet2" type="Sprite2D" parent="." unique_id=308739601]
 texture_filter = 1
 position = Vector2(128, 57)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet3" type="Sprite2D" parent="."]
+[node name="Bullet3" type="Sprite2D" parent="." unique_id=1662477941]
 texture_filter = 1
 position = Vector2(179, 27)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet4" type="Sprite2D" parent="."]
+[node name="Bullet4" type="Sprite2D" parent="." unique_id=345471938]
 texture_filter = 1
 position = Vector2(179, 57)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet5" type="Sprite2D" parent="."]
+[node name="Bullet5" type="Sprite2D" parent="." unique_id=1750437939]
 texture_filter = 1
 position = Vector2(230, 27)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet6" type="Sprite2D" parent="."]
+[node name="Bullet6" type="Sprite2D" parent="." unique_id=1827252638]
 texture_filter = 1
 position = Vector2(230, 57)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Enemy counter" type="Label" parent="."]
+[node name="Enemy counter" type="Label" parent="." unique_id=1839579663]
 texture_filter = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -88.0
-offset_top = 29.0
-offset_right = -76.25
-offset_bottom = 45.0
+anchors_preset = -1
+anchor_left = 0.9236111
+anchor_top = 0.044753086
+anchor_right = 0.94911027
+anchor_bottom = 0.106481485
+offset_right = -17.625
+offset_bottom = -24.0
 grow_horizontal = 0
 scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 8
 theme_override_fonts/font = ExtResource("4_lhbyj")
 text = "X"
 label_settings = SubResource("LabelSettings_skwaw")
+metadata/_edit_use_anchors_ = true

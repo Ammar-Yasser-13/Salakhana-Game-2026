@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c7wp2joxblene"
-path="res://.godot/imported/Iron Fence.glb-519c41133f229de942cbb51cfbee94fd.scn"
+path="res://.godot/imported/Iron Fence.glb-794c0112c221e35f31858aaed7c8ca84.scn"
 
 [deps]
 
-source_file="res://assets/walls/new for level2/Iron Fence.glb"
-dest_files=["res://.godot/imported/Iron Fence.glb-519c41133f229de942cbb51cfbee94fd.scn"]
+source_file="res://Assets/walls/new for level2/Iron Fence.glb"
+dest_files=["res://.godot/imported/Iron Fence.glb-794c0112c221e35f31858aaed7c8ca84.scn"]
 
 [params]
 

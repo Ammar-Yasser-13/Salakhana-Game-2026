@@ -13,5 +13,6 @@ func _process(_delta: float) -> void:
 
 
 func _on_body_entered(_body: Node3D) -> void:
+	Game_Manger.Current_health += 1
 	print("+1 HP")
 	queue_free()

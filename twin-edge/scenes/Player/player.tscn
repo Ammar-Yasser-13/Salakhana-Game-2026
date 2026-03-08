@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuynwls3xkrxt"]
 
 [ext_resource type="Script" uid="uid://dsvi1u26rew5v" path="res://Scripts/Player/PlayerControler.gd" id="1_uvnfx"]
+[ext_resource type="PackedScene" uid="uid://d0tbffm4hqa2v" path="res://Scenes/Player/Player_UI.tscn" id="2_a3d8c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -19,6 +20,8 @@ mesh = SubResource("CapsuleMesh_i3pqv")
 
 [node name="Player Camera" type="Camera3D" parent="Head" unique_id=1913317922]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Player_UI" parent="Head/Player Camera" unique_id=1566876362 instance=ExtResource("2_a3d8c")]
 
 [node name="Dash Timer" type="Timer" parent="." unique_id=353935977]
 wait_time = 3.0

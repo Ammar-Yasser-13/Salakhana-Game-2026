@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctpm7jaolorae"
-path="res://.godot/imported/Building Green.glb-efef466fa69022880f7e33eb23664d19.scn"
+path="res://.godot/imported/Building Green.glb-a576f71c4175c5f4c78f61a90b5cf025.scn"
 
 [deps]
 
-source_file="res://assets/walls/buildings/Building Green.glb"
-dest_files=["res://.godot/imported/Building Green.glb-efef466fa69022880f7e33eb23664d19.scn"]
+source_file="res://Assets/walls/buildings/Building Green.glb"
+dest_files=["res://.godot/imported/Building Green.glb-a576f71c4175c5f4c78f61a90b5cf025.scn"]
 
 [params]
 

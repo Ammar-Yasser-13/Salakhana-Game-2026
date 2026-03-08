@@ -46,6 +46,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Shoot_Player"):
 		#this is a place holder until shooting is implemented
 		print("Player is Shooting")
+		Game_Manger.Current_bullets -= 1
+		print(Game_Manger.Current_bullets)
 	#===================================================================================
 	#Crouching
 	if Input.is_action_just_pressed("Crouch_Player"):
@@ -79,7 +81,7 @@ func _physics_process(delta: float) -> void:
 		rotate_y(-Controller_Direction.x*Controller_Sensitivity)
 
 	move_and_slide()
-	print(velocity.length())
+	#print(velocity.length())
 
 func Change_Crouch_State() -> void:
 	Is_Crouched = !Is_Crouched
