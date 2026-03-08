@@ -1,0 +1,40 @@
+_*to do list - week 3*_
+
+*start date:* 8/3/2026
+*End date:* 15/3/2026
+
+* Ammar
+1. add the bullets
+2. finish task 3&4 from week 2
+3. add the following animations: walk, run, die, shoot, crouching and sliding
+
+* Rawan & Hadeel
+1. refine both level 1&2 and expand them more
+2. add more details for the level (boxes, barrels, etc...)
+3. include areas that can only be reached by one of each action: jumping and crouching
+4. gray box level 3 (last level)
+5. add the enemies and the player to the first two levels
+
+* Nourhan
+1. fix the error when the player is added to the group player the enemy code returns an error
+2. test and send on the group after testing in case of problems with troubleshooting
+3. create a hurtbox for the enemy so when the player shots him he dies 
+
+* Doha
+1. make a design with colors for the main menu and level select screens
+2. add an animated picture for buttons layout in the tutorial tab (check with Ammar for what buttons are pressed & with Mohamed in case you can't find assets)
+
+* Mohamed
+1. add sounds for actions: jumping, walking, running, shooting, reloading
+2. add feedback for the user when he runs out of bullets and try to shoot
+3. allow only the "player" group to take pickups (when the bug with the enemy is fixed)
+4. add the main mechanic (when the enemy is ready)
+
+* Ammar & Rawan & Hadeel
+1. scale the player and adjust his movement to what suits the level and the player
+ 
+
+# please remember to git pull always before you start working and to add and commit your changes even if uncompleted to avoid conflicts with git
+# *NOT* completing the tasks of the week will cause a warning to who ever does not finish  
+# if your work is incomplete please comment it before pushing it to the rest
+# you can find any asset you may need in the game outline document i will upload on the project folder and available as a WhatsApp massage
