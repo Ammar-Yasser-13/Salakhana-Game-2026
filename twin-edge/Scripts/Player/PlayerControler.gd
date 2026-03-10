@@ -43,7 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	#====================================================================================
 	#Shooting
-	if Input.is_action_just_pressed("Shoot_Player"):
+	if Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets > 0:
 		#this is a place holder until shooting is implemented
 		print("Player is Shooting")
 		Game_Manger.Current_bullets -= 1

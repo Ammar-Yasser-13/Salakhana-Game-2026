@@ -10,10 +10,29 @@ extends CanvasLayer
 @onready var bullet_5: Sprite2D = $Bullet5
 @onready var bullet_6: Sprite2D = $Bullet6
 @onready var enemy_counter: Label = $"Enemy counter"
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var no_ammo: Label = $"No Ammo"
 #=============================================
 
 func _process(_delta: float) -> void:
-#===============[Player's Health]===============
+	# sets health limits
+	Health_checker()
+	# sets Ammo limits
+	Ammo_checker()
+	# disable & enable shooting feedback if the player is out of bullets
+	ammo_feedback()
+
+func ammo_feedback():
+	if Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets <= 0:
+		animation_player.play("no ammo")
+		#print("need bullets")
+# removes the "No ammo text"
+	if Game_Manger.Current_bullets > 0:
+		no_ammo.visible = false
+		animation_player.stop()
+
+func Health_checker():
+	#===============[Player's Health]===============
 	if Game_Manger.Current_health <= 4:
 		health_bar.frame = 4
 	if Game_Manger.Current_health <= 3:
@@ -24,7 +43,9 @@ func _process(_delta: float) -> void:
 		health_bar.frame = 1
 	if Game_Manger.Current_health <= 0:
 		health_bar.frame = 0
-#===============[Player's bullets]===============
+
+func Ammo_checker():
+	#===============[Player's bullets]===============
 	if Game_Manger.Current_bullets <= 6:
 		bullet_1.visible = true
 		bullet_2.visible = true

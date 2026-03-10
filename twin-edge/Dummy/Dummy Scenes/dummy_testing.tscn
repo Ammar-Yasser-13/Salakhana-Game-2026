@@ -38,5 +38,8 @@ debug_color = Color(0.789849, 0.368722, 0.580544, 0.419608)
 [node name="bullets" parent="." unique_id=688092986 instance=ExtResource("2_2m1u3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156626, 0.594744, -3.3023)
 
+[node name="bullets2" parent="." unique_id=1877117906 instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0711014, 0.594744, 1.4126263)
+
 [node name="Medkit" parent="." unique_id=357753018 instance=ExtResource("3_tk7nb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696114, 0.810491, -5.17436)
