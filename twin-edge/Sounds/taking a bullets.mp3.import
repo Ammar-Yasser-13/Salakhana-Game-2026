@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c60xmoyn4iee3"
+path="res://.godot/imported/taking a bullets.mp3-4d9ccebbd0e1ff79411bb3b646104de6.mp3str"
+
+[deps]
+
+source_file="res://Sounds/taking a bullets.mp3"
+dest_files=["res://.godot/imported/taking a bullets.mp3-4d9ccebbd0e1ff79411bb3b646104de6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

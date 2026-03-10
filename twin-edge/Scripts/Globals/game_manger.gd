@@ -9,7 +9,7 @@ var Enemies_level_counter = 0
 @export var Current_health:int = Max_Health 
 @export var Current_bullets:int = Max_bullets
 @export var Current_enemies:int = Enemies_level_counter
-#==========================================================================================
+#============================================================================================
 
 func _process(_delta: float) -> void:
 #==================================[ invetory Limit ]========================================

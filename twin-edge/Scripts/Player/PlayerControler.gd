@@ -4,6 +4,8 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $"Head/Player Camera"
 @onready var collider: CollisionShape3D = $"Player Collider"
 @onready var timer: Timer = $"Dash Timer"
+@onready var empty_shot: AudioStreamPlayer = $sounds/EmptyShot
+@onready var gun_shot: AudioStreamPlayer = $sounds/GunShot
 
 #========================== Player Attributes ===============================
 @export var SPEED = 5.0
@@ -47,7 +49,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		#this is a place holder until shooting is implemented
 		print("Player is Shooting")
 		Game_Manger.Current_bullets -= 1
+		gun_shot.play()
 		print(Game_Manger.Current_bullets)
+	# user feedback for no ammo
+	elif Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets <= 0:
+		empty_shot.play()
 	#===================================================================================
 	#Crouching
 	if Input.is_action_just_pressed("Crouch_Player"):

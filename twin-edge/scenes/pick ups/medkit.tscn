@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drkbmskjjnxm7" path="res://Assets/pick ups/Medkit/Pickup Health.glb" id="1_ekv0u"]
 [ext_resource type="Script" uid="uid://bxfesv3csv8d0" path="res://Scripts/pick ups/medkit.gd" id="1_tqy3h"]
+[ext_resource type="AudioStream" uid="uid://dyyknt6051726" path="res://Sounds/Health_pickup.wav" id="3_eylf0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tqy3h"]
 radius = 0.58898824
@@ -14,5 +15,8 @@ transform = Transform3D(0.43489146, 0, 0, 0, 0.43489146, 0, 0, 0, 0.46318644, 0,
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1060059378]
 shape = SubResource("SphereShape3D_tqy3h")
+
+[node name="HealthPickup" type="AudioStreamPlayer3D" parent="." unique_id=1260415950]
+stream = ExtResource("3_eylf0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
