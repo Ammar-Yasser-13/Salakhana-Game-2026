@@ -35,6 +35,11 @@ folder_colors={
 "res://Sounds/": "purple"
 }
 
+[global_group]
+
+Player=""
+Enemy=""
+
 [input]
 
 Forward_Player={

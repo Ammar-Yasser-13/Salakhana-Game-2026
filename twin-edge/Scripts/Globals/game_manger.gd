@@ -10,7 +10,6 @@ var Enemies_level_counter = 0
 @export var Current_bullets:int = Max_bullets
 @export var Current_enemies:int = Enemies_level_counter
 #============================================================================================
-
 func _process(_delta: float) -> void:
 #==================================[ invetory Limit ]========================================
 #=====[ Health ]=====
@@ -29,7 +28,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Dummy_button_damage"):
 		Current_health -= 1
 		print( "your health: " + str(Current_health))
-
 func Restart():
 	#=====[ Restart current level & fills inventory ]=====
 	get_tree().reload_current_scene()

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cdpnbrj5sh5qm"
-path="res://.godot/imported/Fence Broken.glb-e7262f27a3a1c77d0fb31a8382344a0b.scn"
+uid="uid://c2hwdhq4konq5"
+path="res://.godot/imported/Bullet.glb-ac3dfb73b6405e3cbc4cb1e732b2ce6c.scn"
 
 [deps]
 
-source_file="res://assets/walls/new for level2/Fence Broken.glb"
-dest_files=["res://.godot/imported/Fence Broken.glb-e7262f27a3a1c77d0fb31a8382344a0b.scn"]
+source_file="res://assets/guns/player gun/Bullet.glb"
+dest_files=["res://.godot/imported/Bullet.glb-ac3dfb73b6405e3cbc4cb1e732b2ce6c.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.05
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

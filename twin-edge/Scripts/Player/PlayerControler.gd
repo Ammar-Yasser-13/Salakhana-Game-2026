@@ -1,12 +1,13 @@
 extends CharacterBody3D
 #============================= Node References ==============================
 @onready var head: Node3D = $Head
+@onready var crosshair: Node3D = $"Head/Aim Crosshair"
 @onready var camera: Camera3D = $"Head/Player Camera"
 @onready var collider: CollisionShape3D = $"Player Collider"
-@onready var timer: Timer = $"Dash Timer"
+@onready var Dash_Timer: Timer = $"Dash Timer"
+@onready var gun_timer: Timer = $"Gun Timer"
 @onready var empty_shot: AudioStreamPlayer = $sounds/EmptyShot
 @onready var gun_shot: AudioStreamPlayer = $sounds/GunShot
-
 #========================== Player Attributes ===============================
 @export var SPEED = 5.0
 @export var Crouch_Multiplier = 1.0 #(0.5)
@@ -15,13 +16,24 @@ extends CharacterBody3D
 @export var JUMP_VELOCITY = 4.5
 @export var Mouse_Sensitivity = 0.02
 @export var Controller_Sensitivity = 0.05
-#===========================================================================
+#===============================State Controllers===========================
 var Controller_Direction = null
 var Is_Crouched = false
-
+var Can_Shoot = true
+#================================Bullet=======================================
+var Bullet_Scene = preload("res://scenes/pick ups/bullet_projectile.tscn")
+var Bullet_Pool =[]
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	for i in 5:
+		var Bullet = Bullet_Scene.instantiate()
+		get_parent().add_child.call_deferred(Bullet)
+		Bullet.set_physics_process(false)
+		Bullet_Pool.append(Bullet)
+		Bullet.hide()
+		
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Aiming
@@ -45,14 +57,16 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	#====================================================================================
 	#Shooting
-	if Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets > 0:
+	if Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets > 0  && Can_Shoot:
 		#this is a place holder until shooting is implemented
-		print("Player is Shooting")
+		Spawn_Bullet()
 		Game_Manger.Current_bullets -= 1
 		gun_shot.play()
 		print(Game_Manger.Current_bullets)
+		Can_Shoot = false
+		gun_timer.start(0.0)
 	# user feedback for no ammo
-	elif Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets <= 0:
+	elif Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets <= 0 && Can_Shoot:
 		empty_shot.play()
 	#===================================================================================
 	#Crouching
@@ -60,7 +74,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		Change_Crouch_State()
 
 func _physics_process(delta: float) -> void:
-	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -97,12 +110,31 @@ func Change_Crouch_State() -> void:
 			Crouch_Multiplier = 0.5
 			if velocity.length() > SPEED:
 				Dash_Multiplier = 3.0
-				timer.start(0.0)
+				Dash_Timer.start(0.0)
 		false :
 			scale.y = 1
 			collider.shape.height = 2
 			Crouch_Multiplier = 1
 
+func Spawn_Bullet ():
+	if Bullet_Pool.size()>0:
+		var Bullet = Bullet_Pool.pop_back()
+		Bullet.dir = crosshair.global_position - head.global_position
+		Bullet.global_rotation =  head.global_rotation
+		Bullet.global_position = head.global_position
+		Bullet.show()
+		Bullet.set_physics_process(true)
+		Bullet.start()
+
+func Despawn_Bullet (Bullet):
+	Bullet.hide
+	Bullet.set_physics_process(false)
+	Bullet.end()
+	Bullet_Pool.append(Bullet)
 
 func _on_dash_timer_timeout() -> void:
-	Dash_Multiplier =1
+	Dash_Multiplier=1
+
+
+func _on_gun_timer_timeout() -> void:
+	Can_Shoot = true
