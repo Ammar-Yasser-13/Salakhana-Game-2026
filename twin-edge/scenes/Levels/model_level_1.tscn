@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://dbh8m0hlrx3u3" path="res://scenes/assets_with_collision/cars/new_bus.tscn" id="24_t6aed"]
 [ext_resource type="PackedScene" uid="uid://cfwexrjuk78vl" path="res://scenes/assets_with_collision/cars/police_car.tscn" id="24_xv2io"]
 [ext_resource type="PackedScene" uid="uid://bhldmnbqwl6w8" path="res://scenes/assets_with_collision/atm.tscn" id="25_uk0c4"]
+[ext_resource type="PackedScene" uid="uid://cfeuoi6m7ifwk" path="res://scenes/enemy/enemy.tscn" id="25_voxbr"]
+[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="27_52tgj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffnre"]
 sky_horizon_color = Color(0.8296772, 0.83433414, 0.8441853, 1)
@@ -449,3 +451,9 @@ transform = Transform3D(-1.3113417e-05, 0, -300, 0, 299.99997, 0, 300, 0, -1.311
 
 [node name="NewBus" parent="cars" unique_id=1308177305 instance=ExtResource("24_t6aed")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -809.7044, 0, 324)
+
+[node name="enemy" parent="." unique_id=637364845 instance=ExtResource("25_voxbr")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -327.5926, 4, 71.36122)
+
+[node name="Medkit" parent="." unique_id=1030489201 instance=ExtResource("27_52tgj")]
+transform = Transform3D(0.05899439, 0, -1.4988394, 0, 1.5, 0, 1.4988394, 0, 0.05899439, -358.25357, 40.200977, -41.244507)
