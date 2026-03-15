@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://daaaxv5gnvgh3"]
+
+[ext_resource type="PackedScene" uid="uid://dvv3nmrr1e8hi" path="res://assets/cars/Bus.glb" id="1_ilaiq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ilaiq"]
+size = Vector3(43.174805, 42.307373, 153.74332)
+
+[node name="Bus" type="StaticBody3D" unique_id=445917675]
+
+[node name="Bus2" parent="." unique_id=597276612 instance=ExtResource("1_ilaiq")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1423507893]
+transform = Transform3D(1, 0, 0, 0, 0.99957424, 0.029177763, 0, -0.029177763, 0.99957424, 0, 25.942326, 1.4435383)
+shape = SubResource("BoxShape3D_ilaiq")
