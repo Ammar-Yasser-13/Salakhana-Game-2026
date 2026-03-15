@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://dibywk21tk2eh" path="res://Sounds/empty shot.mp3" id="3_xpcdj"]
 [ext_resource type="AudioStream" uid="uid://dpdqg57ddvfu7" path="res://Sounds/gun shotv2.mp3" id="4_mtuoh"]
 [ext_resource type="AudioStream" uid="uid://drhg00ir7wn82" path="res://Sounds/jump.mp3" id="5_uiqp4"]
+[ext_resource type="AudioStream" uid="uid://w4goc8585rhr" path="res://Sounds/take_damage.wav" id="6_hvfru"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 radius = 5.0
@@ -49,6 +50,9 @@ stream = ExtResource("4_mtuoh")
 
 [node name="Jump" type="AudioStreamPlayer" parent="sounds" unique_id=1529328157]
 stream = ExtResource("5_uiqp4")
+
+[node name="TakeDamage" type="AudioStreamPlayer" parent="sounds" unique_id=171889853]
+stream = ExtResource("6_hvfru")
 
 [connection signal="timeout" from="Dash Timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="Gun Timer" to="." method="_on_gun_timer_timeout"]
