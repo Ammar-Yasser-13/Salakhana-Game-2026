@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dqecarga1ab3g"
-path="res://.godot/imported/PanasChill.ttf-cdfa1c7933a7c4de1fb17014279c1967.fontdata"
+path="res://.godot/imported/PanasChill.ttf-8ea1257b66f7f428b5513ff08041087d.fontdata"
 
 [deps]
 
-source_file="res://assets/player/UI/PanasChill.ttf"
-dest_files=["res://.godot/imported/PanasChill.ttf-cdfa1c7933a7c4de1fb17014279c1967.fontdata"]
+source_file="res://Assets/player/UI/PanasChill.ttf"
+dest_files=["res://.godot/imported/PanasChill.ttf-8ea1257b66f7f428b5513ff08041087d.fontdata"]
 
 [params]
 

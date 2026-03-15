@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cdpnbrj5sh5qm"
-path="res://.godot/imported/Fence Broken.glb-e7262f27a3a1c77d0fb31a8382344a0b.scn"
+path="res://.godot/imported/Fence Broken.glb-2f5922009e71b2250841b30d3fc1f781.scn"
 
 [deps]
 
-source_file="res://assets/walls/new for level2/Fence Broken.glb"
-dest_files=["res://.godot/imported/Fence Broken.glb-e7262f27a3a1c77d0fb31a8382344a0b.scn"]
+source_file="res://Assets/walls/new for level2/Fence Broken.glb"
+dest_files=["res://.godot/imported/Fence Broken.glb-2f5922009e71b2250841b30d3fc1f781.scn"]
 
 [params]
 

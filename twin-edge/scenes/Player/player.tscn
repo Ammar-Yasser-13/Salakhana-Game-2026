@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cuynwls3xkrxt"]
 
 [ext_resource type="Script" uid="uid://dsvi1u26rew5v" path="res://Scripts/Player/PlayerControler.gd" id="1_uvnfx"]
-[ext_resource type="PackedScene" uid="uid://d0tbffm4hqa2v" path="res://scenes/Player/Player_UI.tscn" id="2_a3d8c"]
+[ext_resource type="PackedScene" uid="uid://d0tbffm4hqa2v" path="res://Scenes/Player/Player_UI.tscn" id="2_a3d8c"]
 [ext_resource type="AudioStream" uid="uid://dibywk21tk2eh" path="res://Sounds/empty shot.mp3" id="3_xpcdj"]
 [ext_resource type="AudioStream" uid="uid://dpdqg57ddvfu7" path="res://Sounds/gun shotv2.mp3" id="4_mtuoh"]
 
@@ -36,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 wait_time = 3.0
 
 [node name="Gun Timer" type="Timer" parent="." unique_id=347551206]
-wait_time = 0.8
+wait_time = 0.2
 
 [node name="sounds" type="Node" parent="." unique_id=1200192062]
 

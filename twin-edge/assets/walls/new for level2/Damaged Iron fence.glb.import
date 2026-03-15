@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://pam23pxnrkrg"
-path="res://.godot/imported/Damaged Iron fence.glb-673e223c2951ee01c7c5ad97fad3baf3.scn"
+path="res://.godot/imported/Damaged Iron fence.glb-bea6a22a13c6dfc9671046c4cc45c370.scn"
 
 [deps]
 
-source_file="res://assets/walls/new for level2/Damaged Iron fence.glb"
-dest_files=["res://.godot/imported/Damaged Iron fence.glb-673e223c2951ee01c7c5ad97fad3baf3.scn"]
+source_file="res://Assets/walls/new for level2/Damaged Iron fence.glb"
+dest_files=["res://.godot/imported/Damaged Iron fence.glb-bea6a22a13c6dfc9671046c4cc45c370.scn"]
 
 [params]
 

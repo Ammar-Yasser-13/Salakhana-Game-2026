@@ -5,15 +5,16 @@
 [ext_resource type="AudioStream" uid="uid://dyyknt6051726" path="res://Sounds/Health_pickup.wav" id="3_eylf0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tqy3h"]
-radius = 0.58898824
+radius = 0.6968512
 
 [node name="Medkit" type="Area3D" unique_id=1030489201]
 script = ExtResource("1_tqy3h")
 
 [node name="Root Scene" parent="." unique_id=2075949668 instance=ExtResource("1_ekv0u")]
-transform = Transform3D(0.43489146, 0, 0, 0, 0.43489146, 0, 0, 0, 0.46318644, 0, 0, 0)
+transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13.838, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1060059378]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 1.5296731, 0)
 shape = SubResource("SphereShape3D_tqy3h")
 
 [node name="HealthPickup" type="AudioStreamPlayer3D" parent="." unique_id=1260415950]

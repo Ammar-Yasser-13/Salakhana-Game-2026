@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://camuxn2uo73ft"
-path.s3tc="res://.godot/imported/Red Cargo_spacebits_texture.png-04c3c3bd1b6957655af3c3217b0e3051.s3tc.ctex"
+path.s3tc="res://.godot/imported/Red Cargo_spacebits_texture.png-aaee9958055cd6c579a187c10503effb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/level blocks/Red Cargo_spacebits_texture.png"
-dest_files=["res://.godot/imported/Red Cargo_spacebits_texture.png-04c3c3bd1b6957655af3c3217b0e3051.s3tc.ctex"]
+source_file="res://Assets/level blocks/Red Cargo_spacebits_texture.png"
+dest_files=["res://.godot/imported/Red Cargo_spacebits_texture.png-aaee9958055cd6c579a187c10503effb.s3tc.ctex"]
 
 [params]
 

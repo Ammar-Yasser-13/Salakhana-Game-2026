@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwajn3xwn22h7"
-path="res://.godot/imported/Roof Exit.glb-b38d23e050cebd22508642db198a8d63.scn"
+path="res://.godot/imported/Roof Exit.glb-08d0be9736f539a37938b164db278744.scn"
 
 [deps]
 
-source_file="res://assets/walls/buildings/Roof Exit.glb"
-dest_files=["res://.godot/imported/Roof Exit.glb-b38d23e050cebd22508642db198a8d63.scn"]
+source_file="res://Assets/walls/buildings/Roof Exit.glb"
+dest_files=["res://.godot/imported/Roof Exit.glb-08d0be9736f539a37938b164db278744.scn"]
 
 [params]
 

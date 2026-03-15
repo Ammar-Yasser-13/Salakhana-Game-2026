@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bde6e37430c44"
-path="res://.godot/imported/Gate.glb-febc5c1813510abeee5b8119c6139290.scn"
+path="res://.godot/imported/Gate.glb-1282881418aecca34201b24e2540883e.scn"
 
 [deps]
 
-source_file="res://assets/walls/new for level2/Gate.glb"
-dest_files=["res://.godot/imported/Gate.glb-febc5c1813510abeee5b8119c6139290.scn"]
+source_file="res://Assets/walls/new for level2/Gate.glb"
+dest_files=["res://.godot/imported/Gate.glb-1282881418aecca34201b24e2540883e.scn"]
 
 [params]
 

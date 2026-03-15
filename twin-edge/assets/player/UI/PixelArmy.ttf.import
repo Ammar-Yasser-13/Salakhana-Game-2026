@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://50rlk84dl6g0"
-path="res://.godot/imported/PixelArmy.ttf-48a49cf5eaa09e2a3105d14fbff709a5.fontdata"
+path="res://.godot/imported/PixelArmy.ttf-d693fcc9b0ed4dbd29418e9fd09262be.fontdata"
 
 [deps]
 
-source_file="res://assets/player/UI/PixelArmy.ttf"
-dest_files=["res://.godot/imported/PixelArmy.ttf-48a49cf5eaa09e2a3105d14fbff709a5.fontdata"]
+source_file="res://Assets/player/UI/PixelArmy.ttf"
+dest_files=["res://.godot/imported/PixelArmy.ttf-d693fcc9b0ed4dbd29418e9fd09262be.fontdata"]
 
 [params]
 

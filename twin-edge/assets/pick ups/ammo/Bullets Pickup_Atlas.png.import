@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgxourc3f8y0v"
-path.s3tc="res://.godot/imported/Bullets Pickup_Atlas.png-f6407715ef9d99c41c8f98f2dcca88ff.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bullets Pickup_Atlas.png-03ca48ac94300714c85cdf29f26b4597.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/pick ups/ammo/Bullets Pickup_Atlas.png"
-dest_files=["res://.godot/imported/Bullets Pickup_Atlas.png-f6407715ef9d99c41c8f98f2dcca88ff.s3tc.ctex"]
+source_file="res://Assets/pick ups/ammo/Bullets Pickup_Atlas.png"
+dest_files=["res://.godot/imported/Bullets Pickup_Atlas.png-03ca48ac94300714c85cdf29f26b4597.s3tc.ctex"]
 
 [params]
 
