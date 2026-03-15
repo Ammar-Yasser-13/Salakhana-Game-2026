@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbibsq6sxjsmq"
-path="res://.godot/imported/Pickup Truck.glb-cc6df90d2700cea1723a6a2b277e19dd.scn"
+path="res://.godot/imported/Pickup Truck.glb-5db249f49b34c07027e554f50297a6b9.scn"
 
 [deps]
 
-source_file="res://Assets/cars/Pickup Truck.glb"
-dest_files=["res://.godot/imported/Pickup Truck.glb-cc6df90d2700cea1723a6a2b277e19dd.scn"]
+source_file="res://assets/cars/Pickup Truck.glb"
+dest_files=["res://.godot/imported/Pickup Truck.glb-5db249f49b34c07027e554f50297a6b9.scn"]
 
 [params]
 

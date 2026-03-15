@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bi2663ig8kd2x"
-path="res://.godot/imported/Sports Car-Gzj704DXdr.glb-66a4c2ec4d574827cd1af351c844fea5.scn"
+path="res://.godot/imported/Sports Car-Gzj704DXdr.glb-50ca872cbc66ac1e1797d16df59a73db.scn"
 
 [deps]
 
-source_file="res://Assets/cars/Sports Car-Gzj704DXdr.glb"
-dest_files=["res://.godot/imported/Sports Car-Gzj704DXdr.glb-66a4c2ec4d574827cd1af351c844fea5.scn"]
+source_file="res://assets/cars/Sports Car-Gzj704DXdr.glb"
+dest_files=["res://.godot/imported/Sports Car-Gzj704DXdr.glb-50ca872cbc66ac1e1797d16df59a73db.scn"]
 
 [params]
 
