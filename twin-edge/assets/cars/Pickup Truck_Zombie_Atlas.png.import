@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://svgwt6sfxyg7"
-path.s3tc="res://.godot/imported/Pickup Truck_Zombie_Atlas.png-1ba83d17d9edb521b458830fb3bb1572.s3tc.ctex"
+path.s3tc="res://.godot/imported/Pickup Truck_Zombie_Atlas.png-ff643d0f8682be85c30003b371fdbca3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/cars/Pickup Truck_Zombie_Atlas.png"
-dest_files=["res://.godot/imported/Pickup Truck_Zombie_Atlas.png-1ba83d17d9edb521b458830fb3bb1572.s3tc.ctex"]
+source_file="res://Assets/cars/Pickup Truck_Zombie_Atlas.png"
+dest_files=["res://.godot/imported/Pickup Truck_Zombie_Atlas.png-ff643d0f8682be85c30003b371fdbca3.s3tc.ctex"]
 
 [params]
 

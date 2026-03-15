@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbdptw7eqwky0"
-path="res://.godot/imported/Motorcycle.glb-3aba55252d37f166e22bf4786c61109d.scn"
+path="res://.godot/imported/Motorcycle.glb-8641e32c831edb6c86bdc9390970b6db.scn"
 
 [deps]
 
-source_file="res://assets/cars/Motorcycle.glb"
-dest_files=["res://.godot/imported/Motorcycle.glb-3aba55252d37f166e22bf4786c61109d.scn"]
+source_file="res://Assets/cars/Motorcycle.glb"
+dest_files=["res://.godot/imported/Motorcycle.glb-8641e32c831edb6c86bdc9390970b6db.scn"]
 
 [params]
 

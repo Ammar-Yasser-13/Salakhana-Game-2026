@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://damai501lg124"
-path="res://.godot/imported/Sports Car.glb-2a84f352f0629bec0b98c1378595124e.scn"
+path="res://.godot/imported/Sports Car.glb-3c2ca3ab65d29f7f75c4fa85863a0d1e.scn"
 
 [deps]
 
-source_file="res://assets/cars/Sports Car.glb"
-dest_files=["res://.godot/imported/Sports Car.glb-2a84f352f0629bec0b98c1378595124e.scn"]
+source_file="res://Assets/cars/Sports Car.glb"
+dest_files=["res://.godot/imported/Sports Car.glb-3c2ca3ab65d29f7f75c4fa85863a0d1e.scn"]
 
 [params]
 

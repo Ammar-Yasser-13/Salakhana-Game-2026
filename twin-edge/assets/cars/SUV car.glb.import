@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bigrua3yr3ns8"
-path="res://.godot/imported/SUV car.glb-788f826e8372c1fb88d4fb98b0604958.scn"
+path="res://.godot/imported/SUV car.glb-7cf0acdb4ac72400b62be30ce3b7976f.scn"
 
 [deps]
 
-source_file="res://assets/cars/SUV car.glb"
-dest_files=["res://.godot/imported/SUV car.glb-788f826e8372c1fb88d4fb98b0604958.scn"]
+source_file="res://Assets/cars/SUV car.glb"
+dest_files=["res://.godot/imported/SUV car.glb-7cf0acdb4ac72400b62be30ce3b7976f.scn"]
 
 [params]
 

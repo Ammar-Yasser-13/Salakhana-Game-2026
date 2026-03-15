@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 [node name="Dash Timer" type="Timer" parent="." unique_id=353935977]
 wait_time = 3.0
 
-[node name="Gun Timer" type="Timer" parent="." unique_id=347551206]
+[node name="Gun Timer" type="Timer" parent="." unique_id=347551206 groups=["Player"]]
 wait_time = 0.2
 
 [node name="sounds" type="Node" parent="." unique_id=1200192062]
