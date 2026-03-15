@@ -9,11 +9,11 @@ extends CharacterBody3D
 @onready var empty_shot: AudioStreamPlayer = $sounds/EmptyShot
 @onready var gun_shot: AudioStreamPlayer = $sounds/GunShot
 #========================== Player Attributes ===============================
-@export var SPEED = 5.0
+@export var SPEED = 75.0
 @export var Crouch_Multiplier = 1.0 #(0.5)
 @export var Dash_Multiplier = 1.0 #(3.0)
 @export var Sprint_Multiplier = 1.0 #(1.5)
-@export var JUMP_VELOCITY = 4.5
+@export var JUMP_VELOCITY = 50.0
 @export var Mouse_Sensitivity = 0.02
 @export var Controller_Sensitivity = 0.05
 #===============================State Controllers===========================
@@ -53,7 +53,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.fov = 90
 	if Input.is_action_just_released("Sprint_Player"):
 		Sprint_Multiplier = 1.0
-		camera.fov = 75
+		camera.fov = 70
 	
 	#====================================================================================
 	#Shooting
@@ -106,14 +106,13 @@ func Change_Crouch_State() -> void:
 	Is_Crouched = !Is_Crouched
 	match Is_Crouched:
 		true :
-			collider.shape.height = 1
+			collider.shape.height = 10
 			Crouch_Multiplier = 0.5
 			if velocity.length() > SPEED:
 				Dash_Multiplier = 3.0
 				Dash_Timer.start(0.0)
 		false :
-			scale.y = 1
-			collider.shape.height = 2
+			collider.shape.height = 20
 			Crouch_Multiplier = 1
 
 func Spawn_Bullet ():
@@ -127,7 +126,7 @@ func Spawn_Bullet ():
 		Bullet.start()
 
 func Despawn_Bullet (Bullet):
-	Bullet.hide
+	Bullet.hide()
 	Bullet.set_physics_process(false)
 	Bullet.end()
 	Bullet_Pool.append(Bullet)

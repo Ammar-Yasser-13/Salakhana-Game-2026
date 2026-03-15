@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func start ():
-	velocity = dir.normalized() * 30
+	velocity = dir.normalized() * 300
 	
 func end ():
 	velocity = Vector3(0,0,0)
