@@ -8,6 +8,8 @@ extends CharacterBody3D
 @onready var gun_timer: Timer = $"Gun Timer"
 @onready var empty_shot: AudioStreamPlayer = $sounds/EmptyShot
 @onready var gun_shot: AudioStreamPlayer = $sounds/GunShot
+@onready var jump: AudioStreamPlayer = $sounds/Jump
+@onready var take_damage: AudioStreamPlayer = $sounds/TakeDamage
 #========================== Player Attributes ===============================
 @export var SPEED = 75.0
 @export var Crouch_Multiplier = 1.0 #(0.5)
@@ -81,6 +83,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump_Player") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -101,6 +104,11 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	#print(velocity.length())
+	
+		#=====[ dummy health testing ]=====
+	if Input.is_action_just_pressed("Dummy_button_damage"):
+		Take_damage()
+		print( "your health: " + str(Game_Manger.Current_health))
 
 func Change_Crouch_State() -> void:
 	Is_Crouched = !Is_Crouched
@@ -137,3 +145,8 @@ func _on_dash_timer_timeout() -> void:
 
 func _on_gun_timer_timeout() -> void:
 	Can_Shoot = true
+
+# damages the player and plays sound for feedback
+func Take_damage():
+	Game_Manger.Current_health -= 1
+	take_damage.play()
