@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://d0tbffm4hqa2v"]
+[gd_scene load_steps=13 format=3 uid="uid://d0tbffm4hqa2v"]
 
-[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://Assets/player/UI/Health.png" id="1_d1abm"]
-[ext_resource type="Script" uid="uid://ckbos56rmm6lv" path="res://Scripts/Player/player_ui.gd" id="1_skwaw"]
-[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://Assets/player/UI/Enemy skull.png" id="2_gg8lv"]
-[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://Assets/player/UI/Bullet.png" id="3_cn2k5"]
-[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://Assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
+[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://assets/player/UI/Health.png" id="1_d1abm"]
+[ext_resource type="Script" path="res://Scripts/Player/player_ui.gd" id="1_skwaw"]
+[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://assets/player/UI/Enemy skull.png" id="2_gg8lv"]
+[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://assets/player/UI/Bullet.png" id="3_cn2k5"]
+[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg8lv"]
 atlas = ExtResource("1_d1abm")
@@ -51,47 +51,10 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_skwaw"]
 
-[sub_resource type="Animation" id="Animation_skwaw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("No Ammo:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_65l2l"]
-resource_name = "no ammo"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("No Ammo:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojbky"]
-_data = {
-&"RESET": SubResource("Animation_skwaw"),
-&"no ammo": SubResource("Animation_65l2l")
-}
-
-[node name="Player_UI" type="CanvasLayer" unique_id=1254276724]
+[node name="Player_UI" type="CanvasLayer"]
 script = ExtResource("1_skwaw")
 
-[node name="Health bar" type="AnimatedSprite2D" parent="." unique_id=912505038]
+[node name="Health bar" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(48, 43)
 scale = Vector2(5, 5)
@@ -99,61 +62,61 @@ sprite_frames = SubResource("SpriteFrames_ojbky")
 frame = 4
 frame_progress = 1.0
 
-[node name="Enemy symbol" type="Sprite2D" parent="." unique_id=1874249761]
+[node name="Enemy symbol" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1016, 40)
 scale = Vector2(5, 5)
 texture = ExtResource("2_gg8lv")
 
-[node name="Bullet1" type="Sprite2D" parent="." unique_id=552828107]
+[node name="Bullet1" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(128, 27)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet2" type="Sprite2D" parent="." unique_id=308739601]
+[node name="Bullet2" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(128, 57)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet3" type="Sprite2D" parent="." unique_id=1662477941]
+[node name="Bullet3" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(179, 27)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet4" type="Sprite2D" parent="." unique_id=345471938]
+[node name="Bullet4" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(179, 57)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet5" type="Sprite2D" parent="." unique_id=1750437939]
+[node name="Bullet5" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(230, 27)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Bullet6" type="Sprite2D" parent="." unique_id=1827252638]
+[node name="Bullet6" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(230, 57)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Enemy counter" type="Label" parent="." unique_id=1839579663]
+[node name="Enemy counter" type="Label" parent="."]
 texture_filter = 1
 anchors_preset = -1
-anchor_left = 0.9236111
-anchor_top = 0.044753086
-anchor_right = 0.94911027
-anchor_bottom = 0.106481485
+anchor_left = 0.923611
+anchor_top = 0.0447531
+anchor_right = 0.94911
+anchor_bottom = 0.106481
 offset_right = -17.625
 offset_bottom = -24.0
 grow_horizontal = 0
@@ -164,15 +127,15 @@ text = "X"
 label_settings = SubResource("LabelSettings_skwaw")
 metadata/_edit_use_anchors_ = true
 
-[node name="No Ammo" type="Label" parent="." unique_id=1344476961]
+[node name="No Ammo" type="Label" parent="."]
 texture_filter = 1
 anchors_preset = -1
-anchor_left = 0.092013836
-anchor_top = 0.01851852
-anchor_right = 0.24826384
-anchor_bottom = 0.13734569
+anchor_left = 0.0920138
+anchor_top = 0.0185185
+anchor_right = 0.248264
+anchor_bottom = 0.137346
 offset_right = -108.0
-offset_bottom = -46.200005
+offset_bottom = -46.2
 grow_horizontal = 0
 scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 8
@@ -182,5 +145,4 @@ label_settings = SubResource("LabelSettings_skwaw")
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1673252135]
-libraries/ = SubResource("AnimationLibrary_ojbky")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -64,3 +64,9 @@ func shoot():
 
 func _on_shoot_timer_timeout():
 	can_shoot = true
+
+
+
+
+func _on_hurtbox_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

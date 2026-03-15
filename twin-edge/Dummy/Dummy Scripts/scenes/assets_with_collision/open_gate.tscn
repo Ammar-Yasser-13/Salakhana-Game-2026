@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://balacbwmkbdwg"]
+[gd_scene load_steps=0 format=3 uid="uid://balacbwmkbdwg"]
 
 [ext_resource type="PackedScene" uid="uid://0tfx3scf238" path="res://assets/walls/new for level2/open_gate.tscn" id="1_favti"]
 
