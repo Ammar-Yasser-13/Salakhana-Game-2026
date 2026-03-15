@@ -338,7 +338,8 @@ transform = Transform3D(-19.999884, 0, 0.06841472, 0, 20, 0, -0.06841472, 0, -19
 transform = Transform3D(0.16196766, 0, -19.999348, 0, 20.000002, 0, 19.999348, 0, 0.16196766, 403.1517, 0.030830383, 248.69312)
 
 [node name="Player" parent="." unique_id=279958562 instance=ExtResource("12_funs6")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 137.6824, 27.747581, 131.86111)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 126.50746, 27.747581, 332.69684)
+JUMP_VELOCITY = 70.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1270820798]
 
@@ -394,25 +395,22 @@ transform = Transform3D(-61.999992, 0, -5.4202114e-06, 0, 61.999992, 0, 5.420211
 transform = Transform3D(42, 0, 0, 0, 42, 0, 0, 0, 42, -307.5951, 2.8440552, -242.17589)
 
 [node name="crate" parent="new_buildings" unique_id=171462718 instance=ExtResource("23_t6aed")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, 0.5065994, 409.04742)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, -33.769905, 409.04742)
 
 [node name="crate2" parent="new_buildings" unique_id=1332707225 instance=ExtResource("23_t6aed")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, 41.869667, 409.04742)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, 7.5931625, 409.04742)
 
 [node name="b17" parent="new_buildings" unique_id=353219880 instance=ExtResource("16_skd0t")]
 transform = Transform3D(-2.8397096e-06, 0, 64.96498, 0, 64.96499, 0, -64.96498, 0, -2.8397096e-06, 422.1783, -0.08907318, -318.98312)
 
-[node name="crate3" parent="new_buildings" unique_id=213658558 instance=ExtResource("23_t6aed")]
-transform = Transform3D(80, 0, 0, 0, 80, 0, 0, 0, 80, 198.88605, 87.10682, 419.75833)
-
 [node name="crate4" parent="new_buildings" unique_id=1269092462 instance=ExtResource("23_t6aed")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, 0.5065994, 434.59738)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, -33.769905, 434.59738)
 
 [node name="crate5" parent="new_buildings" unique_id=1883840286 instance=ExtResource("23_t6aed")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, 41.869667, 434.59738)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, 7.5931625, 434.59738)
 
 [node name="crate6" parent="new_buildings" unique_id=1122561572 instance=ExtResource("23_t6aed")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 120.90953, 0.5065994, 423.30353)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 134.96962, -20.159523, 423.30353)
 
 [node name="cars" type="Node3D" parent="." unique_id=1296756258]
 
@@ -446,7 +444,7 @@ transform = Transform3D(0.023822445, 0, -34.999992, 0, 35, 0, 34.999992, 0, 0.02
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -103.52655, 1.77001, -63.376785)
 
 [node name="Truck" parent="cars" unique_id=1405782843 instance=ExtResource("24_52tgj")]
-transform = Transform3D(-1.3113416e-06, 0, 30, 0, 30, 0, -30, 0, -1.3113416e-06, -309.09924, -3.8493083, -53.184143)
+transform = Transform3D(-1.1802075e-06, 0, 27, 0, 27, 0, -27, 0, -1.1802075e-06, -309.09924, -3.8493083, -53.184143)
 
 [node name="ATM" parent="cars" unique_id=1773142200 instance=ExtResource("25_uk0c4")]
 transform = Transform3D(-1.3113417e-05, 0, -300, 0, 299.99997, 0, 300, 0, -1.3113417e-05, 433.41745, 3, 42.810394)
@@ -483,10 +481,10 @@ transform = Transform3D(2.5047011, 0, 24.874214, 0, 25, 0, -24.874214, 0, 2.5047
 transform = Transform3D(0.031463675, 0, -0.799381, 0, 0.8, 0, 0.799381, 0, 0.031463675, -348.24875, 29.664078, -59.237595)
 
 [node name="Medkit2" parent="pick_ups" unique_id=1652241511 instance=ExtResource("27_52tgj")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 297.26105, 185.70613, 423.99484)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 198.33247, 75.59365, 424.3032)
 
 [node name="bullets" parent="pick_ups" unique_id=1877117906 instance=ExtResource("26_52tgj")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 196.71494, 137.01093, 421.68024)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 127.58569, 44.47439, -351.31525)
 
 [node name="bullets2" parent="pick_ups" unique_id=335347527 instance=ExtResource("26_52tgj")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, 349.43076)
