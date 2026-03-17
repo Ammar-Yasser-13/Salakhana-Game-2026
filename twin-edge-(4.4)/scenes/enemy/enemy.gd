@@ -64,3 +64,15 @@ func shoot():
 
 func _on_shoot_timer_timeout():
 	can_shoot = true
+
+
+
+
+
+	
+	 
+
+
+func _on_hurtbox_body_entered(body: Node3D) -> void:
+	if body.is_in_group("bullet"):
+		queue_free() # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://cfeuoi6m7ifwk"]
+[gd_scene format=4 uid="uid://cfeuoi6m7ifwk"]
 
 [ext_resource type="Script" uid="uid://vqifs7r0vly4" path="res://scenes/enemy/enemy.gd" id="1_a3pup"]
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="2_40wdo"]
@@ -11014,23 +11014,27 @@ _data = {
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_iifgy"]
 
-[node name="enemy" type="CharacterBody3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a3pup"]
+radius = 0.32177734
+height = 1.8952637
+
+[node name="enemy" type="CharacterBody3D" unique_id=503614419]
 script = ExtResource("1_a3pup")
 bullet_scene = ExtResource("2_40wdo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=187552380]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.957823, 0)
 shape = SubResource("CapsuleShape3D_tjssy")
 
-[node name="Root Scene" type="Node3D" parent="."]
+[node name="Root Scene" type="Node3D" parent="." unique_id=357683298]
 transform = Transform3D(-0.969783, 0, -0.24397, 0, 1, 0, 0.24397, 0, -0.969783, 0, 0, 0)
 
-[node name="RootNode" type="Node3D" parent="Root Scene"]
+[node name="RootNode" type="Node3D" parent="Root Scene" unique_id=1117880036]
 
-[node name="CharacterArmature" type="Node3D" parent="Root Scene/RootNode"]
+[node name="CharacterArmature" type="Node3D" parent="Root Scene/RootNode" unique_id=1143334386]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Root Scene/RootNode/CharacterArmature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Root Scene/RootNode/CharacterArmature" unique_id=778672021]
 bones/0/name = "Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 2.84217e-14, 2.38419e-07, 2.38419e-07, -1.19209e-07, -1, 0, 1, -1.19209e-07, 0, -0.000722887, 0)
@@ -11585,31 +11589,37 @@ bones/78/position = Vector3(0, 0.00177336, 0)
 bones/78/rotation = Quaternion(0, 6.77626e-21, 0, 1)
 bones/78/scale = Vector3(1, 1, 1)
 
-[node name="SpaceSuit_Feet" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D"]
+[node name="SpaceSuit_Feet" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" unique_id=1805199065]
 mesh = SubResource("ArrayMesh_8q8fa")
 skin = SubResource("Skin_klxvi")
 
-[node name="SpaceSuit_Legs" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D"]
+[node name="SpaceSuit_Legs" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" unique_id=384429793]
 mesh = SubResource("ArrayMesh_ivtwd")
 skin = SubResource("Skin_klxvi")
 
-[node name="SpaceSuit_Body" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D"]
+[node name="SpaceSuit_Body" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" unique_id=486168783]
 mesh = SubResource("ArrayMesh_yhyay")
 skin = SubResource("Skin_klxvi")
 
-[node name="SpaceSuit_Head" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D"]
+[node name="SpaceSuit_Head" type="MeshInstance3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" unique_id=788155892]
 mesh = SubResource("ArrayMesh_6e070")
 skin = SubResource("Skin_klxvi")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Root Scene"]
-libraries = {
-&"": SubResource("AnimationLibrary_nsaau")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Root Scene" unique_id=866744555]
+libraries/ = SubResource("AnimationLibrary_nsaau")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=577669519]
 visible = false
 mesh = SubResource("CapsuleMesh_iifgy")
 
-[node name="Marker3D" type="Marker3D" parent="."]
+[node name="Marker3D" type="Marker3D" parent="." unique_id=836506959]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1904629024]
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=311363112]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1466341048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8946533, 0)
+shape = SubResource("CapsuleShape3D_a3pup")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
