@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://0q3h3xgd5ae7"]
+
+[ext_resource type="PackedScene" uid="uid://dtx4mlwlind1g" path="res://assets/graveyard/Smashed Glass.glb" id="1_1ry1x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gpx08"]
+size = Vector3(0.5642395, 0.001, 0.48794556)
+
+[node name="glass" type="StaticBody3D" unique_id=1265911172]
+
+[node name="Root Scene" parent="." unique_id=389581070 instance=ExtResource("1_1ry1x")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=670019192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0023624897, 0.008758128, -0.02830249)
+shape = SubResource("BoxShape3D_gpx08")
