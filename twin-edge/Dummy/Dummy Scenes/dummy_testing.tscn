@@ -1,8 +1,14 @@
 [gd_scene load_steps=8 format=3 uid="uid://cj7e4vetiy6st"]
 
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://Dummy/Dummy Scripts/scenes/pick ups/bullets.tscn" id="2_2m1u3"]
 [ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://Dummy/Dummy Scripts/scenes/Player/player.tscn" id="3_6wf7h"]
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://Dummy/Dummy Scripts/scenes/pick ups/medkit.tscn" id="3_tk7nb"]
+=======
+[ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="2_2m1u3"]
+[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="3_6wf7h"]
+[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="3_tk7nb"]
+>>>>>>> d9f389a209eedd3978d2f937e54e1e3b805a6ca5
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qgi1x"]
 sky_top_color = Color(0.63844, 0.378736, 3.85046e-07, 1)

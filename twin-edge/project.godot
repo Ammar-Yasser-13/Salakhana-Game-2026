@@ -32,7 +32,9 @@ folder_colors={
 "res://Dummy/": "orange",
 "res://Scenes/": "red",
 "res://Scripts/": "teal",
-"res://Sounds/": "purple"
+"res://Sounds/": "purple",
+"res://assets/": "blue",
+"res://scenes/": "red"
 }
 
 [global_group]
