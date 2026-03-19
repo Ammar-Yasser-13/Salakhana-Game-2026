@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dyopxvd6ubesl"]
+
+[ext_resource type="PackedScene" uid="uid://ctpm7jaolorae" path="res://assets/walls/buildings/Building Green.glb" id="1_w0vmv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w0vmv"]
+size = Vector3(2.5405273, 3.4487305, 1.3568726)
+
+[node name="Root Scene" unique_id=2054390457 instance=ExtResource("1_w0vmv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=597993388]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=9498544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04321289, 1.6726074, 0.10366821)
+shape = SubResource("BoxShape3D_w0vmv")

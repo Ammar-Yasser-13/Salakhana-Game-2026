@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c1wbq6h1s31ec"]
+
+[ext_resource type="PackedScene" uid="uid://c2yhhn5k2j03s" path="res://Assets/pick ups/ammo/Bullets Pickup.glb" id="1_1nfwd"]
+[ext_resource type="Script" uid="uid://c40sw2p812wca" path="res://Scripts/pick ups/bullets.gd" id="1_ip2rd"]
+[ext_resource type="AudioStream" uid="uid://ccuh6b67iujkp" path="res://Sounds/taking a bulletv2.mp3" id="3_hv26s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ip2rd"]
+radius = 0.5320231
+
+[node name="bullets" type="Area3D" unique_id=1877117906]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("1_ip2rd")
+
+[node name="Root Scene" parent="." unique_id=1024756486 instance=ExtResource("1_1nfwd")]
+transform = Transform3D(11.877472, 7.622031, 0, -9.161096, 9.882056, 0, 0, 0, 17.901, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=581065003]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+shape = SubResource("SphereShape3D_ip2rd")
+
+[node name="TakingABullet" type="AudioStreamPlayer" parent="." unique_id=586693537]
+stream = ExtResource("3_hv26s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

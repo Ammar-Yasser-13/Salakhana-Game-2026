@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ubqd6amumg20"]
+
+[ext_resource type="PackedScene" uid="uid://bubp3ocbuj6mw" path="res://assets/walls/buildings/Brown Building.glb" id="1_j8l16"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dk2f0"]
+size = Vector3(2.258667, 3.9047852, 2.20813)
+
+[node name="BrownBuilding" type="StaticBody3D" unique_id=1657351782]
+
+[node name="Root Scene" parent="." unique_id=144601553 instance=ExtResource("1_j8l16")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7116237, 0, 1.1798038)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2057092290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6293335, 2.125092, 0.60406494)
+shape = SubResource("BoxShape3D_dk2f0")

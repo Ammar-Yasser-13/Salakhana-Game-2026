@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvwodejm3c6kh"]
+
+[ext_resource type="PackedScene" uid="uid://c10afg4wjmit4" path="res://assets/floors/Street T.glb" id="1_o4ch1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o4ch1"]
+points = PackedVector3Array(-0.04, 0.0009999102, -0.04, -0.03, -8.265282e-09, -0.04, -0.04, -8.265282e-09, -0.03, -0.04, 0.0010000081, 0.04, 0.04, 0.0009999102, -0.04, 0.029999994, -8.265282e-09, -0.04, -0.04, -8.265282e-09, 0.029999994, -0.03, -8.265282e-09, 0.04, 0.04, 0.0010000081, 0.04, 0.04, 0.0009999102, 0.029999994, 0.029999994, -8.265282e-09, 0.04)
+
+[node name="StreetT" type="StaticBody3D" unique_id=1027899010]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=669834706]
+transform = Transform3D(100, 0, 0, 0, 100, -4.371139e-06, 0, 4.371139e-06, 100, -0.834514, 0, 0.86388373)
+shape = SubResource("ConvexPolygonShape3D_o4ch1")
+
+[node name="Root Scene" parent="." unique_id=1548482013 instance=ExtResource("1_o4ch1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.834514, 0, 0.86388373)
+
+[editable path="Root Scene"]
