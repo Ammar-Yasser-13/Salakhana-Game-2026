@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://cl8efly6bnuxi"]
 
-[ext_resource type="PackedScene" uid="uid://ds2m8y7jwbfhd" path="res://scenes/assets_with_collision/floor_tile.tscn" id="1_yqcq3"]
+[ext_resource type="PackedScene" uid="uid://ds2m8y7jwbfhd" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/floor_tile.tscn" id="1_yqcq3"]
 [ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="2_w7hem"]
-[ext_resource type="PackedScene" uid="uid://bmrmsgeicwvv8" path="res://scenes/assets_with_collision/black_fence.tscn" id="3_w7hem"]
-[ext_resource type="PackedScene" uid="uid://n76rvujk02oh" path="res://scenes/assets_with_collision/iron_fence.tscn" id="4_bjkqv"]
-[ext_resource type="PackedScene" uid="uid://balacbwmkbdwg" path="res://scenes/assets_with_collision/open_gate.tscn" id="5_b0xmq"]
+[ext_resource type="PackedScene" uid="uid://bmrmsgeicwvv8" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/black_fence.tscn" id="3_w7hem"]
+[ext_resource type="PackedScene" uid="uid://n76rvujk02oh" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/iron_fence.tscn" id="4_bjkqv"]
+[ext_resource type="PackedScene" uid="uid://balacbwmkbdwg" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/open_gate.tscn" id="5_b0xmq"]
+[ext_resource type="PackedScene" uid="uid://cxq5714htmg75" path="res://scenes/assets_with_collision/graveyard/arch.tscn" id="5_hcd6m"]
 [ext_resource type="PackedScene" uid="uid://c08ehulsbv06x" path="res://scenes/assets_with_collision/graveyard/gravestone.tscn" id="6_2we64"]
 [ext_resource type="PackedScene" uid="uid://dks2o4tm528ip" path="res://scenes/assets_with_collision/graveyard/crypt.tscn" id="7_hcd6m"]
 [ext_resource type="PackedScene" uid="uid://dpsrdkvfvxk5w" path="res://scenes/assets_with_collision/graveyard/dead tree.tscn" id="8_0gdtl"]
 [ext_resource type="PackedScene" uid="uid://0q3h3xgd5ae7" path="res://scenes/assets_with_collision/graveyard/glass.tscn" id="9_jfy7d"]
 [ext_resource type="PackedScene" uid="uid://cedjx4nj70ltn" path="res://scenes/assets_with_collision/graveyard/blood.tscn" id="10_yyx0c"]
+[ext_resource type="PackedScene" uid="uid://b0tdgxhrfr15v" path="res://scenes/assets_with_collision/graveyard/broken_car.tscn" id="12_42vdr"]
+[ext_resource type="PackedScene" uid="uid://b4fsnqddudn1x" path="res://scenes/assets_with_collision/graveyard/coffin.tscn" id="13_nxo30"]
+[ext_resource type="PackedScene" uid="uid://u3p5udeiuusi" path="res://scenes/assets_with_collision/graveyard/gravehead.tscn" id="14_oupgs"]
+[ext_resource type="PackedScene" uid="uid://b0fidjxt0fpc7" path="res://scenes/assets_with_collision/graveyard/pillar.tscn" id="15_48tvu"]
+[ext_resource type="PackedScene" uid="uid://c13u140wi34jj" path="res://scenes/assets_with_collision/graveyard/grave.tscn" id="16_evnt5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yqcq3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -440,21 +446,11 @@ transform = Transform3D(0.03844404, 0, 50.01489, 0, 50, 0, -32.876995, 0, 0.0584
 
 [node name="inner walls2" type="Node3D" parent="." unique_id=988703234]
 
-[node name="IronFence" parent="inner walls2" unique_id=2102165232 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(59.77326, 0, 0, 0, 50.88, 0, 0, 0, 50.88, 292.09836, -1.1634789, -107.86743)
-
-[node name="IronFence2" parent="inner walls2" unique_id=249309316 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -289.2531, -1.1634789, -205.45618)
-
 [node name="IronFence3" parent="inner walls2" unique_id=820099782 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -98.50682, -1.1634789, -13.34314)
 
 [node name="IronFence4" parent="inner walls2" unique_id=475452235 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -130.02693, -1.1634789, 199.94717)
-visible = false
-
-[node name="IronFence5" parent="inner walls2" unique_id=1466236847 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(-0.051537067, 0, 39.349174, 0, 49.831303, 0, -28.393103, 0, -0.07142372, 0.287735, -1.1634789, 39.937225)
+transform = Transform3D(73.053246, 0, 0, 0, 50, 0, 0, 0, 50, 318.82217, -1.1634789, -107.58258)
 
 [node name="IronFence6" parent="inner walls2" unique_id=968907724 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(0.013964534, 0, 50.000004, 0, 50.000008, 0, -50.000004, 0, 0.013964534, -189.02719, -1.1634789, -108.477325)
@@ -462,11 +458,14 @@ transform = Transform3D(0.013964534, 0, 50.000004, 0, 50.000008, 0, -50.000004, 
 [node name="IronFence7" parent="inner walls2" unique_id=2036154858 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(0.34557438, 0, 49.99881, 0, 50.000008, 0, -49.99881, 0, 0.34557438, -392.63733, -1.1634789, -106.433784)
 
-[node name="IronFence8" parent="inner walls2" unique_id=1490182841 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(19.537071, 0, 0, 0, 50, 0, 0, 0, 50, -433.3446, -1.1634789, -7.0876923)
+[node name="IronFence13" parent="inner walls2" unique_id=2102165232 instance=ExtResource("4_bjkqv")]
+transform = Transform3D(50.04971, 0, 2.6531665, 0, 50.000008, 0, -2.6580303, 0, 49.958134, -289.47632, -1.1634789, -204.76013)
 
-[node name="IronFence9" parent="inner walls2" unique_id=1754845964 instance=ExtResource("4_bjkqv")]
-transform = Transform3D(0.33335745, 0, 49.9989, 0, 50.000008, 0, -49.9989, 0, 0.33335745, 172.2692, 0.4623909, -9.863281)
+[node name="IronFence14" parent="inner walls2" unique_id=325720035 instance=ExtResource("4_bjkqv")]
+transform = Transform3D(0.33335745, 0, 49.9989, 0, 50.000008, 0, -49.9989, 0, 0.33335745, -2.227005, 0.4623909, -102.78412)
+
+[node name="IronFence15" parent="inner walls2" unique_id=1139616321 instance=ExtResource("4_bjkqv")]
+transform = Transform3D(49.99988, 0, 0.11519265, 0, 50.000004, 0, -0.11519265, 0, 49.99988, 96.36186, 0.4623909, -204.56143)
 
 [node name="IronFence10" parent="inner walls2" unique_id=1430804504 instance=ExtResource("4_bjkqv")]
 transform = Transform3D(1.1143022, 0, 49.987583, 0, 50.000008, 0, -49.987583, 0, 1.1143022, 79.44895, -1.1634789, -205.83769)
@@ -484,12 +483,16 @@ visible = false
 
 [node name="openGate" parent="gates" unique_id=196097088 instance=ExtResource("5_b0xmq")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 87.858765, 4, 53.301292)
+visible = false
 
-[node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 180.62311, 34.266003, 377.5374)
+[node name="arch" parent="gates" unique_id=1199268744 instance=ExtResource("5_hcd6m")]
+transform = Transform3D(25.375, 0, 0, 0, 25.375, 0, 0, 0, 25.375, -430.9315, 3.8781867, -5.220009)
+
+[node name="arch2" parent="gates" unique_id=431317586 instance=ExtResource("5_hcd6m")]
+transform = Transform3D(1.9268613, 0, -25.266634, 0, 25.34, 0, 25.266634, 0, 1.9268613, 187.73141, 3.8781867, -154.35966)
 
 [node name="gravestone" parent="." unique_id=532415882 instance=ExtResource("6_2we64")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 377.5643, 50, -416.84668)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 377.5643, 35.715363, -416.84668)
 
 [node name="crypt" parent="." unique_id=24273877 instance=ExtResource("7_hcd6m")]
 transform = Transform3D(0.15812668, 0, 29.999582, 0, 29.999998, 0, -29.999582, 0, 0.15812668, -367.28323, 4, -402.92813)
@@ -500,7 +503,7 @@ transform = Transform3D(0.15812668, 0, 29.999582, 0, 29.999998, 0, -29.999582, 0
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -448.35727, 3.8295062, 431.5302)
 
 [node name="dead tree2" parent="trees" unique_id=218627257 instance=ExtResource("8_0gdtl")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -448.35727, 3.8295062, -55.07129)
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -448.35727, 3.8295062, -288.92657)
 
 [node name="dead tree3" parent="trees" unique_id=677553215 instance=ExtResource("8_0gdtl")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 205.61551, 3.8295062, -80.03314)
@@ -510,20 +513,14 @@ transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 259.6296, 3.8295062, -482.
 
 [node name="glass" type="Node3D" parent="." unique_id=271300635]
 
-[node name="glass" parent="glass" unique_id=1265911172 instance=ExtResource("9_jfy7d")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 304.757, 7.362259, -338.85294)
-
-[node name="glass2" parent="glass" unique_id=1774144654 instance=ExtResource("9_jfy7d")]
-transform = Transform3D(74.86434, 0, -66.297295, 0, 100, 0, 66.297295, 0, 74.86434, 346.0751, 7.362259, -333.49072)
-
 [node name="glass3" parent="glass" unique_id=333151789 instance=ExtResource("9_jfy7d")]
 transform = Transform3D(97.32364, 0, -86.18648, 0, 130, 0, 86.18648, 0, 97.32364, -166.29962, 7.362259, -138.58585)
 
+[node name="glass6" parent="glass" unique_id=1265911172 instance=ExtResource("9_jfy7d")]
+transform = Transform3D(97.32364, 0, -86.18648, 0, 130, 0, 86.18648, 0, 97.32364, 308.8554, 7.362259, 317.6576)
+
 [node name="glass4" parent="glass" unique_id=1997974049 instance=ExtResource("9_jfy7d")]
 transform = Transform3D(70.44734, 0, -62.38575, 0, 94.1, 0, 62.38575, 0, 70.44734, -145.04517, 7.362259, -86.226715)
-
-[node name="glass5" parent="glass" unique_id=2078121349 instance=ExtResource("9_jfy7d")]
-transform = Transform3D(-61.8132, 0, -70.95025, 0, 94.1, 0, 70.95025, 0, -61.8132, 275.33667, 7.362259, -398.48422)
 
 [node name="blood" type="Node3D" parent="." unique_id=2018363711]
 
@@ -535,3 +532,43 @@ transform = Transform3D(40.17584, 0, 44.56345, 0, 59.999996, 0, -44.56345, 0, 40
 
 [node name="blood3" parent="blood" unique_id=2033023405 instance=ExtResource("10_yyx0c")]
 transform = Transform3D(39.692844, 0, -4.947525, 0, 40, 0, 4.947525, 0, 39.692844, -396.6033, 5.640686, 358.3011)
+
+[node name="blood4" parent="blood" unique_id=1662772188 instance=ExtResource("10_yyx0c")]
+transform = Transform3D(39.692844, 0, -4.947525, 0, 40, 0, 4.947525, 0, 39.692844, 313.40518, 5.640686, 322.79755)
+
+[node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 126.50746, 27.747581, 332.69684)
+JUMP_VELOCITY = 70.0
+
+[node name="broken car" parent="." unique_id=1264891526 instance=ExtResource("12_42vdr")]
+transform = Transform3D(-39.37239, 0, -7.057967, 0, 40, 0, 7.057967, 0, -39.37239, 385.90442, -2.5792205, 323.92337)
+
+[node name="coffin" parent="." unique_id=631693441 instance=ExtResource("13_nxo30")]
+transform = Transform3D(-49.994194, 0, -0.7618103, 0, 50, 0, 0.7618103, 0, -49.994194, -92.86084, 3.7605152, -118.145935)
+
+[node name="gravehead" parent="." unique_id=1347589895 instance=ExtResource("14_oupgs")]
+transform = Transform3D(2.619892, 0, 29.885382, 0, 29.999998, 0, -29.885382, 0, 2.619892, -401, 6, 349.32925)
+
+[node name="pillar" parent="." unique_id=307718521 instance=ExtResource("15_48tvu")]
+transform = Transform3D(4.9512157, 0, 99.87736, 0, 100, 0, -99.87736, 0, 4.9512157, -395.0339, 2.732629, 189.29616)
+
+[node name="pillar4" parent="." unique_id=1108001462 instance=ExtResource("15_48tvu")]
+transform = Transform3D(72.05027, 0, 69.34522, 0, 100, 0, -69.34522, 0, 72.05027, -53.731583, 2.732629, -362.2431)
+
+[node name="pillar5" parent="." unique_id=1878565924 instance=ExtResource("15_48tvu")]
+transform = Transform3D(99.90881, 0, -4.269512, 0, 100, 0, 4.269512, 0, 99.90881, -40.529007, 2.732629, 185.17285)
+
+[node name="pillar2" parent="." unique_id=1236056335 instance=ExtResource("15_48tvu")]
+transform = Transform3D(99.82872, 0, -5.8504925, 0, 100, 0, 5.8504925, 0, 99.82872, 99.13617, 2.732629, -80.29903)
+
+[node name="pillar3" parent="." unique_id=875871644 instance=ExtResource("15_48tvu")]
+transform = Transform3D(-3.2439966, 0, -99.94738, 0, 100.00003, 0, 99.94738, 0, -3.2439966, 308.89786, 1.5634091, 194.34303)
+
+[node name="grave" parent="." unique_id=1240748282 instance=ExtResource("16_evnt5")]
+transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -300.23505, 58.295944, -160.37964)
+
+[node name="grave2" parent="." unique_id=1929179971 instance=ExtResource("16_evnt5")]
+transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -226.68658, 58.295944, -88.50091)
+
+[node name="grave3" parent="." unique_id=181176195 instance=ExtResource("16_evnt5")]
+transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -349.81873, 58.295944, -84.276245)
