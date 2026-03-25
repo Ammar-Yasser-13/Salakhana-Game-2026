@@ -1,0 +1,132 @@
+[gd_scene format=4 uid="uid://cynxunpqomn5h"]
+
+[ext_resource type="PackedScene" uid="uid://630cvwm868fv" path="res://assets/cars/SCHOOL BUS.glb" id="1_ovho2"]
+
+[sub_resource type="Shader" id="Shader_ovho2"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.6.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform sampler2D texture_emission : source_color, hint_default_black, filter_linear_mipmap, repeat_enable;
+uniform vec4 emission : source_color;
+uniform float emission_energy : hint_range(0.0, 100.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+
+	// Emission: Enabled
+	vec3 emission_tex = texture(texture_emission, base_uv).rgb;
+	// Emission Operator: Add
+	EMISSION = (emission.rgb + emission_tex) * emission_energy;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4sbw"]
+resource_name = "color_11593967"
+render_priority = 0
+shader = SubResource("Shader_ovho2")
+shader_parameter/albedo = Color(0.694361, 0.91132057, 0.940525, 1)
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.1999999955296
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_awpfc"]
+_surfaces = [{
+"aabb": AABB(-21.998, -35.5, 12.998, 47.5, 92.5, 38.043),
+"format": 34359742465,
+"index_count": 114,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAQAAAAQAAQAEAAUABgAHAAgACQAIAAcACgAJAAcACwAJAAoADAANAA4ADQAMAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGwAaABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJwAmACUAKAApACoAKwAqACkALAAtAC4ALgAtAC8AMAAxADIAMwAyADEANAA1ADYANAA3ADUAOAA5ADoAOwA6ADkAPAA9AD4APwA+AD0AQABBAEIAQABCAEMARABFAEYARwBFAEQA"),
+"lods": [12.210037, PackedByteArray("AAABAAIAAwACAAEAAQAAAAQAAQAEAAUABgAHAAgACQAIAAcACgAJAAcACwAJAAoA")],
+"name": "color_11593967",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("5/uvwQAADsK6SfhB5/uvwQAADsL8KUxCEoNAPwAADsK6SfhBEoNAPwAADsL8KUxC5/uvwef768G6SfhB5/uvwef768H8KUxCxSBwQAAADsL8KUxCGQTMQQAADsL8KUxCxSBwQAAADsK6SfhBGQTMQQAADsK6SfhBGQTMQef768H8KUxCGQTMQef768G6SfhBAAA0QQAAZELn+/dBPQq6QQAAZEISA0xCAAA0QQAAZEISA0xCPQq6QQAAZELn+/dBCtf3wAAAZEISA0xCAACewQAAZEISA0xCCtf3wAAAZELn+/dBAACewQAAZELn+/dBexQMQQAAZEISA0xCAACowAAAZEISA0xCexQMQQAAZELn+/dBAACowAAAZELn+/dB5/uvwSUGzMH8KUxC5/uvwSUGzMG6SfhB5/uvwc/3R8H8KUxC5/uvwc/3R8G6SfhB5/uvwef7o8HP909B5/uvwSUGzMElBuhB5/uvwSUGzMHP909B5/uvwef7o8ElBuhB5/uvwc/3R8HP909B5/uvwSUGjMElBuhB5/uvwSUGjMHP909B5/uvwc/3R8ElBuhB5/uvwbbzB0H8KUxC5/uvwbbzB0G6SfhB5/uvwRkErEH8KUxC5/uvwRkErEG6SfhB5/uvwWIQkED8KUxC5/uvwUoMCMH8KUxC5/uvwWIQkEC6SfhB5/uvwUoMCMG6SfhB5/uvwdv5y0H8KUxC5/uvwdv5y0G6SfhB5/uvwQwCGkL8KUxC5/uvwQwCGkK6SfhB5/uvwQwCXkK6SfhB5/uvwQwCXkL8KUxC5/uvwe78KUK6SfhB5/uvwe78KUL8KUxCGQTMQc/3R8H8KUxCGQTMQSUGzMG6SfhBGQTMQSUGzMH8KUxCGQTMQc/3R8G6SfhBGQTMQUoMCMG6SfhBGQTMQUoMCMH8KUxCGQTMQWIQkEC6SfhBGQTMQWIQkED8KUxCGQTMQe78KUK6SfhBGQTMQe78KUL8KUxCGQTMQQwCXkK6SfhBGQTMQQwCXkL8KUxCGQTMQQwCGkL8KUxCGQTMQQwCGkK6SfhBGQTMQdv5y0G6SfhBGQTMQdv5y0H8KUxCGQTMQRkErEH8KUxCGQTMQbbzB0G6SfhBGQTMQbbzB0H8KUxCGQTMQRkErEG6SfhB")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ekw0c"]
+resource_name = "SCHOOL BUS_group_0_11593967"
+_surfaces = [{
+"aabb": AABB(-21.998, -35.5, 12.998, 47.5, 92.5, 38.043),
+"format": 34359742465,
+"index_count": 114,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAQAAAAQAAQAEAAUABgAHAAgACQAIAAcACgAJAAcACwAJAAoADAANAA4ADQAMAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGwAaABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJwAmACUAKAApACoAKwAqACkALAAtAC4ALgAtAC8AMAAxADIAMwAyADEANAA1ADYANAA3ADUAOAA5ADoAOwA6ADkAPAA9AD4APwA+AD0AQABBAEIAQABCAEMARABFAEYARwBFAEQA"),
+"lods": [12.210037, PackedByteArray("AAABAAIAAwACAAEAAQAAAAQAAQAEAAUABgAHAAgACQAIAAcACgAJAAcACwAJAAoA")],
+"material": SubResource("ShaderMaterial_b4sbw"),
+"name": "color_11593967",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("5/uvwQAADsK6SfhB5/uvwQAADsL8KUxCEoNAPwAADsK6SfhBEoNAPwAADsL8KUxC5/uvwef768G6SfhB5/uvwef768H8KUxCxSBwQAAADsL8KUxCGQTMQQAADsL8KUxCxSBwQAAADsK6SfhBGQTMQQAADsK6SfhBGQTMQef768H8KUxCGQTMQef768G6SfhBAAA0QQAAZELn+/dBPQq6QQAAZEISA0xCAAA0QQAAZEISA0xCPQq6QQAAZELn+/dBCtf3wAAAZEISA0xCAACewQAAZEISA0xCCtf3wAAAZELn+/dBAACewQAAZELn+/dBexQMQQAAZEISA0xCAACowAAAZEISA0xCexQMQQAAZELn+/dBAACowAAAZELn+/dB5/uvwSUGzMH8KUxC5/uvwSUGzMG6SfhB5/uvwc/3R8H8KUxC5/uvwc/3R8G6SfhB5/uvwef7o8HP909B5/uvwSUGzMElBuhB5/uvwSUGzMHP909B5/uvwef7o8ElBuhB5/uvwc/3R8HP909B5/uvwSUGjMElBuhB5/uvwSUGjMHP909B5/uvwc/3R8ElBuhB5/uvwbbzB0H8KUxC5/uvwbbzB0G6SfhB5/uvwRkErEH8KUxC5/uvwRkErEG6SfhB5/uvwWIQkED8KUxC5/uvwUoMCMH8KUxC5/uvwWIQkEC6SfhB5/uvwUoMCMG6SfhB5/uvwdv5y0H8KUxC5/uvwdv5y0G6SfhB5/uvwQwCGkL8KUxC5/uvwQwCGkK6SfhB5/uvwQwCXkK6SfhB5/uvwQwCXkL8KUxC5/uvwe78KUK6SfhB5/uvwe78KUL8KUxCGQTMQc/3R8H8KUxCGQTMQSUGzMG6SfhBGQTMQSUGzMH8KUxCGQTMQc/3R8G6SfhBGQTMQUoMCMG6SfhBGQTMQUoMCMH8KUxCGQTMQWIQkEC6SfhBGQTMQWIQkED8KUxCGQTMQe78KUK6SfhBGQTMQe78KUL8KUxCGQTMQQwCXkK6SfhBGQTMQQwCXkL8KUxCGQTMQQwCGkL8KUxCGQTMQQwCGkK6SfhBGQTMQdv5y0G6SfhBGQTMQdv5y0H8KUxCGQTMQRkErEH8KUxCGQTMQbbzB0G6SfhBGQTMQbbzB0H8KUxCGQTMQRkErEG6SfhB")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_awpfc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b4sbw"]
+size = Vector3(55.193237, 59.128662, 115.73584)
+
+[node name="SchoolBus" type="StaticBody3D" unique_id=1892559402]
+
+[node name="SCHOOL BUS" parent="." unique_id=1875729410 instance=ExtResource("1_ovho2")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="group_0_11593967" parent="SCHOOL BUS/obj_0" parent_id_path=PackedInt32Array(1875729410, 415788370) index="1" unique_id=1178685668]
+mesh = SubResource("ArrayMesh_ekw0c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1051786506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5057983, 28.223999, -1.5656738)
+shape = SubResource("BoxShape3D_b4sbw")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2139327183]
+transform = Transform3D(1, 0, 0, 0, 0.10270574, 0.9947118, 0, -0.9947118, 0.10270574, 0, 89.903076, 0)
+visible = false
+light_color = Color(0.5163938, 0.5163938, 0.5163937, 1)
+light_energy = 2.714
+spot_range = 52.31653
+spot_angle = 89.99
+
+[editable path="SCHOOL BUS"]

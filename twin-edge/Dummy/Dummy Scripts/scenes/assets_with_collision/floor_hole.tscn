@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dv20hmqi1iu4j"]
+
+[ext_resource type="PackedScene" uid="uid://b22fcoe3f12m7" path="res://assets/floors/Floor Hole.glb" id="1_vhex8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ehigg"]
+points = PackedVector3Array(0.01, 0.01, 0, 0.01, -0.01, 0, 0.0048629595, 5.6773424e-05, -0.003391846, -0.00044244342, 0.004737666, -0.003391846, -0.01, 0.01, 0, 0.0016425215, -0.005184025, -0.003391846, 0.004698511, -0.0047317934, -0.003391846, -0.01, -0.01, 0, -0.004549726, 0.002079091, -0.003391846, -0.0045947535, -0.0032811277, -0.003391846)
+
+[node name="FloorHole" type="StaticBody3D" unique_id=1469467918]
+
+[node name="Root Scene" parent="." unique_id=1118093237 instance=ExtResource("1_vhex8")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=359517894]
+transform = Transform3D(60.000004, 0, 0, 0, -7.1525587e-06, 60.000004, 0, -60.000004, -7.1525587e-06, -0.0026071072, 0, -0.011192918)
+shape = SubResource("ConvexPolygonShape3D_ehigg")
+
+[editable path="Root Scene"]

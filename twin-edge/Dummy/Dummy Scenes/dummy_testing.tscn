@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cj7e4vetiy6st"]
 
-[ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://Scenes/pick ups/bullets.tscn" id="2_2m1u3"]
-[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://Scenes/Player/player.tscn" id="3_6wf7h"]
-[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://Scenes/pick ups/medkit.tscn" id="3_tk7nb"]
+[ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="2_2m1u3"]
+[ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="3_6wf7h"]
+[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="3_tk7nb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qgi1x"]
 sky_top_color = Color(0.63844, 0.378736, 3.85046e-07, 1)
@@ -22,11 +22,15 @@ glow_enabled = true
 
 [node name="dummy testing" type="Node3D" unique_id=1267841132]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=770789071]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2001099356]
 environment = SubResource("Environment_tk7nb")
 
 [node name="Player" parent="." unique_id=1623967858 instance=ExtResource("3_6wf7h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3.13079, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 11.448776, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1566083286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.775447, 0)
@@ -35,11 +39,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.775447, 0)
 shape = SubResource("WorldBoundaryShape3D_tk7nb")
 debug_color = Color(0.789849, 0.368722, 0.580544, 0.419608)
 
-[node name="bullets" parent="." unique_id=688092986 instance=ExtResource("2_2m1u3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156626, 0.594744, -3.3023)
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=271825966]
+transform = Transform3D(100, 0, 0, 0, 0.666, 0, 0, 0, 100, 0, -0.77253103, 0)
 
-[node name="bullets2" parent="." unique_id=1877117906 instance=ExtResource("2_2m1u3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0711014, 0.594744, 1.4126263)
+[node name="items" type="Node" parent="." unique_id=822950022]
 
-[node name="Medkit" parent="." unique_id=357753018 instance=ExtResource("3_tk7nb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696114, 0.810491, -5.17436)
+[node name="bullets" parent="items" unique_id=688092986 instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.102764, 13.908327, 14.097054)
+
+[node name="bullets2" parent="items" unique_id=1877117906 instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.09332, 13.735582, 33.08683)
+
+[node name="bullets3" parent="items" unique_id=460598281 instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.102764, 13.908327, -21.676338)
+
+[node name="bullets4" parent="items" unique_id=1376553115 instance=ExtResource("2_2m1u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.09332, 13.735582, -2.6865616)
+
+[node name="Medkit" parent="items" unique_id=357753018 instance=ExtResource("3_tk7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.36157, 12.532843, -41.72925)
+
+[node name="Medkit2" parent="items" unique_id=1030489201 instance=ExtResource("3_tk7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.661814, 12.532843, -41.72925)
+
+[node name="Medkit3" parent="items" unique_id=1216207167 instance=ExtResource("3_tk7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.545208, 12.532843, -41.72925)
+
+[node name="Medkit4" parent="items" unique_id=607340678 instance=ExtResource("3_tk7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.244963, 12.532843, -41.72925)

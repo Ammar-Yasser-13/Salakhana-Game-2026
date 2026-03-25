@@ -32,8 +32,15 @@ folder_colors={
 "res://Dummy/": "orange",
 "res://Scenes/": "red",
 "res://Scripts/": "teal",
-"res://Sounds/": "purple"
+"res://Sounds/": "purple",
+"res://assets/": "blue",
+"res://scenes/": "red"
 }
+
+[global_group]
+
+Player=""
+Enemy=""
 
 [input]
 
@@ -118,6 +125,7 @@ Dummy_button_damage={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+3d/default_gravity=98.0
 
 [rendering]
 

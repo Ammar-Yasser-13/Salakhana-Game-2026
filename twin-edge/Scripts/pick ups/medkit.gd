@@ -7,9 +7,10 @@ extends Area3D
 func _process(_delta: float) -> void:
 	root_scene.rotate_y(0.02)
 
-func _on_body_entered(_body: Node3D) -> void:
-	Game_Manger.Current_health += 1
-	print("+1 HP")
-	health_pickup.play()
-	collision_shape_3d.disabled = true
-	root_scene.visible = false
+func _on_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player"):
+		Game_Manger.Current_health += 1
+		print("+1 HP")
+		health_pickup.play()
+		collision_shape_3d.disabled = true
+		root_scene.visible = false
