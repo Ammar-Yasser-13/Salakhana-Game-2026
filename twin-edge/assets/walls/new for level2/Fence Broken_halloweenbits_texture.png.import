@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb8vaygjbomih"
-path.s3tc="res://.godot/imported/Fence Broken_halloweenbits_texture.png-8c227924c8aedd6a28c5b870d583adb6.s3tc.ctex"
+path.s3tc="res://.godot/imported/Fence Broken_halloweenbits_texture.png-aa3d6cff5fc6c4c9b85ba9c552863bf5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/walls/new for level2/Fence Broken_halloweenbits_texture.png"
-dest_files=["res://.godot/imported/Fence Broken_halloweenbits_texture.png-8c227924c8aedd6a28c5b870d583adb6.s3tc.ctex"]
+source_file="res://assets/walls/new for level2/Fence Broken_halloweenbits_texture.png"
+dest_files=["res://.godot/imported/Fence Broken_halloweenbits_texture.png-aa3d6cff5fc6c4c9b85ba9c552863bf5.s3tc.ctex"]
 
 [params]
 
