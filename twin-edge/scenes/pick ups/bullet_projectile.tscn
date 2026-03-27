@@ -74,7 +74,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mj1wu")
 
-[node name="Bullet projectile" type="CharacterBody3D" unique_id=26014183]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u82sm"]
+height = 4.046875
+
+[node name="Bullet projectile" type="CharacterBody3D" unique_id=26014183 groups=["bullet"]]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_u82sm")
 
@@ -97,3 +100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19953105)
 light_color = Color(1, 0.6971667, 0.20999998, 1)
 light_energy = 0.5
 omni_range = 0.42741036
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1739380738]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0, 0.0005223513, 0.0020214827)
+shape = SubResource("CapsuleShape3D_u82sm")
