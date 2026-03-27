@@ -63,6 +63,11 @@ libraries/ = SubResource("AnimationLibrary_p6rba")
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.11220046, -3.8952026, 0.57873315)
 shape = SubResource("CapsuleShape3D_b4s1t")
 
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1512609845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08877916, -1.6463646, 4.7700496)
+
+[node name="cooldown" type="Timer" parent="." unique_id=1233702902]
+
 [connection signal="body_entered" from="detection_zone" to="." method="player_detect"]
 [connection signal="body_exited" from="detection_zone" to="." method="Player_detect_exited"]
 [connection signal="body_entered" from="Area3D" to="." method="bullet_hit"]
