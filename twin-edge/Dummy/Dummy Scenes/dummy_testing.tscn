@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="2_2m1u3"]
 [ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="3_6wf7h"]
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="3_tk7nb"]
+[ext_resource type="PackedScene" uid="uid://c4dvrt72m5nrl" path="res://Dummy/Dummy Scenes/backup_enemy.tscn" id="4_mx2a1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qgi1x"]
 sky_top_color = Color(0.63844, 0.378736, 3.85046e-07, 1)
@@ -67,3 +68,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.545208, 12.532843, -41.729
 
 [node name="Medkit4" parent="items" unique_id=607340678 instance=ExtResource("3_tk7nb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.244963, 12.532843, -41.72925)
+
+[node name="backup_enemy" parent="." unique_id=1452719786 instance=ExtResource("4_mx2a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.879326, 16.008389, 4.679882)
