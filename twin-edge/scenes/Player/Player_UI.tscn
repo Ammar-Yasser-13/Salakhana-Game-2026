@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d0tbffm4hqa2v"]
 
-[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://Assets/player/UI/Health.png" id="1_d1abm"]
+[ext_resource type="Texture2D" uid="uid://dbfx5aihqvtbg" path="res://assets/player/UI/Health.png" id="1_d1abm"]
 [ext_resource type="Script" uid="uid://ckbos56rmm6lv" path="res://Scripts/Player/player_ui.gd" id="1_skwaw"]
-[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://Assets/player/UI/Enemy skull.png" id="2_gg8lv"]
-[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://Assets/player/UI/Bullet.png" id="3_cn2k5"]
-[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://Assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
+[ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://assets/player/UI/Enemy skull.png" id="2_gg8lv"]
+[ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://assets/player/UI/Bullet.png" id="3_cn2k5"]
+[ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg8lv"]
 atlas = ExtResource("1_d1abm")
@@ -152,10 +152,10 @@ texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.9236111
 anchor_top = 0.044753086
-anchor_right = 0.94911027
-anchor_bottom = 0.106481485
-offset_right = -17.625
-offset_bottom = -24.0
+anchor_right = 0.9539931
+anchor_bottom = 0.111111134
+offset_right = -21.0
+offset_bottom = -25.80001
 grow_horizontal = 0
 scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 8
@@ -169,10 +169,10 @@ texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.092013836
 anchor_top = 0.01851852
-anchor_right = 0.24826384
-anchor_bottom = 0.13734569
-offset_right = -108.0
-offset_bottom = -46.200005
+anchor_right = 0.25086802
+anchor_bottom = 0.125
+offset_right = -109.80002
+offset_bottom = -41.4
 grow_horizontal = 0
 scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 8

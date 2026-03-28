@@ -21,6 +21,8 @@ func _process(_delta: float) -> void:
 	Ammo_checker()
 	# disable & enable shooting feedback if the player is out of bullets
 	ammo_feedback()
+	# updates number of enemies in UI
+	Enemies_number_updater()
 
 func ammo_feedback():
 	if Input.is_action_just_pressed("Shoot_Player") && Game_Manger.Current_bullets <= 0:
@@ -95,3 +97,6 @@ func Ammo_checker():
 		bullet_4.visible = false
 		bullet_5.visible = false
 		bullet_6.visible = false
+
+func Enemies_number_updater():
+	enemy_counter.text = str(Game_Manger.Current_enemies)

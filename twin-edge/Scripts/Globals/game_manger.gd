@@ -10,6 +10,8 @@ const Min_bullets:int = 0
 #==================================[ Level data ]========================================
 @export_category("Level data")
 @export var Enemies_level_counter:int = 0
+@export var Level_1_Enemies_number:int = 8
+@export var Level_2_Enemies_number:int = 5
 var Current_enemies:int = Enemies_level_counter
 var current_level:int
 #==========================================================================================
