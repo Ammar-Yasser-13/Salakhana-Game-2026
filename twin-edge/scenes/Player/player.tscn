@@ -37,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 [node name="Dash Timer" type="Timer" parent="." unique_id=353935977]
 wait_time = 3.0
 
-[node name="Gun Timer" type="Timer" parent="." unique_id=347551206 groups=["Player"]]
+[node name="Gun Timer" type="Timer" parent="." unique_id=347551206]
 wait_time = 0.2
 
 [node name="sounds" type="Node" parent="." unique_id=1200192062]
@@ -45,7 +45,7 @@ wait_time = 0.2
 [node name="EmptyShot" type="AudioStreamPlayer" parent="sounds" unique_id=92340712]
 stream = ExtResource("3_xpcdj")
 
-[node name="GunShot" type="AudioStreamPlayer" parent="sounds" unique_id=632657 groups=["Player"]]
+[node name="GunShot" type="AudioStreamPlayer" parent="sounds" unique_id=632657]
 stream = ExtResource("4_mtuoh")
 
 [node name="Jump" type="AudioStreamPlayer" parent="sounds" unique_id=1529328157]

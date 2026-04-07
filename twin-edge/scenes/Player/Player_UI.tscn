@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://r3ly3te0pvbb" path="res://assets/player/UI/Enemy skull.png" id="2_gg8lv"]
 [ext_resource type="Texture2D" uid="uid://j6liitpwlgd5" path="res://assets/player/UI/Bullet.png" id="3_cn2k5"]
 [ext_resource type="FontFile" uid="uid://dqecarga1ab3g" path="res://assets/player/UI/PanasChill.ttf" id="4_lhbyj"]
+[ext_resource type="Texture2D" uid="uid://drsw63wyop5bd" path="res://assets/player/UI/crosshair012.png" id="6_otse3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg8lv"]
 atlas = ExtResource("1_d1abm")
@@ -184,3 +185,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1673252135]
 libraries/ = SubResource("AnimationLibrary_ojbky")
+
+[node name="Crosshair012" type="Sprite2D" parent="." unique_id=371231819]
+position = Vector2(576, 352)
+texture = ExtResource("6_otse3")

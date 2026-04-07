@@ -28,12 +28,6 @@ var Bullet_Pool =[]
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	for i in 5:
-		var Bullet = Bullet_Scene.instantiate()
-		get_parent().add_child.call_deferred(Bullet)
-		Bullet.set_physics_process(false)
-		Bullet_Pool.append(Bullet)
-		Bullet.hide()
 		
 
 
@@ -124,11 +118,14 @@ func Change_Crouch_State() -> void:
 			Crouch_Multiplier = 1
 
 func Spawn_Bullet ():
-	if Bullet_Pool.size()>0:
-		var Bullet = Bullet_Pool.pop_back()
+		var Bullet = Bullet_Scene.instantiate()
+		get_parent().add_child(Bullet)
 		Bullet.dir = crosshair.global_position - head.global_position
 		Bullet.global_rotation =  head.global_rotation
 		Bullet.global_position = head.global_position
+		Bullet.global_position.y = head.global_position.y - 3
+	
+		
 		Bullet.show()
 		Bullet.set_physics_process(true)
 		Bullet.start()

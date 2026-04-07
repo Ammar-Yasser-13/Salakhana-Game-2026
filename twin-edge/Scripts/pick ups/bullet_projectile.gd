@@ -14,3 +14,10 @@ func start ():
 	
 func end ():
 	velocity = Vector3(0,0,0)
+
+
+func _on_bullet_area_body_entered(body: Node3D) -> void:
+	if not body.is_in_group("Player"):
+		if body.is_in_group("Enemy"):
+			body.die()
+		queue_free()
