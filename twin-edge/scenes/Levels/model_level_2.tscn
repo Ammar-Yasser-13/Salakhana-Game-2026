@@ -13,9 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://cedjx4nj70ltn" path="res://scenes/assets_with_collision/graveyard/blood.tscn" id="10_yyx0c"]
 [ext_resource type="PackedScene" uid="uid://b0tdgxhrfr15v" path="res://scenes/assets_with_collision/graveyard/broken_car.tscn" id="12_42vdr"]
 [ext_resource type="PackedScene" uid="uid://b4fsnqddudn1x" path="res://scenes/assets_with_collision/graveyard/coffin.tscn" id="13_nxo30"]
+[ext_resource type="PackedScene" uid="uid://cfeuoi6m7ifwk" path="res://scenes/enemy/enemy.tscn" id="14_od7ca"]
 [ext_resource type="PackedScene" uid="uid://u3p5udeiuusi" path="res://scenes/assets_with_collision/graveyard/gravehead.tscn" id="14_oupgs"]
 [ext_resource type="PackedScene" uid="uid://b0fidjxt0fpc7" path="res://scenes/assets_with_collision/graveyard/pillar.tscn" id="15_48tvu"]
 [ext_resource type="PackedScene" uid="uid://c13u140wi34jj" path="res://scenes/assets_with_collision/graveyard/grave.tscn" id="16_evnt5"]
+[ext_resource type="PackedScene" uid="uid://clu43e4vvk6yu" path="res://scenes/assets_with_collision/graveyard/car_2.tscn" id="17_kk34i"]
+[ext_resource type="PackedScene" uid="uid://lw0uaqnubt6y" path="res://scenes/assets_with_collision/graveyard/tire.tscn" id="18_oniui"]
+[ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="19_2l77w"]
+[ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="20_n1g0a"]
+[ext_resource type="PackedScene" uid="uid://cldatiok1jred" path="res://scenes/assets_with_collision/graveyard/bike.tscn" id="22_oniui"]
+[ext_resource type="PackedScene" uid="uid://b0xl23eeh8wp8" path="res://scenes/pick ups/bullet_projectile.tscn" id="22_usehl"]
+[ext_resource type="PackedScene" uid="uid://f188kdyokjkp" path="res://scenes/assets_with_collision/graveyard/pile of bones.tscn" id="24_2l77w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yqcq3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -277,6 +285,7 @@ radius = 29.060059
 height = 81.292725
 
 [node name="enemies" type="CSGCombiner3D" parent="." unique_id=1567471323]
+visible = false
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="enemies" unique_id=1187775375]
 transform = Transform3D(1.1806127, 0, 0, 0, 2.1177988, 0, 0, 0, 1, 382.81052, 0, 58.776596)
@@ -284,6 +293,7 @@ mesh = SubResource("CapsuleMesh_lesfc")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="enemies" unique_id=1383270216]
 transform = Transform3D(1.1806127, 0, 0, 0, 2.1177988, 0, 0, 0, 1, -85.23047, 0, 58.776596)
+visible = false
 mesh = SubResource("CapsuleMesh_lesfc")
 
 [node name="CSGMesh3D4" type="CSGMesh3D" parent="enemies" unique_id=1988415276]
@@ -491,11 +501,25 @@ transform = Transform3D(25.375, 0, 0, 0, 25.375, 0, 0, 0, 25.375, -430.9315, 3.8
 [node name="arch2" parent="gates" unique_id=431317586 instance=ExtResource("5_hcd6m")]
 transform = Transform3D(1.9268613, 0, -25.266634, 0, 25.34, 0, 25.266634, 0, 1.9268613, 187.73141, 3.8781867, -154.35966)
 
-[node name="gravestone" parent="." unique_id=532415882 instance=ExtResource("6_2we64")]
+[node name="graves" type="Node3D" parent="." unique_id=837807592]
+
+[node name="gravehead" parent="graves" unique_id=1347589895 instance=ExtResource("14_oupgs")]
+transform = Transform3D(2.619892, 0, 29.885382, 0, 29.999998, 0, -29.885382, 0, 2.619892, -401, 6, 349.32925)
+
+[node name="grave" parent="graves" unique_id=1240748282 instance=ExtResource("16_evnt5")]
+transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -300.23505, 58.295944, -160.37964)
+
+[node name="grave2" parent="graves" unique_id=1929179971 instance=ExtResource("16_evnt5")]
+transform = Transform3D(0.015637554, 0, 6.9999824, 0, 7, 0, -6.9999824, 0, 0.015637554, -209.93474, 58.295944, -88.50091)
+
+[node name="grave3" parent="graves" unique_id=181176195 instance=ExtResource("16_evnt5")]
+transform = Transform3D(0.015637554, 0, 6.9999824, 0, 7, 0, -6.9999824, 0, 0.015637554, -349.81873, 58.295944, -84.276245)
+
+[node name="gravestone" parent="graves" unique_id=532415882 instance=ExtResource("6_2we64")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 377.5643, 35.715363, -416.84668)
 
-[node name="crypt" parent="." unique_id=24273877 instance=ExtResource("7_hcd6m")]
-transform = Transform3D(0.15812668, 0, 29.999582, 0, 29.999998, 0, -29.999582, 0, 0.15812668, -367.28323, 4, -402.92813)
+[node name="coffin" parent="graves" unique_id=631693441 instance=ExtResource("13_nxo30")]
+transform = Transform3D(-49.994194, 0, -0.7618103, 0, 50, 0, 0.7618103, 0, -49.994194, -92.86084, 3.7605152, -118.145935)
 
 [node name="trees" type="Node3D" parent="." unique_id=812909565]
 
@@ -519,6 +543,9 @@ transform = Transform3D(97.32364, 0, -86.18648, 0, 130, 0, 86.18648, 0, 97.32364
 [node name="glass6" parent="glass" unique_id=1265911172 instance=ExtResource("9_jfy7d")]
 transform = Transform3D(97.32364, 0, -86.18648, 0, 130, 0, 86.18648, 0, 97.32364, 308.8554, 7.362259, 317.6576)
 
+[node name="glass7" parent="glass" unique_id=332975573 instance=ExtResource("9_jfy7d")]
+transform = Transform3D(97.32364, 0, -86.18648, 0, 130, 0, 86.18648, 0, 97.32364, -342.24152, 7.362259, 317.6576)
+
 [node name="glass4" parent="glass" unique_id=1997974049 instance=ExtResource("9_jfy7d")]
 transform = Transform3D(70.44734, 0, -62.38575, 0, 94.1, 0, 62.38575, 0, 70.44734, -145.04517, 7.362259, -86.226715)
 
@@ -536,39 +563,83 @@ transform = Transform3D(39.692844, 0, -4.947525, 0, 40, 0, 4.947525, 0, 39.69284
 [node name="blood4" parent="blood" unique_id=1662772188 instance=ExtResource("10_yyx0c")]
 transform = Transform3D(39.692844, 0, -4.947525, 0, 40, 0, 4.947525, 0, 39.692844, 313.40518, 5.640686, 322.79755)
 
-[node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
+[node name="pillars" type="Node3D" parent="." unique_id=1921973168]
+
+[node name="pillar4" parent="pillars" unique_id=1108001462 instance=ExtResource("15_48tvu")]
+transform = Transform3D(72.05027, 0, 69.34522, 0, 100, 0, -69.34522, 0, 72.05027, -53.731583, 2.732629, -362.2431)
+
+[node name="pillar5" parent="pillars" unique_id=1878565924 instance=ExtResource("15_48tvu")]
+transform = Transform3D(99.90881, 0, -4.269512, 0, 100, 0, 4.269512, 0, 99.90881, -89.09999, 2.732629, 185.17285)
+
+[node name="pillar3" parent="pillars" unique_id=875871644 instance=ExtResource("15_48tvu")]
+transform = Transform3D(-3.2439966, 0, -99.94738, 0, 100.00003, 0, 99.94738, 0, -3.2439966, 324.94827, 1.5634091, 194.34303)
+
+[node name="pillar" parent="pillars" unique_id=307718521 instance=ExtResource("15_48tvu")]
+transform = Transform3D(4.9512157, 0, 99.87736, 0, 100, 0, -99.87736, 0, 4.9512157, -395.0339, 2.732629, 189.29616)
+
+[node name="pick_ups" type="Node3D" parent="." unique_id=1224942801]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 126.50746, 27.747581, 332.69684)
-JUMP_VELOCITY = 70.0
+
+[node name="Medkit" parent="pick_ups" unique_id=1030489201 instance=ExtResource("19_2l77w")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -21.611874, 2.4411142, -50.27819)
+
+[node name="Medkit2" parent="pick_ups" unique_id=1514666601 instance=ExtResource("19_2l77w")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 27.61493, 5.260005, -0.81230927)
+
+[node name="bullets" parent="pick_ups" unique_id=1877117906 instance=ExtResource("20_n1g0a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -42.260773, -0.33176494, -45.231728)
+
+[node name="bullets2" parent="pick_ups" unique_id=1597494942 instance=ExtResource("20_n1g0a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 26.530098, 0.539042, -69.54105)
+
+[node name="Bullet projectile" parent="pick_ups" unique_id=26014183 instance=ExtResource("22_usehl")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -38.248035, 1.9859993, -71.35069)
+
+[node name="enemies2" type="Node3D" parent="." unique_id=393060822]
+transform = Transform3D(-48.19502, 0, 26.499811, 0, 54.999996, 0, -26.499811, 0, -48.19502, -80.32883, 5.06389, 59.956253)
+
+[node name="enemy2" parent="enemies2" unique_id=1481929069 instance=ExtResource("14_od7ca")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 7.891262, 0, 1.1639229)
+
+[node name="enemy" parent="enemies2" unique_id=1710723458 instance=ExtResource("14_od7ca")]
+transform = Transform3D(1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 1, 0.39136147, 0, 0.7117663)
+
+[node name="enemy3" parent="enemies2" unique_id=876422717 instance=ExtResource("14_od7ca")]
+transform = Transform3D(-0.0034383237, 0, -0.9999941, 0, 1, 0, 0.9999941, 0, -0.0034383237, -7.261673, 0, 3.9197536)
+
+[node name="enemy4" parent="enemies2" unique_id=42156457 instance=ExtResource("14_od7ca")]
+transform = Transform3D(0.7360145, 0, 0.6769659, 0, 0.9999999, 0, -0.6769659, 0, 0.7360145, 2.1971283, 0, 7.188034)
+
+[node name="crypt" parent="." unique_id=24273877 instance=ExtResource("7_hcd6m")]
+transform = Transform3D(0.15812668, 0, 29.999582, 0, 29.999998, 0, -29.999582, 0, 0.15812668, -367.28323, 4, -402.92813)
 
 [node name="broken car" parent="." unique_id=1264891526 instance=ExtResource("12_42vdr")]
 transform = Transform3D(-39.37239, 0, -7.057967, 0, 40, 0, 7.057967, 0, -39.37239, 385.90442, -2.5792205, 323.92337)
 
-[node name="coffin" parent="." unique_id=631693441 instance=ExtResource("13_nxo30")]
-transform = Transform3D(-49.994194, 0, -0.7618103, 0, 50, 0, 0.7618103, 0, -49.994194, -92.86084, 3.7605152, -118.145935)
+[node name="car2" parent="." unique_id=449204164 instance=ExtResource("17_kk34i")]
+transform = Transform3D(-0.94875, 0.54776114, -0.63249993, -0.63250005, -1.095522, -2.5072834e-08, -0.547761, 0.31624997, 1.0955222, -356, 33.95883, 207)
 
-[node name="gravehead" parent="." unique_id=1347589895 instance=ExtResource("14_oupgs")]
-transform = Transform3D(2.619892, 0, 29.885382, 0, 29.999998, 0, -29.885382, 0, 2.619892, -401, 6, 349.32925)
+[node name="tire" parent="." unique_id=1610745538 instance=ExtResource("18_oniui")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -399.90842, 2.2972455, 386.86807)
 
-[node name="pillar" parent="." unique_id=307718521 instance=ExtResource("15_48tvu")]
-transform = Transform3D(4.9512157, 0, 99.87736, 0, 100, 0, -99.87736, 0, 4.9512157, -395.0339, 2.732629, 189.29616)
+[node name="bike" parent="." unique_id=180699606 instance=ExtResource("22_oniui")]
+transform = Transform3D(23.19767, -13.402937, 29.702349, 8.249827, 37.687683, 10.563098, -31.524727, -5.9604645e-07, 24.620956, -50.98662, 3.2018728, 210.92416)
 
-[node name="pillar4" parent="." unique_id=1108001462 instance=ExtResource("15_48tvu")]
-transform = Transform3D(72.05027, 0, 69.34522, 0, 100, 0, -69.34522, 0, 72.05027, -53.731583, 2.732629, -362.2431)
+[node name="pile bones" parent="." unique_id=253779605 instance=ExtResource("24_2l77w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 84.9117, 17.635864, -145.70111)
 
-[node name="pillar5" parent="." unique_id=1878565924 instance=ExtResource("15_48tvu")]
-transform = Transform3D(99.90881, 0, -4.269512, 0, 100, 0, 4.269512, 0, 99.90881, -40.529007, 2.732629, 185.17285)
+[node name="pile bones2" parent="." unique_id=51710822 instance=ExtResource("24_2l77w")]
+transform = Transform3D(0.5161044, 0, -1.2149224, 0, 1.32, 0, 1.2149224, 0, 0.5161044, 52.166885, 17.635864, -119.36154)
+collision_layer = 1
 
-[node name="pillar2" parent="." unique_id=1236056335 instance=ExtResource("15_48tvu")]
-transform = Transform3D(99.82872, 0, -5.8504925, 0, 100, 0, 5.8504925, 0, 99.82872, 99.13617, 2.732629, -80.29903)
+[node name="pile bones3" parent="." unique_id=775013092 instance=ExtResource("24_2l77w")]
+transform = Transform3D(0.5161044, 0, -1.2149224, 0, 1.32, 0, 1.2149224, 0, 0.5161044, -37.604324, 17.635864, 192.18008)
+collision_layer = 1
 
-[node name="pillar3" parent="." unique_id=875871644 instance=ExtResource("15_48tvu")]
-transform = Transform3D(-3.2439966, 0, -99.94738, 0, 100.00003, 0, 99.94738, 0, -3.2439966, 308.89786, 1.5634091, 194.34303)
+[node name="pile bones4" parent="." unique_id=2084431494 instance=ExtResource("24_2l77w")]
+transform = Transform3D(-0.11288807, 0, -1.315164, 0, 1.3199999, 0, 1.315164, 0, -0.11288807, -37.604324, 17.635864, 225.94662)
+collision_layer = 1
 
-[node name="grave" parent="." unique_id=1240748282 instance=ExtResource("16_evnt5")]
-transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -300.23505, 58.295944, -160.37964)
-
-[node name="grave2" parent="." unique_id=1929179971 instance=ExtResource("16_evnt5")]
-transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -226.68658, 58.295944, -88.50091)
-
-[node name="grave3" parent="." unique_id=181176195 instance=ExtResource("16_evnt5")]
-transform = Transform3D(0.022339374, 0, 9.999976, 0, 10, 0, -9.999976, 0, 0.022339374, -349.81873, 58.295944, -84.276245)
+[node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 126.50746, 27.747581, 332.69684)
+JUMP_VELOCITY = 70.0

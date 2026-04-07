@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clu43e4vvk6yu"]
+
+[ext_resource type="PackedScene" uid="uid://du228ut8gdf28" path="res://assets/graveyard/Car.glb" id="1_edj33"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lpvn4"]
+size = Vector3(63.81798, 88.706055, 140.91779)
+
+[node name="car2" type="StaticBody3D" unique_id=449204164]
+
+[node name="Car2" parent="." unique_id=1860716437 instance=ExtResource("1_edj33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.550259, 29.47673, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2058820858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.148104, 23.635254, 16.124466)
+shape = SubResource("BoxShape3D_lpvn4")
