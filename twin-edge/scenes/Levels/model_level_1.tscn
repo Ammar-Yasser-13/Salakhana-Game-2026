@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="26_52tgj"]
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="27_52tgj"]
 [ext_resource type="PackedScene" uid="uid://b0xl23eeh8wp8" path="res://scenes/pick ups/bullet_projectile.tscn" id="28_uk0c4"]
+[ext_resource type="PackedScene" uid="uid://2seoyuah7por" path="res://Robo enemies/robo_enemy_explode.tscn" id="29_lkoxp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffnre"]
 sky_horizon_color = Color(0.8296772, 0.83433414, 0.8441853, 1)
@@ -50,7 +51,7 @@ albedo_color = Color(1, 0.3529412, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_fo8y5"]
 size = Vector3(984.30835, 13.15097, 1004.29504)
 
-[node name="model level 1" type="Node3D" unique_id=2105410516]
+[node name="model_level_1" type="Node3D" unique_id=2105410516]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=239212469]
 environment = SubResource("Environment_ac4d1")
@@ -59,7 +60,7 @@ environment = SubResource("Environment_ac4d1")
 transform = Transform3D(-0.8660254, -0.50000006, -2.1855696e-08, 0, -4.371139e-08, 1, -0.50000006, 0.8660254, 3.7855173e-08, 0, 342.54675, 0)
 light_energy = 1.8
 shadow_enabled = true
-directional_shadow_max_distance = 120.0
+directional_shadow_max_distance = 900.0
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2039415791]
 
@@ -338,7 +339,8 @@ transform = Transform3D(-19.999884, 0, 0.06841472, 0, 20, 0, -0.06841472, 0, -19
 transform = Transform3D(0.16196766, 0, -19.999348, 0, 20.000002, 0, 19.999348, 0, 0.16196766, 403.1517, 0.030830383, 248.69312)
 
 [node name="Player" parent="." unique_id=279958562 instance=ExtResource("12_funs6")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 126.50746, 27.747581, 332.69684)
+unique_name_in_owner = true
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 126.50746, 27.747581, 332.69684)
 JUMP_VELOCITY = 70.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1270820798]
@@ -368,28 +370,25 @@ transform = Transform3D(-2.8397099e-06, 0, -64.96499, 0, 64.96499, 0, 64.96499, 
 transform = Transform3D(-2.8849513e-06, 0, -65.99999, 0, 65.99999, 0, 65.99999, 0, -2.8849513e-06, 345.2664, -0.67714214, -171.616)
 
 [node name="b5" parent="new_buildings" unique_id=1306437937 instance=ExtResource("17_05rhm")]
-transform = Transform3D(65.39413, 0, 0.33785805, 0, 65.395, 0, -0.33785805, 0, 65.39413, -438.30362, 1.8610535, 386.7952)
+transform = Transform3D(65.39413, 0, 0.33785805, 0, 65.395, 0, -0.33785805, 0, 65.39413, -438.30362, 1.8610535, 368.677)
 
 [node name="b8" parent="new_buildings" unique_id=28630448 instance=ExtResource("20_3d367")]
-transform = Transform3D(-1.5305557, 0, 64.94696, 0, 64.965, 0, -64.94696, 0, -1.5305557, -430.11575, 2.926857, 284.21683)
+transform = Transform3D(-1.5305557, 0, 64.94696, 0, 64.965, 0, -64.94696, 0, -1.5305557, -430.11575, 2.926857, 243.21683)
 
 [node name="b10" parent="new_buildings" unique_id=1818226129 instance=ExtResource("22_t6aed")]
-transform = Transform3D(-64.90799, 0, -0.51093644, 0, 64.91, 0, 0.51093644, 0, -64.90799, -442.30673, 3.2229486, 174.82672)
+transform = Transform3D(-64.90799, 0, -0.51093644, 0, 64.91, 0, 0.51093644, 0, -64.90799, -442.30673, 3.2229486, 115.73172)
 
 [node name="b1" parent="new_buildings" unique_id=11529686 instance=ExtResource("13_5phhs")]
-transform = Transform3D(-72, 0, 1.0871698e-05, 0, 72, 0, -1.0871698e-05, 0, -72, -399.7498, -9.134148, 456.7824)
+transform = Transform3D(-72, 0, 1.0871698e-05, 0, 72, 0, -1.0871698e-05, 0, -72, -325.50574, -0.74684143, 456.7824)
 
 [node name="b2" parent="new_buildings" unique_id=406382531 instance=ExtResource("13_5phhs")]
-transform = Transform3D(-72, 0, 1.0871698e-05, 0, 72, 0, -1.0871698e-05, 0, -72, -313.28256, -9.134148, 456.7824)
+transform = Transform3D(-72, 0, 1.0871698e-05, 0, 72, 0, -1.0871698e-05, 0, -72, -159.28256, -1.6030502, 456.7824)
 
 [node name="b3" parent="new_buildings" unique_id=73021567 instance=ExtResource("13_5phhs")]
-transform = Transform3D(-61.999992, 0, -5.4202114e-06, 0, 61.999992, 0, 5.4202114e-06, 0, -61.999992, 234.27217, -0.359, 239.3172)
+transform = Transform3D(-61.999992, 0, -5.4202114e-06, 0, 61.999992, 0, 5.4202114e-06, 0, -61.999992, 195.01494, -0.359, 239.3172)
 
 [node name="b14" parent="new_buildings" unique_id=968998591 instance=ExtResource("16_skd0t")]
 transform = Transform3D(-2.8397096e-06, 0, 64.96498, 0, 64.96499, 0, -64.96498, 0, -2.8397096e-06, 422.1783, 0, -167.68784)
-
-[node name="b4" parent="new_buildings" unique_id=1485380213 instance=ExtResource("13_5phhs")]
-transform = Transform3D(-61.999992, 0, -5.4202114e-06, 0, 61.999992, 0, 5.4202114e-06, 0, -61.999992, 138.5618, -0.2703388, 239.48312)
 
 [node name="BigBuilding" parent="new_buildings" unique_id=2126844331 instance=ExtResource("22_ukith")]
 transform = Transform3D(42, 0, 0, 0, 42, 0, 0, 0, 42, -307.5951, 2.8440552, -242.17589)
@@ -415,7 +414,7 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 134.96962, -20.159523, 
 [node name="cars" type="Node3D" parent="." unique_id=1296756258]
 
 [node name="PoliceCar" parent="cars" unique_id=1889334875 instance=ExtResource("24_xv2io")]
-transform = Transform3D(-1.5298986e-06, 0, -35, 0, 35, 0, 35, 0, -1.5298986e-06, 257.33386, 2.7264066, 104.883125)
+transform = Transform3D(-1.0927847e-06, 0, -25, 0, 25, 0, 25, 0, -1.0927847e-06, 257.33386, 2.7264066, 133.8078)
 
 [node name="SchoolBus" parent="cars" unique_id=1892559402 instance=ExtResource("19_fhw1f")]
 transform = Transform3D(-1.4, 0, -1.2239188e-07, 0, 1.4, 0, 1.2239188e-07, 0, -1.4, -269.0993, 3, 234)
@@ -432,25 +431,25 @@ spot_range = 52.31653
 spot_angle = 89.99
 
 [node name="CarOne" parent="cars" unique_id=1688988479 instance=ExtResource("20_ukith")]
-transform = Transform3D(-35, 0, 5.284853e-06, 0, 35, 0, -5.284853e-06, 0, -35, -30.792542, 2.5044186, 294.67535)
+transform = Transform3D(-25, 0, 3.774895e-06, 0, 25, 0, -3.774895e-06, 0, -25, -1.0820007, 2.5044186, 294.67535)
 
 [node name="CarThree" parent="cars" unique_id=364401459 instance=ExtResource("21_3d367")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.745575, 2.710144, -217.49998)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.745575, 2.710144, -216.41873)
 
 [node name="CarTwo" parent="cars" unique_id=38822701 instance=ExtResource("22_xv2io")]
-transform = Transform3D(0.023822445, 0, -34.999992, 0, 35, 0, 34.999992, 0, 0.023822445, 173.48242, 2.2795105, -351.9556)
+transform = Transform3D(0.01701603, 0, -24.999994, 0, 25, 0, 24.999994, 0, 0.01701603, 227.48242, 2.2795105, -351.9556)
 
 [node name="Motorcycle" parent="cars" unique_id=241762987 instance=ExtResource("23_voxbr")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -103.52655, 1.77001, -63.376785)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -103.52655, 1.77001, -63.376785)
 
 [node name="Truck" parent="cars" unique_id=1405782843 instance=ExtResource("24_52tgj")]
 transform = Transform3D(-1.1802075e-06, 0, 27, 0, 27, 0, -27, 0, -1.1802075e-06, -309.09924, -3.8493083, -53.184143)
 
 [node name="ATM" parent="cars" unique_id=1773142200 instance=ExtResource("25_uk0c4")]
-transform = Transform3D(-1.3113417e-05, 0, -300, 0, 299.99997, 0, 300, 0, -1.3113417e-05, 433.41745, 3, 42.810394)
+transform = Transform3D(-4.371139e-06, 0, -100, 0, 100, 0, 100, 0, -4.371139e-06, 433.41745, 3, 33.67148)
 
 [node name="NewBus" parent="cars" unique_id=1308177305 instance=ExtResource("24_t6aed")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -716.14465, 0, 290.08557)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -617.92236, -0.69688416, 281.08557)
 
 [node name="enemies" type="Node3D" parent="." unique_id=1131082658]
 
@@ -491,3 +490,6 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, 3
 
 [node name="Bullet projectile" parent="pick_ups" unique_id=26014183 instance=ExtResource("28_uk0c4")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -329.4674, 2.8805528, -372.6103)
+
+[node name="CharacterBody3D" parent="." unique_id=851551012 instance=ExtResource("29_lkoxp")]
+transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, -84.91467, 27.45178, 92.850204)
