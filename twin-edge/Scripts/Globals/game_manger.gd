@@ -57,14 +57,22 @@ func Enemies_counter()->void:
 
 #====> checks current level
 func current_level():
-	if level_one == true && Enemies_killed >= Max_Enemies_Num && level_two == false:
+	if level_one == true && Enemies_killed >= Max_Enemies_Num && level_two == false && Enemies_killed >= 5:
 		print("Level complete")
+		get_tree().change_scene_to_file("res://scenes/Levels/model_level_2.tscn")
 		level_one = false
 		level_two = true
 		Enemies_killed = 0
-		#Level_switcher()
+		Restart()
+	if level_one == false && Enemies_killed >= Max_Enemies_Num && level_two == true && Enemies_killed >= 4:
+		print("Level complete")
+		get_tree().change_scene_to_file("res://scenes/Menus/level_select.tscn")
+		level_one = false
+		level_two = true
+		Enemies_killed = 0
+		Restart()
 
 
 #====> switches level to level select when all enemies are killed
 func Level_switcher()->void:
-	get_tree().change_scene_to_file("res://scenes/Menus/level_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/Levels/model_level_2.tscn")
