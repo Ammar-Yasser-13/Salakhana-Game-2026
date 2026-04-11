@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://bhldmnbqwl6w8" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/atm.tscn" id="25_uk0c4"]
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="26_52tgj"]
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="27_52tgj"]
-[ext_resource type="PackedScene" uid="uid://c6x4gpfd1o8ec" path="res://Robo enemies/roboranged.tscn" id="28_uk0c4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffnre"]
 sky_horizon_color = Color(0.8296772, 0.83433414, 0.8441853, 1)
@@ -353,16 +352,16 @@ shape = SubResource("BoxShape3D_fo8y5")
 transform = Transform3D(-3.059797e-06, 0, 70, 0, 70, 0, -70, 0, -3.059797e-06, 415.88, 0, 435.357)
 
 [node name="b19" parent="new_buildings" unique_id=846124532 instance=ExtResource("23_3d367")]
-transform = Transform3D(-50, 0, -7.54979e-06, 0, 50, 0, 7.54979e-06, 0, -50, 305.25504, 7.063156, 396.6819)
+transform = Transform3D(-50, 0, -7.54979e-06, 0, 50, 0, 7.54979e-06, 0, -50, 305.25504, 1.0631561, 396.6819)
 
 [node name="b20" parent="new_buildings" unique_id=1470235117 instance=ExtResource("22_t6aed")]
 transform = Transform3D(-70, 0, -1.0569706e-05, 0, 70, 0, 1.0569706e-05, 0, -70, 415.87985, 0, 352.30786)
 
 [node name="b21" parent="new_buildings" unique_id=452688127 instance=ExtResource("23_3d367")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 309.5965, 7.063156, 449.58368)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 309.5965, 1.0631561, 449.58368)
 
 [node name="b13" parent="new_buildings" unique_id=1987573842 instance=ExtResource("16_skd0t")]
-transform = Transform3D(-2.8397099e-06, 0, -64.96499, 0, 64.96499, 0, 64.96499, 0, -2.8397099e-06, 330.83426, 2.4533157, -331.659)
+transform = Transform3D(-2.8397099e-06, 0, -64.96499, 0, 64.96499, 0, 64.96499, 0, -2.8397099e-06, 327.83426, -3.5466843, -327.659)
 
 [node name="b15" parent="new_buildings" unique_id=2054390457 instance=ExtResource("18_fo8y5")]
 transform = Transform3D(-2.8849513e-06, 0, -65.99999, 0, 65.99999, 0, 65.99999, 0, -2.8849513e-06, 345.2664, -0.67714214, -171.616)
@@ -467,6 +466,3 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, 3
 
 [node name="bullets3" parent="pick_ups" unique_id=2133143094 instance=ExtResource("26_52tgj")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, -375.86462)
-
-[node name="Root Scene" parent="." unique_id=537913821 instance=ExtResource("28_uk0c4")]
-transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 15.476837, 39.08346, -78.81173)
