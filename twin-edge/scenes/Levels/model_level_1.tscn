@@ -91,6 +91,7 @@ size = Vector3(25.213257, 79.257935, 100)
 
 [node name="floor" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1169740850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099591255, -1.6370181, 0.20130539)
+visible = false
 use_collision = true
 collision_mask = 2
 size = Vector3(1000, 1.579834, 1000)
