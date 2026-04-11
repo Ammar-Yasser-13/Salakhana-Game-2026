@@ -376,4 +376,26 @@ transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 315.36304, 31.331093, 4
 SPEED = 110.0
 JUMP_VELOCITY = 70.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1479416553]
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1299672832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 410.2471, 75.53706, 346.8401)
+light_energy = 14.778
+spot_range = 27.946375
+spot_angle = 58.700027
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1191383931]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 399.6239, 75.53706, 293.83102)
+light_energy = 14.778
+spot_range = 27.946375
+spot_angle = 58.700027
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1739963095]
+transform = Transform3D(1, 0, 0, 0, 0.077154025, 0.99701923, 0, -0.99701923, 0.077154025, -93.22557, 99.92251, -169.03987)
+light_energy = 14.778
+spot_range = 27.946375
+spot_angle = 58.700027
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1013526275]
+transform = Transform3D(1, 0, 0, 0, 0.077154025, 0.99701923, 0, -0.99701923, 0.077154025, 406.22968, 112.90033, 326.90344)
+light_energy = 14.778
+spot_range = 22.70933
+spot_angle = 58.700027
