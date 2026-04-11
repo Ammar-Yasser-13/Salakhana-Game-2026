@@ -43,7 +43,7 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 		
 func die ():
 	damage_collision.disabled = true
-	Game_Manger.Current_enemies -= 1
+	Game_Manger.Enemies_killed += 1
 	co3d.disabled = true
 	shape3d.disabled = true
 	if not dead:
