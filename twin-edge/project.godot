@@ -136,3 +136,5 @@ Dummy_button_damage={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/stretch/aspect="keep"
+textures/stretch/mode="disabled"

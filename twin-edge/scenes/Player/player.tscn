@@ -16,6 +16,7 @@ radius = 5.0
 height = 20.0
 
 [node name="Player" type="CharacterBody3D" unique_id=279958562 groups=["Player"]]
+wall_min_slide_angle = 0.5235988
 script = ExtResource("1_uvnfx")
 
 [node name="Player Collider" type="CollisionShape3D" parent="." unique_id=1921965431]
