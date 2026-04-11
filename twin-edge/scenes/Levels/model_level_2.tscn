@@ -42,9 +42,6 @@ glow_enabled = true
 fog_light_color = Color(0.77534497, 0.7976385, 0.8323244, 1)
 fog_light_energy = 0.14
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_oniui"]
-size = Vector3(1, 0.03237988, 1.0042732)
-
 [node name="model_level_2" type="Node3D" unique_id=7759660]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1321578851]
@@ -380,7 +377,3 @@ SPEED = 110.0
 JUMP_VELOCITY = 70.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1479416553]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=631846619]
-transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 19.549423, -16.278217)
-shape = SubResource("BoxShape3D_oniui")
