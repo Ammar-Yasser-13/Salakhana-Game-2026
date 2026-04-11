@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dhaiig30k40ji"]
 
 [ext_resource type="Script" uid="uid://d1mbfhhnh1v4" path="res://Scripts/Menus/level_select.gd" id="1_37jrt"]
-[ext_resource type="Texture2D" uid="uid://c30aflr2hsx1f" path="res://level1.jpeg" id="2_1djbc"]
-[ext_resource type="Texture2D" uid="uid://cq6ivs81j44lv" path="res://level2.jpeg" id="3_o1xjm"]
+[ext_resource type="Texture2D" uid="uid://d3vtno23r5q5" path="res://level1.jpeg" id="2_1djbc"]
+[ext_resource type="Texture2D" uid="uid://dj2bdbl4ewjb6" path="res://level2.jpeg" id="3_o1xjm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7kul"]
 bg_color = Color(0, 0, 0, 0.81900007)
@@ -60,10 +60,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -330.0
-offset_top = -173.0
-offset_right = 461.0
-offset_bottom = 233.0
+offset_left = -530.0
+offset_top = -203.0
+offset_right = 530.0
+offset_bottom = 203.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 60
@@ -71,7 +71,7 @@ theme_override_constants/v_separation = 40
 columns = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GridContainer" unique_id=2069767030]
-custom_minimum_size = Vector2(400, 250)
+custom_minimum_size = Vector2(500, 250)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -84,6 +84,7 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="GridContainer/VBoxContainer" unique_id=1952466811]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
 text = "Level 1
 "
@@ -102,7 +103,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_k4uoc")
 text = "select "
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer" unique_id=1623814010]
-custom_minimum_size = Vector2(400, 250)
+custom_minimum_size = Vector2(500, 250)
 layout_mode = 2
 
 [node name="level2" type="TextureRect" parent="GridContainer/VBoxContainer2" unique_id=988913681]
@@ -114,6 +115,7 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="GridContainer/VBoxContainer2" unique_id=181222262]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
 text = "Level 2
 "
