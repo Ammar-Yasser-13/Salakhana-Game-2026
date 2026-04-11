@@ -566,6 +566,9 @@ visible = false
 transform = Transform3D(-61.999985, 0, 0.01515007, 0, 61.99999, 0, -0.01515007, 0, -61.999985, -224.9137, -0.35899997, 551.3054)
 visible = false
 
+[node name="b25" parent="new_buildings" unique_id=2021445200 instance=ExtResource("13_5phhs")]
+transform = Transform3D(-1.3550528e-05, 0, 61.99999, 0, 61.99999, 0, -61.99999, 0, -1.3550528e-05, -262.0758, -0.359, 252.07526)
+
 [node name="cars" type="Node3D" parent="." unique_id=1296756258]
 
 [node name="PoliceCar" parent="cars" unique_id=1889334875 instance=ExtResource("24_xv2io")]
@@ -604,12 +607,12 @@ transform = Transform3D(-1.1802075e-06, 0, 27, 0, 27, 0, -27, 0, -1.1802075e-06,
 transform = Transform3D(-4.371139e-06, 0, -100, 0, 100, 0, 100, 0, -4.371139e-06, 433.41745, 3, 33.67148)
 
 [node name="NewBus" parent="cars" unique_id=1308177305 instance=ExtResource("24_t6aed")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -617.92236, -0.69688416, 281.08557)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -525.293, -0.69688416, 281.08557)
 
 [node name="enemies" type="Node3D" parent="." unique_id=1131082658]
 
 [node name="CharacterBody3D" parent="enemies" unique_id=851551012 instance=ExtResource("26_uk0c4")]
-transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 58.30233, 1.7137929, 432.96463)
+transform = Transform3D(15.873881, 0, 31.193266, 0, 35, 0, -31.193266, 0, 15.873881, 58.30233, 1.7137929, -27.769058)
 
 [node name="CharacterBody3D2" parent="enemies" unique_id=1269213292 instance=ExtResource("26_uk0c4")]
 transform = Transform3D(-1.5298988e-06, 0, 35.000004, 0, 35, 0, -35.000004, 0, -1.5298988e-06, 405.02316, 13.003525, 154.67877)
