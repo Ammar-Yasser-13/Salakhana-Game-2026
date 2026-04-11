@@ -7,20 +7,21 @@ var dead = false
 var chase = false
 @onready var co3d: CollisionShape3D = $Area3D/CollisionShape3D
 @onready var shape3d: CollisionShape3D = $CollisionShape3D
-
+var speed = 150
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if get_parent().get_parent().name == "model_level_2":
+		speed = 300
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if not dead:
 		if is_on_floor() and !reached_Player && chase:
-			look_at(player.position)
+			look_at(player.global_position)
 			rotation.x =0
 			rotation.z =0
-			velocity = (player.position - position).normalized()*150
+			velocity = (player.global_position - global_position).normalized()*speed
 			animation.play("CharacterArmature|Run")
 		else:
 			velocity = get_gravity()

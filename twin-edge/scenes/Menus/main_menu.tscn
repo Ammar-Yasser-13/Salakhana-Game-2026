@@ -132,7 +132,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_rhts7")
 text = " Exit"
 
 [node name="tutorial panel" type="Panel" parent="." unique_id=1408251318]
-visible = false
 layout_mode = 0
 offset_left = -571.0
 offset_top = -320.0
@@ -170,6 +169,7 @@ offset_right = -133.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 
 [node name="Label" type="Label" parent="tutorial panel/Container2" unique_id=501807739]
 layout_mode = 2
@@ -185,10 +185,11 @@ Sprint + Crouch to slide at high speeds"
 
 [node name="Label2" type="Label" parent="tutorial panel" unique_id=1823926469]
 layout_mode = 0
-offset_left = 787.0
-offset_top = 60.0
-offset_right = 1083.0
-offset_bottom = 572.0
+offset_left = 699.0
+offset_top = 52.0
+offset_right = 995.0
+offset_bottom = 564.0
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Controller:
 Use (Left Joystick) to move

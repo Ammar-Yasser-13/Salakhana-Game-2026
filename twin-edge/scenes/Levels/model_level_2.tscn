@@ -329,16 +329,16 @@ transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -37.981934, 4.041711
 transform = Transform3D(-48.19502, 0, 26.499811, 0, 54.999996, 0, -26.499811, 0, -48.19502, -80.32883, 5.06389, 59.956253)
 
 [node name="CharacterBody3D" parent="enemies2" unique_id=851551012 instance=ExtResource("15_kk34i")]
-transform = Transform3D(-0.6503633, 0, 0.75962377, 0, 1, 0, -0.75962377, 0, -0.6503633, -2.5921488, 0.5637517, -4.9229565)
+transform = Transform3D(-0.6503634, 0, 0.7596238, 0, 1, 0, -0.7596238, 0, -0.6503634, -1.9046944, 1.2327263, -3.672689)
 
 [node name="Root Scene" parent="enemies2" unique_id=537913821 instance=ExtResource("16_oniui")]
 transform = Transform3D(0.48692992, 0, -0.87344134, 0, 1, 0, 0.87344134, 0, 0.48692992, -4.567458, 0.20884356, 9.269916)
 
 [node name="CharacterBody3D2" parent="enemies2" unique_id=908860344 instance=ExtResource("15_kk34i")]
-transform = Transform3D(0.68346524, 0, -0.72998416, 0, 1, 0, 0.72998416, 0, 0.68346524, -5.9427204, 0.5958943, 3.235897)
+transform = Transform3D(0.68346524, 0, -0.72998416, 0, 1, 0, 0.72998416, 0, 0.68346524, 2.2932281, 1.1605778, 9.0358305)
 
 [node name="Root Scene2" parent="enemies2" unique_id=1408148152 instance=ExtResource("16_oniui")]
-transform = Transform3D(0.5894928, 0, 0.32413003, 0, 0.67272735, 0, -0.32413003, 0, 0.5894928, 4.043305, 0.15206367, -0.7106942)
+transform = Transform3D(0.87627304, 0, 0.48181492, 0, 1, 0, -0.48181492, 0, 0.87627304, 4.043305, 0.15206367, -0.7106942)
 
 [node name="crypt" parent="." unique_id=24273877 instance=ExtResource("7_hcd6m")]
 transform = Transform3D(0.15812668, 0, 29.999582, 0, 29.999998, 0, -29.999582, 0, 0.15812668, -367.28323, 4, -402.92813)
