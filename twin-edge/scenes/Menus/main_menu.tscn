@@ -154,6 +154,11 @@ offset_bottom = 65.0
 theme_override_font_sizes/font_size = 40
 text = "X"
 
+[node name="Label" type="Label" parent="tutorial panel" unique_id=501807739]
+layout_mode = 0
+offset_right = 372.0
+offset_bottom = 308.0
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_toturial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

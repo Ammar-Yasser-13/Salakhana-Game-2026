@@ -9,7 +9,7 @@ extends CanvasLayer
 @onready var bullet_4: Sprite2D = $Bullet4
 @onready var bullet_5: Sprite2D = $Bullet5
 @onready var bullet_6: Sprite2D = $Bullet6
-@onready var enemy_counter: Label = $"Enemy counter"
+@onready var enemy_counter: Label = $"top left/Enemy counter"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var no_ammo: Label = $"No Ammo"
 #=============================================

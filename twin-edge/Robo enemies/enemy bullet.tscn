@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://4d4fbs8gohhb"]
+[gd_scene format=3 uid="uid://hfaw70ppcyro"]
 
 [ext_resource type="Script" uid="uid://ch3rywv1qdxd6" path="res://Robo enemies/enemyprojectile.gd" id="1_1g01m"]
 
@@ -7,7 +7,7 @@ albedo_color = Color(0.11699989, 0, 0.39, 1)
 roughness = 0.2
 emission_enabled = true
 emission = Color(1, 0, 0, 1)
-emission_energy_multiplier = 10.0
+emission_energy_multiplier = 100.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_sdfih"]
 material = SubResource("StandardMaterial3D_dvh4p")
@@ -36,7 +36,7 @@ curve = SubResource("Curve_fcu52")
 lifetime_randomness = 0.3
 emission_shape = 1
 emission_sphere_radius = 1.0
-gravity = Vector3(10, 0, 0)
+gravity = Vector3(0, 3, 0)
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_f1qtd")
 color = Color(0, 0, 0, 1)
@@ -47,6 +47,7 @@ alpha_curve = SubResource("CurveTexture_omrtd")
 [sub_resource type="SphereShape3D" id="SphereShape3D_d7i6v"]
 
 [node name="Node3D" type="CharacterBody3D" unique_id=546734831]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_1g01m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1687650336]

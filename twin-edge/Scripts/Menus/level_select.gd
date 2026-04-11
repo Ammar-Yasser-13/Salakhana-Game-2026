@@ -17,9 +17,7 @@ func _on_back_button_pressed() -> void:
 #====> selcets level 1
 func Level_1_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Levels/model_level_1.tscn")
-	Game_Manger.Enemies_level_counter = 1
 
 #====> selcets level 2
 func Level_2_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Levels/model_level_2.tscn")
-	Game_Manger.Enemies_level_counter = 2

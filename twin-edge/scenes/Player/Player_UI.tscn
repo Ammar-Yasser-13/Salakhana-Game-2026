@@ -100,12 +100,6 @@ sprite_frames = SubResource("SpriteFrames_ojbky")
 frame = 4
 frame_progress = 1.0
 
-[node name="Enemy symbol" type="Sprite2D" parent="." unique_id=1874249761]
-texture_filter = 1
-position = Vector2(1016, 40)
-scale = Vector2(5, 5)
-texture = ExtResource("2_gg8lv")
-
 [node name="Bullet1" type="Sprite2D" parent="." unique_id=552828107]
 texture_filter = 1
 position = Vector2(128, 27)
@@ -148,23 +142,6 @@ rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("3_cn2k5")
 
-[node name="Enemy counter" type="Label" parent="." unique_id=1839579663]
-texture_filter = 1
-anchors_preset = -1
-anchor_left = 0.9236111
-anchor_top = 0.044753086
-anchor_right = 0.9539931
-anchor_bottom = 0.111111134
-offset_right = -21.0
-offset_bottom = -25.80001
-grow_horizontal = 0
-scale = Vector2(2.5, 2.5)
-size_flags_horizontal = 8
-theme_override_fonts/font = ExtResource("4_lhbyj")
-text = "X"
-label_settings = SubResource("LabelSettings_skwaw")
-metadata/_edit_use_anchors_ = true
-
 [node name="No Ammo" type="Label" parent="." unique_id=1344476961]
 texture_filter = 1
 anchors_preset = -1
@@ -186,6 +163,42 @@ metadata/_edit_use_anchors_ = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1673252135]
 libraries/ = SubResource("AnimationLibrary_ojbky")
 
-[node name="Crosshair012" type="Sprite2D" parent="." unique_id=371231819]
-position = Vector2(576, 352)
+[node name="center" type="Container" parent="." unique_id=94375772]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Crosshair012" type="Sprite2D" parent="center" unique_id=371231819]
+position = Vector2(20, 48)
 texture = ExtResource("6_otse3")
+
+[node name="top left" type="Container" parent="." unique_id=645017331]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Enemy symbol" type="Sprite2D" parent="top left" unique_id=1874249761]
+texture_filter = 1
+position = Vector2(-96, 40)
+scale = Vector2(5, 5)
+texture = ExtResource("2_gg8lv")
+
+[node name="Enemy counter" type="Label" parent="top left" unique_id=1839579663]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("4_lhbyj")
+text = "X"
+label_settings = SubResource("LabelSettings_skwaw")
+metadata/_edit_use_anchors_ = true
