@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://4d4fbs8gohhb"]
+
+[ext_resource type="Script" uid="uid://ch3rywv1qdxd6" path="res://Robo enemies/enemyprojectile.gd" id="1_1g01m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvh4p"]
+albedo_color = Color(0.11699989, 0, 0.39, 1)
+roughness = 0.2
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_sdfih"]
+material = SubResource("StandardMaterial3D_dvh4p")
+radial_segments = 8
+rings = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqwtu"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="Curve" id="Curve_qs3bq"]
+_data = [Vector2(0, 0.1), 0.0, 1.4, 0, 1, Vector2(0.5, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.6, 0.0, 1, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_omrtd"]
+curve = SubResource("Curve_qs3bq")
+
+[sub_resource type="Curve" id="Curve_fcu52"]
+_data = [Vector2(0, 0.50561804), 0.0, 0.49438193, 0, 1, Vector2(1, 1), 0.49438193, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_f1qtd"]
+curve = SubResource("Curve_fcu52")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jw8kq"]
+lifetime_randomness = 0.3
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(10, 0, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_f1qtd")
+color = Color(0, 0, 0, 1)
+alpha_curve = SubResource("CurveTexture_omrtd")
+
+[sub_resource type="SphereMesh" id="SphereMesh_jma43"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d7i6v"]
+
+[node name="Node3D" type="CharacterBody3D" unique_id=546734831]
+script = ExtResource("1_1g01m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1687650336]
+mesh = SubResource("SphereMesh_sdfih")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="MeshInstance3D" unique_id=597318194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15791988, 0, 0)
+material_override = SubResource("StandardMaterial3D_yqwtu")
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_jw8kq")
+draw_pass_1 = SubResource("SphereMesh_jma43")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=681743740]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1901951194]
+shape = SubResource("SphereShape3D_d7i6v")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -46,10 +46,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Sprinting
 	if Input.is_action_pressed("Sprint_Player"):
 		Sprint_Multiplier = 1.5
-		camera.fov = 90
 	if Input.is_action_just_released("Sprint_Player"):
 		Sprint_Multiplier = 1.0
-		camera.fov = 70
 	
 	#====================================================================================
 	#Shooting

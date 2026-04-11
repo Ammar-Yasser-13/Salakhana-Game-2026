@@ -83,6 +83,7 @@ func shoot_player()->void:
 
 	var bullet = Bullet_Scene.instantiate()
 	get_tree().current_scene.add_child(bullet)
+	bullet.change_shotbyenemy()
 	#==> positioning bullet
 	if marker_3d:
 		bullet.global_position = marker_3d.global_position

@@ -7,7 +7,11 @@
 radius = 0.99317795
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qdnhn"]
-size = Vector3(0.6758728, 1.2886963, 0.46484375)
+size = Vector3(0.6758728, 1.2886963, 0.52734375)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qdnhn"]
+radius = 0.30419922
+height = 1.009903
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1fwd6"]
 resource_name = "Main2"
@@ -301,6 +305,17 @@ tracks/15/path = NodePath("RootNode/CharacterArmature/Skeleton3D:PT.R")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = PackedFloat32Array(0, 1, -0.0056974506, 0.002492795, 0.005413516)
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("..")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
 
 [sub_resource type="Animation" id="Animation_vljso"]
 resource_name = "CharacterArmature|Death"
@@ -1010,6 +1025,9 @@ _data = {
 &"CharacterArmature|Walk": SubResource("Animation_cry71")
 }
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_qdnhn"]
+radius = 9.0
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=851551012 groups=["Enemy"]]
 transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0)
 script = ExtResource("1_b1c0d")
@@ -1021,7 +1039,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0,
 shape = SubResource("SphereShape3D_ffjvt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=75759128]
-transform = Transform3D(-4.371136e-08, -0.99999845, 0, 0.99999845, -4.371136e-08, 0, 0, 0, 0.99999845, 0.0014831794, 0.371453, -0.0048828125)
+transform = Transform3D(-4.371136e-08, -0.99999845, 0, 0.99999845, -4.371136e-08, 0, 0, 0, 0.99999845, 0.0014831794, 0.371453, 0.009765602)
 shape = SubResource("BoxShape3D_qdnhn")
 
 [node name="Root Scene" type="Node3D" parent="." unique_id=341625585]
@@ -1147,6 +1165,14 @@ bone_idx = 2
 [node name="Head_end" type="Node3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D/Head" unique_id=226987186]
 transform = Transform3D(1, 1.29084934e-17, 2.310547e-19, -1.29084934e-17, 1, -2.9825681e-36, -2.310547e-19, 0, 1, 0, 0.001693167, 3.469447e-20)
 
+[node name="Damage area" type="Area3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D/Head/Head_end" unique_id=1642777622]
+transform = Transform3D(3.5026756e-10, 0.009999986, 2.6735996e-09, 0.009998656, -3.938014e-10, 0.00016300222, 0.00016300222, 2.6675346e-09, -0.009998656, -1.1394014e-05, -0.0017582015, -0.00014912224)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D/Head/Head_end/Damage area" unique_id=1335978053]
+transform = Transform3D(1, -1.110223e-16, 7.4440174e-17, 1.0658141e-14, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.4319085e-08, -0.34064496)
+shape = SubResource("CapsuleShape3D_qdnhn")
+disabled = true
+
 [node name="Leg3_L" type="BoneAttachment3D" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" unique_id=674016982]
 transform = Transform3D(0.722366, 0.1814362, -0.66728413, 0.6856945, -0.06304556, 0.7251539, 0.08949995, -0.9813792, -0.16995208, 0.0053748004, 0.00013576818, 0.0033743922)
 bone_name = "Leg3.L"
@@ -1219,5 +1245,12 @@ skin = SubResource("Skin_7skdg")
 libraries/ = SubResource("AnimationLibrary_lu6w8")
 autoplay = &"CharacterArmature|Idle"
 
+[node name="Chase area" type="Area3D" parent="." unique_id=1094959966]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chase area" unique_id=639813828]
+shape = SubResource("SphereShape3D_qdnhn")
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="Root Scene/RootNode/CharacterArmature/Skeleton3D/Head/Head_end/Damage area" to="." method="_on_damage_area_body_entered"]
+[connection signal="body_entered" from="Chase area" to="." method="_on_chase_area_body_entered"]

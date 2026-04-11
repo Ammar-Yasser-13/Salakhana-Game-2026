@@ -491,4 +491,4 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, 3
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, -375.86462)
 
 [node name="CharacterBody3D" parent="." unique_id=851551012 instance=ExtResource("29_lkoxp")]
-transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, -84.91467, 27.45178, 92.850204)
+transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, -84.91467, 27.45178, -193.71759)
