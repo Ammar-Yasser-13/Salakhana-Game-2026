@@ -12,7 +12,7 @@ const Min_bullets:int = 0
 @export var Enemies_level_counter:int = 0
 @export var Level_1_Enemies_number:int = 8
 @export var Level_2_Enemies_number:int = 5
-var Current_enemies:int = Enemies_level_counter
+var Current_enemies:int
 var current_level:int
 #==========================================================================================
 
@@ -30,6 +30,7 @@ func _process(_delta: float) -> void:
 	if Current_bullets <= 0:
 		Current_bullets = Min_bullets
 	Level_switcher()
+	Enemies_counter()
 	#=========================================================================================
 
 #====> called when player dies
@@ -44,3 +45,6 @@ func Level_switcher()->void:
 	if Game_Manger.Current_enemies <= 0 && Game_Manger.current_level >= 1:
 		get_tree().change_scene_to_file("res://scenes/Levels/model_level_2.tscn")
 		Game_Manger.Enemies_level_counter = 2
+
+func Enemies_counter():
+	Current_enemies = get_tree().get_nodes_in_group("Enemy").size()
