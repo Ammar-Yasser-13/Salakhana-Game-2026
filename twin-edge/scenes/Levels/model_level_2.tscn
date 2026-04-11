@@ -368,6 +368,7 @@ transform = Transform3D(-0.11288807, 0, -1.315164, 0, 1.3199999, 0, 1.315164, 0,
 collision_layer = 1
 
 [node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
+unique_name_in_owner = true
 transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 266.8428, 31.331093, -174.78006)
 SPEED = 110.0
 JUMP_VELOCITY = 70.0
