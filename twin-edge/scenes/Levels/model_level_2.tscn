@@ -25,8 +25,11 @@
 [ext_resource type="PackedScene" uid="uid://f188kdyokjkp" path="res://scenes/assets_with_collision/graveyard/pile of bones.tscn" id="24_2l77w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yqcq3"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.01673405, 0.0030278694, 0.18371478, 1)
+sky_horizon_color = Color(0.011645139, 0.24221757, 0.3575586, 1)
+sky_curve = 0.204906
+ground_horizon_color = Color(0.10822462, 0.10822461, 0.10822461, 1)
+ground_curve = 0.3429674
 
 [sub_resource type="Sky" id="Sky_w7hem"]
 sky_material = SubResource("ProceduralSkyMaterial_yqcq3")
@@ -45,7 +48,7 @@ size = Vector3(1, 0.03237988, 1.0042732)
 [node name="model_level_2" type="Node3D" unique_id=7759660]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1321578851]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 775.40594, -1122.7493)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=308335122]
