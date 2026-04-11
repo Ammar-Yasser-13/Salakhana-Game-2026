@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://4d4fbs8gohhb"]
+[gd_scene format=3 uid="uid://hfaw70ppcyro"]
 
-[ext_resource type="Script" uid="uid://ch3rywv1qdxd6" path="res://Robo enemies/enemyprojectile.gd" id="1_1g01m"]
+[ext_resource type="Script" path="res://Robo enemies/enemyprojectile.gd" id="1_1g01m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvh4p"]
 albedo_color = Color(0.11699989, 0, 0.39, 1)
@@ -36,7 +36,7 @@ curve = SubResource("Curve_fcu52")
 lifetime_randomness = 0.3
 emission_shape = 1
 emission_sphere_radius = 1.0
-gravity = Vector3(10, 0, 0)
+gravity = Vector3(0, 3, 0)
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_f1qtd")
 color = Color(0, 0, 0, 1)
@@ -47,6 +47,7 @@ alpha_curve = SubResource("CurveTexture_omrtd")
 [sub_resource type="SphereShape3D" id="SphereShape3D_d7i6v"]
 
 [node name="Node3D" type="CharacterBody3D" unique_id=546734831]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 script = ExtResource("1_1g01m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1687650336]
@@ -55,7 +56,7 @@ mesh = SubResource("SphereMesh_sdfih")
 [node name="GPUParticles3D" type="GPUParticles3D" parent="MeshInstance3D" unique_id=597318194]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15791988, 0, 0)
 material_override = SubResource("StandardMaterial3D_yqwtu")
-amount = 30
+amount = 90
 process_material = SubResource("ParticleProcessMaterial_jw8kq")
 draw_pass_1 = SubResource("SphereMesh_jma43")
 

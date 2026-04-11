@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cl8efly6bnuxi"]
 
-[ext_resource type="PackedScene" uid="uid://ds2m8y7jwbfhd" path="res://scenes/assets_with_collision/floor_tile.tscn" id="1_yqcq3"]
+[ext_resource type="PackedScene" uid="uid://ds2m8y7jwbfhd" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/floor_tile.tscn" id="1_yqcq3"]
 [ext_resource type="PackedScene" uid="uid://cuynwls3xkrxt" path="res://scenes/Player/player.tscn" id="2_w7hem"]
-[ext_resource type="PackedScene" uid="uid://bmrmsgeicwvv8" path="res://scenes/assets_with_collision/black_fence.tscn" id="3_w7hem"]
-[ext_resource type="PackedScene" uid="uid://n76rvujk02oh" path="res://scenes/assets_with_collision/iron_fence.tscn" id="4_bjkqv"]
-[ext_resource type="PackedScene" uid="uid://balacbwmkbdwg" path="res://scenes/assets_with_collision/open_gate.tscn" id="5_b0xmq"]
+[ext_resource type="PackedScene" uid="uid://bmrmsgeicwvv8" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/black_fence.tscn" id="3_w7hem"]
+[ext_resource type="PackedScene" uid="uid://n76rvujk02oh" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/iron_fence.tscn" id="4_bjkqv"]
+[ext_resource type="PackedScene" uid="uid://balacbwmkbdwg" path="res://Dummy/Dummy Scripts/scenes/assets_with_collision/open_gate.tscn" id="5_b0xmq"]
 [ext_resource type="PackedScene" uid="uid://c08ehulsbv06x" path="res://scenes/assets_with_collision/graveyard/gravestone.tscn" id="6_2we64"]
 [ext_resource type="PackedScene" uid="uid://dks2o4tm528ip" path="res://scenes/assets_with_collision/graveyard/crypt.tscn" id="7_hcd6m"]
 [ext_resource type="PackedScene" uid="uid://dpsrdkvfvxk5w" path="res://scenes/assets_with_collision/graveyard/dead tree.tscn" id="8_0gdtl"]
@@ -486,6 +486,7 @@ visible = false
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 87.858765, 4, 53.301292)
 
 [node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
+unique_name_in_owner = true
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 180.62311, 34.266003, 377.5374)
 
 [node name="gravestone" parent="." unique_id=532415882 instance=ExtResource("6_2we64")]
