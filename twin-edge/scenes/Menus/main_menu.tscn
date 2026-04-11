@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnyc1qucll737"]
 
 [ext_resource type="Script" uid="uid://raa8vx1jr4ci" path="res://Scripts/Menus/main_menu.gd" id="1_pha2q"]
-[ext_resource type="Texture2D" uid="uid://caqynkvpgyyxj" path="res://main_menu_background.jpeg" id="2_iep04"]
+[ext_resource type="Texture2D" uid="uid://dp8h0v01twbi8" path="res://Robo enemies/Screenshot 2026-04-11 215640.png" id="2_iep04"]
 [ext_resource type="Texture2D" uid="uid://cim7yypw6h0cn" path="res://download (1).png" id="2_penys"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3b8pq"]
@@ -52,10 +52,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -575.0
+offset_left = -576.0
 offset_top = -324.0
-offset_right = 579.0
-offset_bottom = 322.0
+offset_right = 578.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_3b8pq")
@@ -132,6 +132,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_rhts7")
 text = " Exit"
 
 [node name="tutorial panel" type="Panel" parent="." unique_id=1408251318]
+visible = false
 layout_mode = 0
 offset_left = -571.0
 offset_top = -320.0
