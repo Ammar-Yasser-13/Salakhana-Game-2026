@@ -31,7 +31,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 [node name="Player Camera" type="Camera3D" parent="Head" unique_id=1913317922]
 
 [node name="Player_UI" parent="Head/Player Camera" unique_id=1254276724 instance=ExtResource("2_a3d8c")]
-visible = false
 
 [node name="Aim Crosshair" type="Node3D" parent="Head" unique_id=17199916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)

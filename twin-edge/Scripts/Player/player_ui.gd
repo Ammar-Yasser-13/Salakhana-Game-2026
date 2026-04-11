@@ -2,7 +2,6 @@ extends CanvasLayer
 
 #===============[UI Reffrences]===============
 @onready var health_bar: AnimatedSprite2D = $"Health bar"
-@onready var enemy_symbol: Sprite2D = $"Enemy symbol"
 @onready var bullet_1: Sprite2D = $Bullet1
 @onready var bullet_2: Sprite2D = $Bullet2
 @onready var bullet_3: Sprite2D = $Bullet3

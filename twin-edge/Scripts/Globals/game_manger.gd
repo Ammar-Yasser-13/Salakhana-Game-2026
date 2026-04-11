@@ -62,7 +62,7 @@ func current_level():
 		level_one = false
 		level_two = true
 		Enemies_killed = 0
-		Level_switcher()
+		#Level_switcher()
 
 
 #====> switches level to level select when all enemies are killed

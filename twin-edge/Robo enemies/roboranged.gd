@@ -8,6 +8,7 @@ var enemy_bullet_load = preload("res://Robo enemies/enemy bullet.tscn")
 var reached_Player = false
 var dead = false
 var chase = false
+@onready var collisionshape3d: CollisionShape3D = $CollisionShape3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -31,11 +32,11 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func die ():
-	Game_Manger.Current_enemies -= 1
 	if not dead:
 		animation.play("CharacterArmature|Death")
 		dead = true
-		
+		Game_Manger.Enemies_killed += 1
+		collisionshape3d.disabled = true
 
 
 
