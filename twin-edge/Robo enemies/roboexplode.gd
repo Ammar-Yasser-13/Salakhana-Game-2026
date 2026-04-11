@@ -24,9 +24,9 @@ func _physics_process(delta: float) -> void:
 			animation.play("CharacterArmature|Run")
 		else:
 			velocity = get_gravity()
+			if is_on_floor() and reached_Player:
+				animation.play("CharacterArmature|Attack")
 		move_and_slide()
-		if is_on_floor() and reached_Player:
-			animation.play("CharacterArmature|Attack")
  
 
 

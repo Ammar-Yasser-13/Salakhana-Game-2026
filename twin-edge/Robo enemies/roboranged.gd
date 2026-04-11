@@ -17,7 +17,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if not dead:
-		velocity = get_gravity()
+		if not is_on_floor():
+			velocity = get_gravity()
 		if is_on_floor() and not chase:
 			animation.play("CharacterArmature|Idle")
 			look_at(player.position)

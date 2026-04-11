@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1mbfhhnh1v4" path="res://Scripts/Menus/level_select.gd" id="1_37jrt"]
 [ext_resource type="Texture2D" uid="uid://0q300ysw41w0" path="res://scenes/Menus/Screenshot 2026-04-11 215640.png" id="2_1djbc"]
-[ext_resource type="Texture2D" uid="uid://dj2bdbl4ewjb6" path="res://level2.jpeg" id="3_o1xjm"]
+[ext_resource type="Texture2D" uid="uid://bgm7abitlruds" path="res://scenes/Menus/Screenshot 2026-04-11 233244.png" id="3_1djbc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7kul"]
 bg_color = Color(0, 0, 0, 0.81900007)
@@ -109,7 +109,7 @@ layout_mode = 2
 [node name="level2" type="TextureRect" parent="GridContainer/VBoxContainer2" unique_id=988913681]
 layout_mode = 2
 size_flags_vertical = 2
-texture = ExtResource("3_o1xjm")
+texture = ExtResource("3_1djbc")
 expand_mode = 5
 stretch_mode = 6
 

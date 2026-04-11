@@ -1126,7 +1126,7 @@ _data = {
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_y4xe0"]
-radius = 7.0
+radius = 9.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p2ymx"]
 size = Vector3(0.83158875, 1.2886963, 0.52734375)

@@ -65,9 +65,9 @@ directional_shadow_max_distance = 900.0
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2039415791]
 
 [node name="room1" type="Node3D" parent="CSGCombiner3D" unique_id=2089698046]
+visible = false
 
 [node name="obstacles" type="Node3D" parent="CSGCombiner3D/room1" unique_id=1589874473]
-visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/room1/obstacles" unique_id=1929543782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.39337, -10.371033, 0)
@@ -341,7 +341,7 @@ transform = Transform3D(-8.742278e-07, 0, 20, 0, 20, 0, -20, 0, -8.742278e-07, 2
 transform = Transform3D(-8.742277e-07, 0, 19.999998, 0, 19.999998, 0, -19.999998, 0, -8.742277e-07, 258.66656, 0.3101883, -59.065193)
 
 [node name="Root Scene" parent="floors" unique_id=1079347615 instance=ExtResource("6_3d367")]
-transform = Transform3D(37.5, 0, 0, 0, 37.5, 0, 0, 0, 37.5, -69.205, 0.653, 32.110413)
+transform = Transform3D(37.5, 0, 0, 0, 37.5, 0, 0, 0, 37.5, -69.205, -0.9, 32.11)
 
 [node name="StreetStraight42" parent="floors" unique_id=938426594 instance=ExtResource("6_bfgjj")]
 transform = Transform3D(-8.742278e-07, 0, 20, 0, 20, 0, -20, 0, -8.742278e-07, 171.995, 0.3101883, 80.6969)
@@ -507,7 +507,7 @@ transform = Transform3D(-61.999992, 0, -5.4202114e-06, 0, 61.999992, 0, 5.420211
 transform = Transform3D(-2.8397096e-06, 0, 64.96498, 0, 64.96499, 0, -64.96498, 0, -2.8397096e-06, 422.1783, 0, -167.68784)
 
 [node name="BigBuilding" parent="new_buildings" unique_id=2126844331 instance=ExtResource("22_ukith")]
-transform = Transform3D(42, 0, 0, 0, 42, 0, 0, 0, 42, -307.5951, 2.8440552, -242.17589)
+transform = Transform3D(42, 0, 0, 0, 42, 0, 0, 0, 42, -307.5951, -1.8319397, -242.17589)
 
 [node name="crate" parent="new_buildings" unique_id=171462718 instance=ExtResource("23_t6aed")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 198.93756, -33.769905, 409.04742)
