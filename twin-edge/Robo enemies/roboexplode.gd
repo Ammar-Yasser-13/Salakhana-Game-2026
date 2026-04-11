@@ -5,6 +5,7 @@ var reached_Player = false
 var dead = false
 @onready var damage_collision: CollisionShape3D = $"Root Scene/RootNode/CharacterArmature/Skeleton3D/Head/Head_end/Damage area/CollisionShape3D"
 var chase = false
+@onready var area_3d: Area3D = $Area3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -39,10 +40,8 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 		damage_collision.disabled = true
 		
 func die ():
-	print(Game_Manger.Enemies_level_counter)
 	damage_collision.disabled = true
-	Game_Manger.Current_enemies = 0
-	print(Game_Manger.Enemies_level_counter)
+	Game_Manger.Current_enemies -= 1
 	if not dead:
 		animation.play("CharacterArmature|Death")
 		

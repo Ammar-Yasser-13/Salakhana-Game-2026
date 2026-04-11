@@ -8,11 +8,8 @@ const Min_bullets:int = 0
 @export var Current_health:int = Max_Health 
 @export var Current_bullets:int = Max_bullets
 #==================================[ Level data ]========================================
-@export_category("Level data")
-@export var Enemies_level_counter:int = 0
-@export var Level_1_Enemies_number:int = 8
-@export var Level_2_Enemies_number:int = 5
-var Current_enemies:int
+var Max_Enemies_Num:int
+var Current_enemies:int = Max_Enemies_Num + 1
 var current_level:int
 #==========================================================================================
 
@@ -29,6 +26,9 @@ func _process(_delta: float) -> void:
 		Current_bullets = Max_bullets
 	if Current_bullets <= 0:
 		Current_bullets = Min_bullets
+#=====[ Enemies ]=====
+	if Current_enemies <= 0:
+		Current_enemies = 0
 	Level_switcher()
 	Enemies_counter()
 	#=========================================================================================
@@ -46,5 +46,5 @@ func Level_switcher()->void:
 		get_tree().change_scene_to_file("res://scenes/Levels/model_level_2.tscn")
 		Game_Manger.Enemies_level_counter = 2
 
-func Enemies_counter():
-	Current_enemies = get_tree().get_nodes_in_group("Enemy").size()
+func Enemies_counter()->void:
+	Max_Enemies_Num = get_tree().get_nodes_in_group("Enemy").size()
