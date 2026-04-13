@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://cfeuoi6m7ifwk" path="res://scenes/enemy/enemy.tscn" id="25_voxbr"]
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="26_52tgj"]
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="27_52tgj"]
-[ext_resource type="PackedScene" uid="uid://b0xl23eeh8wp8" path="res://scenes/pick ups/bullet_projectile.tscn" id="28_uk0c4"]
 [ext_resource type="PackedScene" uid="uid://2seoyuah7por" path="res://Robo enemies/robo_enemy_explode.tscn" id="29_lkoxp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffnre"]
@@ -483,13 +482,13 @@ transform = Transform3D(0.031463675, 0, -0.799381, 0, 0.8, 0, 0.799381, 0, 0.031
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 198.33247, 75.59365, 424.3032)
 
 [node name="bullets" parent="pick_ups" unique_id=1877117906 instance=ExtResource("26_52tgj")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 127.58569, 44.47439, -351.31525)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 231.86774, 44.47439, -351.31525)
 
 [node name="bullets2" parent="pick_ups" unique_id=335347527 instance=ExtResource("26_52tgj")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, 349.43076)
 
-[node name="Bullet projectile" parent="pick_ups" unique_id=26014183 instance=ExtResource("28_uk0c4")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -329.4674, 2.8805528, -372.6103)
+[node name="bullets3" parent="pick_ups" unique_id=2133143094 instance=ExtResource("26_52tgj")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -311.0323, 27.921837, -375.86462)
 
 [node name="CharacterBody3D" parent="." unique_id=851551012 instance=ExtResource("29_lkoxp")]
 transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, -84.91467, 27.45178, 92.850204)

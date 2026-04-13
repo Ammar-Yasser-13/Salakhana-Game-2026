@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://bxwg7m0ajuw82" path="res://scenes/pick ups/medkit.tscn" id="19_2l77w"]
 [ext_resource type="PackedScene" uid="uid://c1wbq6h1s31ec" path="res://scenes/pick ups/bullets.tscn" id="20_n1g0a"]
 [ext_resource type="PackedScene" uid="uid://cldatiok1jred" path="res://scenes/assets_with_collision/graveyard/bike.tscn" id="22_oniui"]
-[ext_resource type="PackedScene" uid="uid://b0xl23eeh8wp8" path="res://scenes/pick ups/bullet_projectile.tscn" id="22_usehl"]
 [ext_resource type="PackedScene" uid="uid://f188kdyokjkp" path="res://scenes/assets_with_collision/graveyard/pile of bones.tscn" id="24_2l77w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yqcq3"]
@@ -318,10 +317,10 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 27.61493, 5.260005, -0.
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -42.260773, -0.33176494, -45.231728)
 
 [node name="bullets2" parent="pick_ups" unique_id=1597494942 instance=ExtResource("20_n1g0a")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 26.530098, 2.839042, -69.54105)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 26.530098, 2.839042, -69.54105)
 
-[node name="Bullet projectile" parent="pick_ups" unique_id=26014183 instance=ExtResource("22_usehl")]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -19.55914, -0.5494404, -73.668304)
+[node name="bullets3" parent="pick_ups" unique_id=1139138619 instance=ExtResource("20_n1g0a")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -37.981934, 4.041711, -71.7621)
 
 [node name="enemies2" type="Node3D" parent="." unique_id=393060822]
 transform = Transform3D(-48.19502, 0, 26.499811, 0, 54.999996, 0, -26.499811, 0, -48.19502, -80.32883, 5.06389, 59.956253)
@@ -370,7 +369,7 @@ collision_layer = 1
 
 [node name="Player" parent="." unique_id=279958562 instance=ExtResource("2_w7hem")]
 transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 266.8428, 31.331093, -174.78006)
-SPEED = 105.0
+SPEED = 110.0
 JUMP_VELOCITY = 70.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1479416553]
